@@ -1,5 +1,10 @@
 import { useState } from "react";
 import "../../styles/Cities.css";
+import { MapPin } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 const cityData = {
   Telangana: [
@@ -45,24 +50,48 @@ const CitySection = ({ title, cities }) => {
     <div style={styles.section}>
       <h2 style={styles.stateTitle}>{title}</h2>
 
-      <div style={styles.grid}>
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={15}
+        slidesPerView={5}
+        loop={true}
+        speed={5000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        breakpoints={{
+          320: { slidesPerView: 1.3 },
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+        }}
+      >
         {visibleCities.map((city, index) => (
-          <div key={index} className="city-card" style={styles.card}>
-            <span className="location-icon">📍</span>
-            <span>{city}</span>
-          </div>
+          <SwiperSlide key={index}>
+            <div className="city-card" style={styles.card}>
+              <MapPin className="location-icon" size={14} strokeWidth={2} />
+              <span>{city}</span>
+            </div>
+          </SwiperSlide>
         ))}
+      </Swiper>
 
-        {cities.length > 8 && (
-          <div
-            className="city-card show-more"
-            style={styles.card}
-            onClick={() => setShowAll(!showAll)}
-          >
-            {showAll ? "Show Less ▲" : "Show More ▼"}
-          </div>
-        )}
-      </div>
+      {cities.length > 8 && (
+        <div
+          className="city-card show-more"
+          style={{
+            ...styles.card,
+            width: "180px",
+            margin: "20px auto 0",
+            justifyContent: "center",
+          }}
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? "Show Less ▲" : "Show More ▼"}
+        </div>
+      )}
     </div>
   );
 };
@@ -100,23 +129,25 @@ const styles = {
 
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit,minmax(170px,1fr))",
-    gap: "12px",
+    gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))",
+    gap: "10px",
   },
 
   card: {
     background: "#fff",
     color: "#192A5F",
-    height: "50px",
-    borderRadius: "12px",
+    height: "42px",
+    borderRadius: "8px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    gap: "6px",
-    fontSize: "14px",
+    gap: "5px",
+    fontSize: "13px",
     fontWeight: "600",
     cursor: "pointer",
     transition: ".3s",
-    boxShadow: "0 4px 10px rgba(0,0,0,.15)",
+    boxShadow: "0 3px 8px rgba(0,0,0,.15)",
   },
+
+  
 };

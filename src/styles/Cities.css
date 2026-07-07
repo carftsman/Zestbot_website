@@ -1,62 +1,365 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+   MAIN HEADING
+=========================== */
+
 .main-heading {
   text-align: center;
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 700;
-  margin-bottom: 25px;
+  color: #fff;
+  margin-bottom: 45px;
+  letter-spacing: 1px;
   position: relative;
+  animation: fadeDown .8s ease;
 }
 
 .main-heading::after {
   content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
   width: 90px;
   height: 4px;
-  background: #ff7a00;
-  display: block;
-  margin: 10px auto 0;
   border-radius: 20px;
+  background: #FFC107;
 }
 
-.city-card {
-  transition: all 0.3s ease;
+/* ===========================
+   STATE TITLE
+=========================== */
+
+.state-title{
+    text-align:center;
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:25px;
+    position:relative;
 }
 
-.city-card:hover {
-  transform: translateY(-4px);
-  border: 2px solid #ff7a00;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+.state-title::before,
+.state-title::after{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+
+width:140px;
+
+height:2px;
+
+background:rgba(255,255,255,.25);
+
 }
 
-.location-icon {
-  font-size: 15px;
+.state-title::before{
+
+left:30%;
+
 }
 
-.show-more {
-  background: #ff7a00 !important;
-  color: white !important;
-  font-weight: 700;
+.state-title::after{
+
+right:30%;
+
 }
 
-.show-more:hover {
-  background: #ff6200 !important;
+/* ===========================
+   CARD
+=========================== */
+
+.city-card{
+
+background:#fff;
+
+border-radius:14px;
+
+height:54px;
+
+display:flex;
+
+align-items:center;
+
+padding:0 18px;
+
+gap:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+border:1px solid rgba(255,255,255,.2);
+
+transition:all .35s ease;
+
+cursor:pointer;
+
+position:relative;
+
+overflow:hidden;
+
 }
 
-/* Tablet */
-@media (max-width: 992px) {
-  .main-heading {
-    font-size: 30px;
-  }
+/* Premium hover */
+
+.city-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 35px rgba(0,0,0,.22);
+
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .main-heading {
-    font-size: 28px;
-  }
+.city-card::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+height:3px;
+
+width:0;
+
+background:#FFC107;
+
+transition:.35s;
+
 }
 
-/* Small Mobile */
-@media (max-width: 480px) {
-  .main-heading {
-    font-size: 24px;
-  }
+.city-card:hover::after{
+
+width:100%;
+
+}
+
+/* ===========================
+   LOCATION ICON
+=========================== */
+
+.location-icon{
+
+width:16px;
+
+height:16px;
+
+color:#FFC107;
+
+flex-shrink:0;
+
+transition:.35s;
+
+}
+
+.city-card:hover .location-icon{
+
+transform:scale(1.15);
+
+}
+
+/* ===========================
+   CITY TEXT
+=========================== */
+
+.city-card span{
+
+font-size:14px;
+
+font-weight:600;
+
+color:#1f2f63;
+
+white-space:nowrap;
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+}
+
+/* ===========================
+   SHOW MORE
+=========================== */
+
+.show-more{
+
+justify-content:center;
+
+background:#fff !important;
+
+color:#FFC107 !important;
+
+font-weight:700;
+
+border:2px solid #FFC107;
+
+}
+
+.show-more:hover{
+
+background:#FFC107 !important;
+
+color:#192A5F !important;
+
+}
+
+/* ===========================
+   ENTRANCE ANIMATION
+=========================== */
+
+.city-card{
+
+opacity:0;
+
+animation:cardFade .6s forwards;
+
+}
+
+.city-card:nth-child(1){animation-delay:.05s;}
+.city-card:nth-child(2){animation-delay:.1s;}
+.city-card:nth-child(3){animation-delay:.15s;}
+.city-card:nth-child(4){animation-delay:.2s;}
+.city-card:nth-child(5){animation-delay:.25s;}
+.city-card:nth-child(6){animation-delay:.3s;}
+.city-card:nth-child(7){animation-delay:.35s;}
+.city-card:nth-child(8){animation-delay:.4s;}
+.city-card:nth-child(9){animation-delay:.45s;}
+
+@keyframes cardFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(18px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+.state-title::before,
+.state-title::after{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.main-heading{
+
+font-size:30px;
+
+}
+
+.state-title{
+
+font-size:24px;
+
+}
+
+.city-card{
+
+height:50px;
+
+padding:0 14px;
+
+}
+
+.city-card span{
+
+font-size:13px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.main-heading{
+
+font-size:26px;
+
+}
+
+.state-title{
+
+font-size:22px;
+
+}
+
+.city-card{
+
+height:46px;
+
+}
+
+.city-card span{
+
+font-size:12px;
+
+}
+
+}
+
+.swiper {
+  padding: 10px 0 25px;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.swiper-slide .city-card {
+  width: 100%;
 }
