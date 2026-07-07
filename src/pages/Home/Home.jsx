@@ -1,10 +1,9 @@
-import Hero from "../../components/home/Hero";
-
+import Cities from "../../components/home/Cities";
 const Home = () => {
   return (
-    <>
-      <Hero />
-    </>
+    <div>
+    <Cities/>
+    </div>
   );
 };
 
