@@ -4,7 +4,7 @@
   color: #ffffff;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .footer-container {
@@ -252,7 +252,7 @@
   .footer{
     border-top-left-radius:25px;
     border-top-right-radius:25px;
-    margin-top:40px;
+    /* margin-top:40px; */
   }
 
   .footer-container{
