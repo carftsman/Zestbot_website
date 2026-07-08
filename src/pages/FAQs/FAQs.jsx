@@ -1,8 +1,8 @@
 const FAQs = () => {
   return (
-    <div>
-      <h1>FAQs</h1>
-    </div>
+    <>
+      <h1>Hi</h1>
+    </>
   );
 };
 
