@@ -18,7 +18,7 @@ const Navbar = () => {
         .navbar{
           width:100%;
           height:70px;
-          background:#1F2E63;
+          background:#192a5f;
           display:flex;
           align-items:center;
           position:sticky;
