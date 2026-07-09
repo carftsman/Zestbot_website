@@ -81,11 +81,11 @@ export default function Cities() {
 
 const styles = {
   container: {
-    background: "#192A5F",
-    color: "#fff",
-    padding: "20px 5%",
-    minHeight: "100vh",
-  },
+    color:"#192A5F",
+  background: "#fff",
+  padding: "20px 5%",
+  minHeight: "100vh",
+},
 
   section: {
     marginBottom: "28px",

@@ -139,7 +139,7 @@ const Footer = () => {
 
             <h3>Other Pages</h3>
 
-            <NavLink to="/terms">
+            <NavLink to="/terms-and-conditions">
               Terms
             </NavLink>
 
