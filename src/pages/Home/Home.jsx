@@ -5,7 +5,7 @@ import DeliveryShowcase from "../../components/home/DeliveryShowcase";
 import FAQs from "../../components/FAQs/FAQs";
 import Cities from "../../components/home/Cities";
 import Partners from "../../components/home/Partners";
-
+import WhyChoose from "../../components/home/WhyChoose";
 const Home = () => {
   return (
     <>
@@ -13,9 +13,16 @@ const Home = () => {
       <Cards />
       <DeliveryShowcase />
       {/* <ZestBot /> */}
+      <section id="WhyChoose">
+    <WhyChoose />
+  </section>
          <Partners/>
-      <Cities />
       
+
+      
+    
+
+  <Cities />
 
   <section id="faqs">
     <FAQs />
