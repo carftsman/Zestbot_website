@@ -5,58 +5,64 @@
   margin-bottom: 25px;
   position: relative;
 }
-
+ 
 .main-heading::after {
   content: "";
   width: 90px;
   height: 4px;
-  background: #ff7a00;
+  background: #ffd400;
   display: block;
   margin: 10px auto 0;
   border-radius: 20px;
 }
-
+ 
 .city-card {
   transition: all 0.3s ease;
 }
-
+ 
 .city-card:hover {
   transform: translateY(-4px);
-  border: 2px solid #ff7a00;
+  border: 2px solid #ffd400;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
-
+ 
 .location-icon {
   font-size: 15px;
 }
-
+ 
 .show-more {
-  background: #ff7a00 !important;
+  background: #ffd400 !important;
   color: white !important;
   font-weight: 700;
 }
-
+ 
 .show-more:hover {
-  background: #ff6200 !important;
+  background: #ffd400 !important;
 }
-
+ 
 /* Tablet */
 @media (max-width: 992px) {
   .main-heading {
     font-size: 30px;
   }
 }
-
+ 
 /* Mobile */
 @media (max-width: 768px) {
   .main-heading {
     font-size: 28px;
   }
 }
-
+ 
 /* Small Mobile */
 @media (max-width: 480px) {
   .main-heading {
     font-size: 24px;
   }
+}
+ .location-icon{
+  color:#192A5F;
+  width:14px;
+  height:14px;
+  flex-shrink:0;
 }

@@ -14,9 +14,12 @@ import "./Footer.css";
 import logo from "../../../assets/images/logo.png";
 import googlePlay from "../../../assets/images/google-play.png";
 import appStore from "../../../assets/images/app-store.png";
-
+import { useLocation } from "react-router-dom";
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   return (
+    <div className={isHome ? "footer-wrapper home-footer" : "footer-wrapper"}>
     <footer id="contact" className="footer">
       <div className="footer-container">
         <div className="footer-top">
@@ -139,7 +142,7 @@ const Footer = () => {
 
             <h3>Other Pages</h3>
 
-            <NavLink to="/terms-and-conditions">
+            <NavLink to="/terms">
               Terms
             </NavLink>
 
@@ -178,6 +181,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 
