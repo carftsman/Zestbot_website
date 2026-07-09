@@ -1,0 +1,457 @@
+/* =====================================================
+   GOOGLE FONTS
+===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   DOWNLOAD SECTION
+===================================================== */
+
+.download-app{
+    width:50%;
+    /* padding:10px 20px; */
+    background:#fff;
+    overflow:hidden;
+    
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+==================================================== */
+
+.download-container{
+    position:relative;
+    max-width:1380px;
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    gap:40px;
+    padding:10px 20px;
+    border:1px solid rgba(59, 103, 223, 0.2);
+    border-radius:40px;
+    overflow:hidden;
+    background:linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f5f9ff 40%,
+        #e3eeff 80%,
+        #f8faff 100%
+    );
+    box-shadow:
+        0 15px 45px rgba(59, 103, 223, 0.08);
+}
+
+
+/* =====================================================
+   BACKGROUND Z
+===================================================== */
+
+.bg-z{
+    position:absolute;
+    top:0;
+    left:-40px;
+    font-size:30px;
+    font-weight:900;
+    font-family:"Poppins",sans-serif;
+    color:rgba(80,120,255,.05);
+    line-height:1;
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   CURVES
+===================================================== */
+
+.curve{
+    position:absolute;
+    border-radius:50%;
+    border:2px solid rgba(77,118,255,.12);
+    pointer-events:none;
+}
+
+.curve-1{
+    width:800px;
+    height:800px;
+    right:-500px;
+    bottom:-500px;
+}
+
+.curve-2{
+    width:600px;
+    height:600px;
+    right:-400px;
+    bottom:-400px;
+}
+
+.curve-3{
+    width:400px;
+    height:400px;
+    right:-300px;
+    bottom:-300px;
+}
+
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.download-left{
+    flex:1;
+    max-width:560px;
+    position:relative;
+    z-index:1;
+    margin-left: 5%;
+}
+
+.download-left h2{
+    font-family:"Poppins",sans-serif;
+    font-size:52px;
+    font-weight:500;
+    line-height:1.1;
+    letter-spacing:-1.5px;
+    color:#171717;
+    margin-bottom:16px;
+}
+
+.download-left h2 span{
+    /* background: linear-gradient(135deg, #3b67df 0%, #1742be 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    display: inline-block;
+    color: #192A5F;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.download-left p{
+    font-family:"Nunito",sans-serif;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.6;
+    color:#5c6b86;
+    margin-bottom:24px;
+}
+
+
+/* =====================================================
+   STORE BUTTONS
+===================================================== */
+
+.store-buttons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.store-buttons a{
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.store-buttons a:hover{
+    transform: translateY(-4px) scale(1.02);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+}
+
+.store-buttons img{
+    width:170px;
+    height:auto;
+    border-radius: 10px;
+    margin: 10px;   
+}
+
+/* =====================================================
+   RIGHT SECTION
+===================================================== */
+
+.download-right{
+    flex:1;
+    position:relative;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    min-height:400px;
+    z-index:5;
+    margin-right: 10%;
+}
+
+
+/* =====================================================
+   BOT IMAGE
+===================================================== */
+
+.bot-image{
+    width:60px;
+    max-width:60%;
+    /* height:auto; */
+    display:block;
+    object-fit:contain;
+    pointer-events:none;
+    user-select:none;
+    z-index:5;
+    will-change:transform;
+}
+
+
+/* =====================================================
+   LAYER ORDER
+===================================================== */
+
+.download-right::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.bot-image{
+    position:relative;
+    z-index:4;
+}
+
+
+/* =====================================================
+   PERFORMANCE
+===================================================== */
+
+.download-container,
+.download-right,
+.bot-image{
+    backface-visibility:hidden;
+    -webkit-font-smoothing:antialiased;
+}
+
+.bot-image{
+    backface-visibility:hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.download-container:hover .bot-image{
+    transform: translateY(-6px);
+}
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width:1400px){
+
+    .download-container{
+        padding:25px 45px;
+        gap:30px;
+    }
+
+    .download-left h2{
+        font-size:46px;
+    }
+
+    .download-left p{
+        font-size:17px;
+    }
+
+    .store-buttons img{
+        width:170px;
+    }
+
+    .bot-image{
+        width:400px;
+    }
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width:1200px){
+
+    .download-container{
+        padding:20px 40px;
+        gap:25px;
+    }
+
+    .download-left h2{
+        font-size:40px;
+    }
+
+    .download-left p{
+        font-size:16px;
+    }
+
+    .store-buttons img{
+        width:155px;
+    }
+
+    .download-right{
+        min-height:320px;
+    }
+
+    .bot-image{
+        width:340px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+    .download-container{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 30px;
+        gap:30px;
+    }
+
+    .download-left{
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .download-left h2{
+        font-size:36px;
+    }
+
+    .download-left p{
+        font-size:16px;
+    }
+
+    .store-buttons{
+        justify-content:center;
+    }
+
+    .download-right{
+        justify-content:center;
+        min-height:auto;
+    }
+
+    .bot-image{
+        width:320px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+    .download-app{
+        padding:40px 15px;
+    }
+
+    .download-container{
+        padding:30px 20px;
+        border-radius:28px;
+    }
+
+    .download-left h2{
+        font-size:28px;
+        letter-spacing:-1px;
+    }
+
+    .download-left p{
+        font-size:15px;
+    }
+
+    .store-buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .store-buttons img{
+        width:165px;
+    }
+
+    .download-right{
+        justify-content:center;
+    }
+
+    .bot-image{
+        width:260px;
+    }
+
+    .bg-z{
+        font-size:220px;
+        left:-50px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width:480px){
+
+    .download-container{
+        padding:25px 15px;
+    }
+
+    .download-left h2{
+        font-size:24px;
+    }
+
+    .download-left p{
+        font-size:14px;
+    }
+
+    .store-buttons img{
+        width:145px;
+    }
+
+    .bot-image{
+        width:200px;
+    }
+}
+
+
+/* =====================================================
+   FINAL POLISH
+===================================================== */
+
+.curve{
+    opacity:.75;
+}

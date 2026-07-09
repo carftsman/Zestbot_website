@@ -2,136 +2,170 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import logo from "../../../assets/images/logo.png"
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const navigate = useNavigate();
-
+ 
   return (
     <>
       <style>{`
-        *{
-          margin:0;
-          padding:0;
-          box-sizing:border-box;
-        }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-        .navbar{
-          width:100%;
-          height:70px;
-          background:#192a5f;
-          display:flex;
-          align-items:center;
-          position:sticky;
-          top:0;
-          z-index:1000;
-        }
+.navbar{
+  width:100%;
+  height:80px;
+  background:#192A5F;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+}
 
-        .navbar-container{
-          width:90%;
-          max-width:1400px;
-          margin:auto;
-          display:flex;
-          justify-content:space-between;
-          align-items:center;
-        }
+.navbar-container{
+  width:90%;
+  max-width:1400px;
+  margin:0 auto;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
 
-        .logo{
-          cursor:pointer;
-        }
+/* Logo */
 
-        .logo img{
-          width:147px;
-          display:block;
-        }
+.logo{
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  z-index:10;
+}
 
-        .nav-links{
-          display:flex;
-          align-items:center;
-          gap:50px;
-        }
+.logo img{
+  width:170px;
+  display:block;
+}
 
-        .nav-links a{
-          text-decoration:none;
-          color:#fff;
-          font-size:20px;
-          font-weight:500;
-          transition:.3s ease;
-        }
+/* Navigation */
 
-        .nav-links a:hover{
-          color:#FFD42A;
-        }
+.nav-links{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:60px;
+}
 
-        .nav-links a.active{
-          color:#FFD42A;
-        }
+.nav-links a{
+  text-decoration:none;
+  color:#ffffff;
+  font-size:22px;
+  font-weight:500;
+  transition:.3s ease;
+}
 
-        /* Laptop */
+.nav-links a:hover{
+  color:#FFD42A;
+}
 
-        @media(max-width:1200px){
+.nav-links a.active{
+  color:#FFD42A;
+}
 
-          .navbar-container{
-            width:95%;
-          }
+/* ===========================
+   Laptop
+=========================== */
 
-          .nav-links{
-            gap:35px;
-          }
+@media(max-width:1200px){
 
-          .nav-links a{
-            font-size:18px;
-          }
+  .navbar-container{
+    width:94%;
+  }
 
-          .logo img{
-            width:130px;
-          }
+  .logo img{
+    width:150px;
+  }
 
-        }
+  .nav-links{
+    gap:45px;
+  }
 
-        /* Tablet */
+  .nav-links a{
+    font-size:20px;
+  }
 
-        @media(max-width:992px){
+}
 
-          .navbar{
-            height:80px;
-          }
+/* ===========================
+   Tablet
+=========================== */
 
-          .nav-links{
-            gap:25px;
-          }
+@media(max-width:992px){
 
-          .nav-links a{
-            font-size:16px;
-          }
+  .navbar{
+    height:75px;
+  }
 
-          .logo img{
-            width:120px;
-          }
+  .logo img{
+    width:140px;
+  }
 
-        }
+  .nav-links{
+    gap:30px;
+  }
 
-        /* Mobile */
+  .nav-links a{
+    font-size:18px;
+  }
 
-        @media(max-width:768px){
+}
 
-          .navbar{
-            height:75px;
-          }
+/* ===========================
+   Mobile
+=========================== */
 
-          .navbar-container{
-            width:92%;
-          }
+@media(max-width:768px){
 
-          .nav-links{
-            display:none;
-          }
+  .navbar{
+    height:70px;
+  }
 
-        }
-      `}</style>
+  .navbar-container{
+    width:92%;
+    justify-content:space-between;
+  }
+
+  .logo img{
+    width:130px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+  .logo img{
+    width:115px;
+  }
+
+}
+`}</style>
 
       <header className="navbar">
         <div className="navbar-container">
-
+ 
           {/* Logo */}
           <div
             className="logo"
@@ -139,27 +173,26 @@ const Navbar = () => {
           >
             <img src={logo} alt="ZestBot Logo" />
           </div>
-
+ 
           {/* Navigation */}
-
+ 
           <nav className="nav-links">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/services">Services</NavLink>
-            <NavLink to="/about">Why Zestbot</NavLink>
-            <NavLink to="/faqs">FAQs</NavLink>
-          </nav>
+            <HashLink smooth to="/#contact">
+              ContactUs
+            </HashLink>
 
+          </nav>
+ 
           {/* Contact Button */}
 
-          <Button
-            text="Contact Us"
-            onClick={() => navigate("/contact")}
-          />
+          
 
         </div>
       </header>
     </>
   );
 };
-
+ 
 export default Navbar;

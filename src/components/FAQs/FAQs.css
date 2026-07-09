@@ -5,7 +5,7 @@
 .faq-section {
   width: 100%;
   background: linear-gradient(180deg, #192A5F 0%, #213A7B 100%);
-  padding: 100px 20px;
+  padding: 40px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -94,6 +94,43 @@
   border-color:#FFD54A;
 
   background:rgba(255,255,255,.11);
+
+}
+
+/* ================= SEE MORE ================= */
+
+.faq-see-more{
+  display:flex;
+  justify-content:center;
+  margin-top:30px;
+}
+
+.see-more-btn{
+  /* background:#FFD54A; */
+  color:#192A5F;
+  border:none;
+  padding:7px 20px;
+  border-radius:30px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.see-more-btn:hover{
+  background:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(255,213,74,.35);
+}
+
+@media(max-width:768px){
+
+.see-more-btn{
+  width:100%;
+  max-width:220px;
+  font-size:15px;
+  padding:12px 20px;
+}
 
 }
 

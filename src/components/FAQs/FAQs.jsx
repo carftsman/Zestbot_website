@@ -8,34 +8,49 @@ import "./FAQs.css";
 
 const faqData = [
   {
-    question: "What is ZestBot?",
+    question: "What can I order using the ZestBot Customer App?",
     answer:
-      "ZestBot is a local commerce platform that connects customers, vendors, and delivery partners through one seamless ecosystem for ordering groceries, food, medicines, and daily essentials.",
-  },
-  {
-    question: "How do I place an order?",
-    answer:
-      "Download the ZestBot Customer App, choose a nearby store, add products to your cart, complete the payment securely, and track your order in real time until it reaches your doorstep.",
-  },
-  {
-    question: "How can I become a Vendor?",
-    answer:
-      "Register through the ZestBot Vendor App, submit your business details and required documents, and once verified, start receiving online orders from customers.",
-  },
-  {
-    question: "How can I become a Delivery Partner?",
-    answer:
-      "Download the Delivery Partner App, complete the registration process, upload the required documents, and start earning by delivering orders after verification.",
-  },
-  {
-    question: "Which payment methods are supported?",
-    answer:
-      "We support secure online payments including UPI, Debit Cards, Credit Cards, Net Banking and other supported payment methods.",
+      "You can order groceries, food, fresh fruits and vegetables, dairy products, and other daily essentials from nearby local stores.",
   },
   {
     question: "Can I track my order?",
     answer:
-      "Yes. You can track your order live from the moment it is accepted until it is delivered to your location.",
+      "Yes. You can track your order in real time from the moment it is confirmed until it reaches your doorstep.",
+  },
+  {
+    question: "Are there any platform charges?",
+    answer:
+      "No. ZestBot does not charge any platform fees. You only pay for the items you order.",
+  },
+  {
+    question: "Who can become a ZestBot vendor?",
+    answer:
+      "Local businesses such as grocery stores, supermarkets, restaurants, pharmacies, bakeries, and other retail stores can join the ZestBot platform.",
+  },
+  {
+    question: "How do I receive customer orders?",
+    answer:
+      "Once your store is onboarded, you'll receive instant notifications for new orders through the Vendor App, where you can accept and manage them.",
+  },
+  {
+    question: "Can I manage my products and prices?",
+    answer:
+      "Yes. You can easily add, update, or remove products, modify prices, and manage inventory directly from the app.",
+  },
+  {
+    question: "How can I become a ZestBot delivery partner?",
+    answer:
+      "Download the Delivery Partner App, complete the registration process, submit the required documents, and wait for account verification.",
+  },
+  {
+    question: "Can I choose my own working hours?",
+    answer:
+      "Yes. ZestBot offers flexible working hours, allowing you to work based on your availability.",
+  },
+  {
+    question: "How do I track my earnings?",
+    answer:
+      "The app includes an earnings dashboard where you can view completed deliveries, earnings, and payment history.",
   },
 ];
 
@@ -44,7 +59,7 @@ const FAQs = () => {
   const navigate = useNavigate();
 
   const [activeIndex, setActiveIndex] = useState(null);
-
+  const [showAll, setShowAll] = useState(false);
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -76,13 +91,13 @@ const FAQs = () => {
 
       <div className="faq-container">
 
-        {faqData.map((faq, index) => (
+        {(showAll ? faqData : faqData.slice(0, 3)).map((faq, index) => (
 
           <div
             key={index}
             className={`faq-card ${activeIndex === index
-                ? "active"
-                : ""
+              ? "active"
+              : ""
               }`}
           >
 
@@ -111,8 +126,8 @@ const FAQs = () => {
 
             <div
               className={`faq-answer ${activeIndex === index
-                  ? "show"
-                  : ""
+                ? "show"
+                : ""
                 }`}
             >
 
@@ -125,6 +140,16 @@ const FAQs = () => {
           </div>
 
         ))}
+
+      </div>
+      <div className="faq-see-more">
+
+        <button
+          className="see-more-btn"
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? "Show Less" : "See More FAQs"}
+        </button>
 
       </div>
 
