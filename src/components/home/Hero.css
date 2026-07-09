@@ -214,7 +214,7 @@
  
 
 .yellow-gradient-text {
-  background: linear-gradient(135deg, #FFD42A 0%, #fff066 60%, #ffa600 100%);
+  background: linear-gradient(135deg, #192a5f 0%, #192a5f 60%, #192a5f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

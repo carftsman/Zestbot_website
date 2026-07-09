@@ -45,7 +45,7 @@
 
 .whyChoose-header {
   text-align: center;
-  max-width: 780px;
+  max-width: 790px;
   margin: 0 auto 70px;
 }
 
@@ -55,27 +55,31 @@
   background: rgba(255, 212, 0, 0.15);
   color: #192a5f;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 18px;
 }
 
 .whyChoose-title {
-  font-size: 37px;
+  font-size: 30px;
   color: #192a5f;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
-  margin-bottom: 18px;
+  margin-bottom: 0px;
 }
 
 .whyChoose-title span {
   color: #ffd400;
+
 }
 
 .whyChoose-description {
-  font-size: 17px;
+  font-size: 14px;
   line-height: 1.8;
-  color: #6c7280;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-weight: 500;
 }
 
 /* ==========================
@@ -249,8 +253,8 @@
   border-radius: 50%;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: center;
+  background-size: 116%;   /* Change from cover to 72% */
   box-shadow: 0 10px 24px rgba(25, 42, 95, 0.14);
   transition: 0.3s;
 }

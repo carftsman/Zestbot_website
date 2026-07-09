@@ -1,3 +1,4 @@
+
 .footer {
   width: 100%;
   background: #0d0d0d;
@@ -7,6 +8,15 @@
   /* margin-top: 20px; */
 }
 
+.footer-wrapper{
+    background:#ffffff;
+    padding-top:0;
+}
+
+.home-footer{
+    background:#192A5F;
+    padding-top:40px; /* Adjust this value as needed */
+}
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;

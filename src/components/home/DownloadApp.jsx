@@ -43,7 +43,7 @@ const phoneVariant = {
 
 export default function DownloadApp() {
   return (
-    <section className="\">
+    <section className="download">
       <div className="download-container">
         {/* Background Elements */}
         <div className="bg-z">Z</div>

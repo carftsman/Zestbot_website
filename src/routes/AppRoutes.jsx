@@ -6,8 +6,6 @@ import Services from "../pages/Services/Services";
 import CustomerApp from "../pages/Services/CustomerApp/CustomerApp";
 import VendorApp from "../pages/Services/VendorApp/VendorApp";
 import DeliveryPartner from "../pages/Services/DeliveryPartner/DeliveryPartner";
-import About from "../pages/About/About";
-import Contact from "../pages/Contact/Contact";
 
 const AppRoutes = () => {
   return (
@@ -21,9 +19,8 @@ const AppRoutes = () => {
         <Route path="/services/customer" element={<CustomerApp />} />
         <Route path="/services/vendor" element={<VendorApp />} />
         <Route path="/services/delivery" element={<DeliveryPartner />} />
-
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        
+        
 
       </Route>
     </Routes>

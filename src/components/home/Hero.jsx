@@ -91,7 +91,7 @@ const Hero = () => {
 
           </h1>
 
-          Description
+          
           <motion.p
             className="hero-description"
             variants={scrollRevealVariants}
