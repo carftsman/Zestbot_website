@@ -6,29 +6,34 @@ import {
   FaMotorcycle,
   FaArrowRight,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
     title: "Customer App",
+    path: "/services/customer",
     icon: <FaUser />,
     description:
-      "The ZestBot Customer App lets users order groceries, food, medicines, and daily essentials from nearby local stores with secure payments, live order tracking, and quick doorstep delivery.",
+      "Shop groceries, food, medicines and daily essentials from trusted local stores with secure payments and real-time tracking.",
   },
   {
     title: "Vendor App",
+    path: "/services/vendor",
     icon: <FaStore />,
     description:
-      "The ZestBot Vendor App helps local businesses manage products, receive and process online orders, track sales, and expand their reach by connecting with more customers.",
+      "Manage products, receive online orders and grow your business with powerful vendor management tools.",
   },
   {
     title: "Delivery Partner App",
+    path: "/services/delivery",
     icon: <FaMotorcycle />,
     description:
-      "The ZestBot Delivery Partner App enables riders to accept delivery requests, navigate efficiently, track earnings, manage deliveries, and enjoy flexible earning opportunities.",
+      "Accept deliveries, manage earnings and work with complete flexibility using the ZestBot Delivery Partner App.",
   },
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <section className="services-section">
 
@@ -70,7 +75,7 @@ const Services = () => {
                 {service.description}
               </p>
 
-              <button>
+              <button onClick={() => navigate(service.path)}>
                 Learn More
                 <FaArrowRight />
               </button>

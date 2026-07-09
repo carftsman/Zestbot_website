@@ -1,0 +1,977 @@
+/* ======================================================
+   GOOGLE FONT
+====================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/* ======================================================
+   RESET
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f9fd;
+    color:#1f2d3d;
+    overflow-x:hidden;
+}
+
+/* ======================================================
+   MAIN SECTION
+====================================================== */
+
+.partners-section{
+    position:relative;
+    overflow:hidden;
+    background:#f7f9fd;
+    padding:45px 0 50px;
+}
+
+.container{
+    width:90%;
+    max-width:1240px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+/* ======================================================
+   BACKGROUND CIRCLES
+====================================================== */
+
+.bg-circle{
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+    filter:blur(1px);
+}
+
+.bg1{
+    width:320px;
+    height:320px;
+    top:-60px;
+    left:-140px;
+
+    background:
+    radial-gradient(circle,
+    rgba(59,130,246,.20),
+    transparent 70%);
+}
+
+.bg2{
+    width:280px;
+    height:280px;
+
+    bottom:-80px;
+    right:-100px;
+
+    background:
+    radial-gradient(circle,
+    rgba(147,197,253,.28),
+    transparent 70%);
+}
+
+.bg3{
+    width:170px;
+    height:170px;
+
+    right:18%;
+    top:40px;
+
+    background:
+    radial-gradient(circle,
+    rgba(219,234,254,.8),
+    transparent 72%);
+}
+
+/* ======================================================
+   DECORATION DOTS
+====================================================== */
+
+.grid-dots{
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    background-image:
+    radial-gradient(#9dbdf7 1.4px,transparent 1.4px);
+
+    background-size:11px 11px;
+
+    opacity:.30;
+}
+
+.dots-left{
+    left:40px;
+    bottom:30px;
+}
+
+.dots-right{
+    right:40px;
+    top:60px;
+}
+
+/* ======================================================
+   FLOATING ICONS
+====================================================== */
+
+.floating-icon{
+
+    position:absolute;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+
+    color:#2d73ff;
+
+    font-size:18px;
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,.08);
+
+    animation:float 5s ease-in-out infinite;
+
+    z-index:5;
+}
+
+.icon1{
+    left:130px;
+    top:100px;
+}
+
+.icon2{
+    right:190px;
+    top:110px;
+}
+
+.icon3{
+    right:70px;
+    top:40px;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.partners-header{
+
+    text-align:center;
+
+    margin-bottom:28px;
+}
+
+.section-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#edf4ff;
+
+    color:#2d73ff;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    margin-bottom:16px;
+}
+
+.badge-dot{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#2d73ff;
+}
+
+.partners-header h2{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#17346e;
+
+    line-height:1.1;
+
+    margin-bottom:12px;
+}
+
+.partners-header p{
+
+    width:620px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    color:#667085;
+
+    font-size:15px;
+
+    line-height:25px;
+}
+
+/* ======================================================
+   MAIN PARTNER CARD
+====================================================== */
+
+.partner-card{
+    display:flex;
+    align-items:stretch;
+    background:#ffffff;
+    border-radius:24px;
+    overflow:hidden;
+    margin-top:30px;
+    box-shadow:
+        0 18px 45px rgba(16,24,40,.08);
+    transition:.35s ease;
+}
+
+.partner-card:hover{
+    transform:translateY(-4px);
+    box-shadow:
+        0 28px 60px rgba(16,24,40,.12);
+}
+
+/* ======================================================
+   LEFT PANEL
+====================================================== */
+
+.partner-left{
+
+    width:38%;
+
+    min-height:360px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    padding:40px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #184c97 0%,
+        #0f3b7d 50%,
+        #082d60 100%
+    );
+
+}
+
+/* ======================================================
+   ROTATING RINGS
+====================================================== */
+
+.left-pattern{
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    animation:rotatePattern 20s linear infinite;
+
+}
+
+.left-pattern::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:22px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.left-pattern::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:45px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.10);
+
+}
+
+@keyframes rotatePattern{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* ======================================================
+   LOGO CARD
+====================================================== */
+
+.logo-card{
+
+    position:relative;
+
+    z-index:3;
+
+    width:240px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+}
+
+.partner-card:hover .logo-card{
+
+    transform:translateY(-6px);
+
+}
+
+.logo-card img{
+
+    width:160px;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+/* ======================================================
+   FLOATING MINI ICONS
+====================================================== */
+
+.mini-circle{
+
+    position:absolute;
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:14px;
+
+    z-index:5;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.orange{
+
+    top:35px;
+
+    left:50px;
+
+    background:#ff9f43;
+
+}
+
+.cyan{
+
+    bottom:35px;
+
+    left:70px;
+
+    background:#14cba8;
+
+}
+
+/* ======================================================
+   RIGHT PANEL
+====================================================== */
+
+.partner-right{
+
+    width:62%;
+
+    padding:38px 42px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+/* ======================================================
+   PARTNER BADGE
+====================================================== */
+
+.partner-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    width:max-content;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#eef5ff;
+
+    color:#2d73ff;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.partner-tag svg{
+
+    font-size:13px;
+
+}
+
+/* ======================================================
+   TITLE
+====================================================== */
+
+.partner-right h3{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    line-height:1.25;
+
+    color:#17346e;
+
+    margin-bottom:14px;
+
+}
+
+/* ======================================================
+   DESCRIPTION
+====================================================== */
+
+.partner-right p{
+
+    font-size:15px;
+
+    line-height:25px;
+
+    color:#667085;
+
+    margin-bottom:24px;
+
+}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.partner-buttons{
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+}
+
+.visit-btn,
+.contact-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    height:46px;
+
+    padding:0 22px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s ease;
+
+}
+
+.visit-btn{
+
+    border:none;
+
+    color:#fff;
+
+    background:#2d73ff;
+
+    box-shadow:
+        0 10px 22px rgba(45,115,255,.25);
+
+}
+
+.visit-btn:hover{
+
+    background:#165fe8;
+
+    transform:translateY(-2px);
+
+}
+
+.contact-btn{
+
+    background:#fff;
+
+    border:1px solid #d8e3f5;
+
+    color:#35507d;
+
+}
+
+.contact-btn:hover{
+
+    border-color:#2d73ff;
+
+    color:#2d73ff;
+
+    background:#f6f9ff;
+
+}
+
+/* ======================================================
+   WHY PARTNER SECTION
+====================================================== */
+
+.feature-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    margin:38px 0 22px;
+}
+
+.feature-title span{
+    width:70px;
+    height:2px;
+    border-radius:10px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #2d73ff,
+        transparent
+    );
+}
+
+.feature-title h4{
+    font-size:24px;
+    font-weight:800;
+    color:#17346e;
+    position:relative;
+}
+
+.feature-title h4::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-10px;
+    width:60px;
+    height:3px;
+    border-radius:20px;
+    background:#2d73ff;
+}
+
+/* ======================================================
+   FEATURES GRID
+====================================================== */
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+/* ======================================================
+   FEATURE CARD
+====================================================== */
+
+.feature-card{
+
+    position:relative;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    border:1px solid #edf2fb;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.05);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(15,23,42,.10);
+
+}
+
+/* Top Border Animation */
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2d73ff,
+            #6ba7ff
+        );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+}
+
+.feature-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* Decorative Circle */
+
+.feature-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    top:-55px;
+
+    right:-45px;
+
+    background:rgba(45,115,255,.05);
+
+    transition:.4s;
+
+}
+
+.feature-card:hover::after{
+
+    transform:scale(1.2);
+
+}
+
+/* ======================================================
+   ICON
+====================================================== */
+
+.feature-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    background:#f4f8ff;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.feature-card:hover .feature-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    background:#edf4ff;
+
+}
+
+/* ======================================================
+   FEATURE TITLE
+====================================================== */
+
+.feature-card h5{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#17346e;
+
+    line-height:1.4;
+
+    margin-bottom:10px;
+
+}
+
+/* ======================================================
+   FEATURE DESCRIPTION
+====================================================== */
+
+.feature-card p{
+
+    font-size:14px;
+
+    line-height:23px;
+
+    color:#667085;
+
+}
+
+/* ======================================================
+   COLOR BAR
+====================================================== */
+
+.feature-line{
+
+    width:55px;
+
+    height:4px;
+
+    border-radius:50px;
+
+    margin-top:18px;
+
+    transition:.35s;
+
+}
+
+.feature-card:hover .feature-line{
+
+    width:95px;
+
+}
+
+/* ======================================================
+   ICON ANIMATION
+====================================================== */
+
+.visit-btn svg,
+.contact-btn svg{
+
+    transition:.3s;
+
+}
+
+.visit-btn:hover svg{
+
+    transform:translateX(4px);
+
+}
+
+.contact-btn:hover svg{
+
+    transform:scale(1.15);
+
+}
+
+/* ======================================================
+   SMOOTH TRANSITIONS
+====================================================== */
+
+.partner-card,
+.feature-card,
+.feature-icon,
+.logo-card,
+.visit-btn,
+.contact-btn{
+
+    transition:all .35s ease;
+
+}
+
+/* ======================================================
+   IMAGE
+====================================================== */
+
+.logo-card img{
+
+    max-width:100%;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+/* ======================================================
+   Z-INDEX
+====================================================== */
+
+.feature-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.partner-logo{
+    width:170px;
+    max-width:100%;
+    object-fit:contain;
+    display:block;
+}
+
+.logo-card{
+    width:280px;
+    height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.partner-buttons a{
+    text-decoration:none;
+}
+
+.contact-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}

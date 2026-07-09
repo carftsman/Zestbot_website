@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import {
   FaInstagram,
   FaYoutube,
@@ -16,7 +17,7 @@ import appStore from "../../../assets/images/app-store.png";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="contact" className="footer">
       <div className="footer-container">
         <div className="footer-top">
 
@@ -118,13 +119,13 @@ const Footer = () => {
               Services
             </NavLink>
 
-            <NavLink to="/about">
+            <HashLink smooth to="/#why-zestbot">
               Why ZestBot
-            </NavLink>
+            </HashLink>
 
-            <NavLink to="/faqs">
+            <HashLink smooth to="/#faqs">
               FAQs
-            </NavLink>
+            </HashLink>
 
             <NavLink to="/blog">
               Blog
