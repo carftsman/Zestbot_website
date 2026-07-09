@@ -1,198 +1,259 @@
-import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import Button from "../Button/Button";
-import logo from "../../../assets/images/logo.png"
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+import {
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
+
+import logo from "../../../assets/images/logo.png";
+import "../../../styles/Navbar.css";
+
+export default function Navbar() {
+
   const navigate = useNavigate();
- 
+
+  /* ===========================
+      STATES
+  =========================== */
+
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const location = useLocation();
+
+const isHome = location.pathname === "/";
+  /* ===========================
+      SCROLL EFFECT
+  =========================== */
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      if (window.scrollY > 40) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () =>
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+
+  }, []);
+
+  
+
   return (
-    <>
-      <style>{`
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
 
-.navbar{
-  width:100%;
-  height:80px;
-  background:#192A5F;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  display:flex;
-  align-items:center;
-}
+    <header
+  className={`navbar ${scrolled ? "scrolled" : ""} ${!isHome ? "navbar-light" : ""}`}
+>
 
-.navbar-container{
-  width:90%;
-  max-width:1400px;
-  margin:0 auto;
-  position:relative;
-  display:flex;
-  align-items:center;
-}
+      <div className="navbar-container">
 
-/* Logo */
+        {/* ======================
+              LOGO
+        ====================== */}
 
-.logo{
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  z-index:10;
-}
+        <motion.div
 
-.logo img{
-  width:170px;
-  display:block;
-}
+          className="logo"
 
-/* Navigation */
+          onClick={() => navigate("/")}
 
-.nav-links{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  align-items:center;
-  gap:60px;
-}
+          whileHover={{
+            scale: 1.04,
+          }}
 
-.nav-links a{
-  text-decoration:none;
-  color:#ffffff;
-  font-size:22px;
-  font-weight:500;
-  transition:.3s ease;
-}
+          whileTap={{
+            scale: .96,
+          }}
 
-.nav-links a:hover{
-  color:#FFD42A;
-}
+        >
 
-.nav-links a.active{
-  color:#FFD42A;
-}
+          {/* Logo Always Visible */}
 
-/* ===========================
-   Laptop
-=========================== */
+          <motion.img
 
-@media(max-width:1200px){
+            src={logo}
 
-  .navbar-container{
-    width:94%;
-  }
+            alt="ZestBot"
 
-  .logo img{
-    width:150px;
-  }
+            initial={{
+              opacity: 0,
+              y: -15,
+            }}
 
-  .nav-links{
-    gap:45px;
-  }
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
 
-  .nav-links a{
-    font-size:20px;
-  }
+            transition={{
+              duration: .5,
+            }}
 
-}
+          />
 
-/* ===========================
-   Tablet
-=========================== */
+        </motion.div>
 
-@media(max-width:992px){
+        {/* ======================
+              DESKTOP NAV
+        ====================== */}
 
-  .navbar{
-    height:75px;
-  }
+        <nav className="nav-links">
 
-  .logo img{
-    width:140px;
-  }
-
-  .nav-links{
-    gap:30px;
-  }
-
-  .nav-links a{
-    font-size:18px;
-  }
-
-}
-
-/* ===========================
-   Mobile
-=========================== */
-
-@media(max-width:768px){
-
-  .navbar{
-    height:70px;
-  }
-
-  .navbar-container{
-    width:92%;
-    justify-content:space-between;
-  }
-
-  .logo img{
-    width:130px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-}
-
-/* ===========================
-   Small Mobile
-=========================== */
-
-@media(max-width:480px){
-
-  .logo img{
-    width:115px;
-  }
-
-}
-`}</style>
-
-      <header className="navbar">
-        <div className="navbar-container">
- 
-          {/* Logo */}
-          <div
-            className="logo"
-            onClick={() => navigate("/")}
+          <NavLink
+            to="/"
+            end
           >
-            <img src={logo} alt="ZestBot Logo" />
-          </div>
- 
-          {/* Navigation */}
- 
-          <nav className="nav-links">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/services">Services</NavLink>
-            <HashLink smooth to="/#contact">
-              ContactUs
-            </HashLink>
+            Home
+          </NavLink>
 
-          </nav>
- 
-          {/* Contact Button */}
+          <NavLink
+            to="/services"
+          >
+            Services
+          </NavLink>
 
-          
+          <HashLink smooth to="/#contact">
+            Contact
+          </HashLink>
 
-        </div>
-      </header>
-    </>
+        </nav>
+
+        {/* ======================
+             RIGHT SECTION
+        ====================== */}
+        <div className="navbar-right">
+
+  {/* ======================
+        DARK MODE
+  ====================== */}
+
+
+
+  {/* ======================
+       MOBILE BUTTON
+  ====================== */}
+
+  <motion.button
+
+    className="menu-btn"
+
+    whileTap={{
+      scale: .90,
+    }}
+
+    onClick={() =>
+      setMobileMenu(!mobileMenu)
+    }
+
+  >
+
+    {mobileMenu ? <FiX /> : <FiMenu />}
+
+  </motion.button>
+
+</div>
+
+{/* ======================
+      MOBILE MENU
+====================== */}
+
+<AnimatePresence>
+
+  {mobileMenu && (
+
+    <motion.div
+
+      className="mobile-menu"
+
+      initial={{
+        opacity: 0,
+        y: -25,
+      }}
+
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+
+      exit={{
+        opacity: 0,
+        y: -25,
+      }}
+
+      transition={{
+        duration: .30,
+      }}
+
+    >
+
+      <NavLink
+
+        to="/"
+
+        end
+
+        onClick={() =>
+          setMobileMenu(false)
+        }
+
+      >
+
+        Home
+
+      </NavLink>
+
+      <NavLink
+
+        to="/services"
+
+        onClick={() =>
+          setMobileMenu(false)
+        }
+
+      >
+
+        Services
+
+      </NavLink>
+
+      <HashLink
+
+        smooth
+
+        to="/#contact"
+
+        onClick={() =>
+          setMobileMenu(false)
+        }
+
+      >
+
+        Contact
+
+      </HashLink>
+
+    </motion.div>
+
+  )}
+
+</AnimatePresence>
+
+      </div>
+
+    </header>
+
   );
-};
- 
-export default Navbar;
+}

@@ -63,7 +63,7 @@ const Services = () => {
               key={index}
             >
 
-              <div className="icon-box">
+              <div className="services-icon-box">
                 {service.icon}
               </div>
 

@@ -108,7 +108,7 @@ export default function Cards() {
         {cards.map((card) => (
           <SwiperSlide key={card.id}>
             <div className={`feature-card ${card.bg}`}>
-              <div className="icon-box">{card.icon}</div>
+              <div className="card-icon-box">{card.icon}</div>
 
               <h3>{card.title}</h3>
 
