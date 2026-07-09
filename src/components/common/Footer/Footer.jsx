@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+
 import {
   FaInstagram,
   FaYoutube,
@@ -9,13 +10,21 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+import TermsConditions from "../../home/Terms&Conditions";
+
 import "./Footer.css";
 
 import logo from "../../../assets/images/logo.png";
 import googlePlay from "../../../assets/images/google-play.png";
 import appStore from "../../../assets/images/app-store.png";
 
+
+
 const Footer = () => {
+
+  const [showTerms, setShowTerms] = useState(false);
+
+
   return (
     <footer id="contact" className="footer">
       <div className="footer-container">
@@ -139,9 +148,12 @@ const Footer = () => {
 
             <h3>Other Pages</h3>
 
-            <NavLink to="/terms">
-              Terms
-            </NavLink>
+           <button
+  className="footer-link-btn"
+  onClick={() => setShowTerms(true)}
+>
+  Terms
+</button>
 
             <NavLink to="/disclosures">
               Disclosures
@@ -176,6 +188,14 @@ const Footer = () => {
             Dhatvi Business Solutions Private Limited
           </p>
         </div>
+
+        {showTerms && (
+  <TermsConditions
+    isModal={true}
+    isOpen={showTerms}
+    onClose={() => setShowTerms(false)}
+  />
+)}
       </div>
     </footer>
   );
