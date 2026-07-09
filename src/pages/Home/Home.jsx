@@ -12,24 +12,17 @@ const Home = () => {
     <>
       <Hero />
       <Cards />
-      <DownloadApp/>
       <DeliveryShowcase />
-      {/* <ZestBot /> */}
       <section id="WhyChoose">
-    <WhyChoose />
-  </section>
-         <Partners/>
-      
+        <WhyChoose />
+      </section>
+      <Partners />
+      <Cities />
+      <DownloadApp/>
+      <section id="faqs">
+        <FAQs />
+      </section>
 
-      
-    
-
-  <Cities />
-
-  <section id="faqs">
-    <FAQs />
-  </section>
-  
     </>
   );
 };
