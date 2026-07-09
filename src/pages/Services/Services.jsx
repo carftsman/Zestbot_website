@@ -7,7 +7,6 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
- 
 const services = [
   {
     title: "Customer App",
@@ -74,7 +73,6 @@ const Services = () => {
               <p>
                 {service.description}
               </p>
- 
               <button onClick={() => navigate(service.path)}>
                 Learn More
                 <FaArrowRight />

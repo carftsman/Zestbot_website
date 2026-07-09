@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import {
   Bike,
@@ -21,6 +20,8 @@ import {
   ArrowLeft,
   ArrowRight,
 } from "lucide-react";
+
+import delivery from "../../../assets/images/rider.png";
 
 // ---- Brand tokens (matches the ZestBot home/services/customer/vendor pages) ----
 const NAVY = "#152352";
@@ -269,58 +270,59 @@ export default function DeliveryPartnerAppPage() {
           </div>
         </div>
 
-        {/* Earnings mock signature element */}
+        {/* Rider image inside a phone frame */}
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             style={{
-              width: 280,
-              background: "#fff",
-              borderRadius: 20,
-              padding: 22,
-              boxShadow: "0 30px 60px rgba(21,35,82,0.18)",
+              width: 240,
+              height: 490,
+              background: "#111318",
+              borderRadius: 26,
+              padding: 10,
+              boxShadow: "0 30px 60px rgba(21,35,82,0.35)",
+              position: "relative",
             }}
           >
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
-              <div style={{ fontWeight: 800, color: NAVY, fontSize: 15 }}>Today's Earnings</div>
-              <div style={{ background: GOLD_SOFT, color: NAVY, fontSize: 11, fontWeight: 800, padding: "4px 10px", borderRadius: 999 }}>
-                Online
-              </div>
-            </div>
+            {/* side buttons */}
+            <div style={{ position: "absolute", left: -2, top: 90, width: 3, height: 28, background: "#111318", borderRadius: 2 }} />
+            <div style={{ position: "absolute", left: -2, top: 130, width: 3, height: 50, background: "#111318", borderRadius: 2 }} />
+            <div style={{ position: "absolute", right: -2, top: 110, width: 3, height: 60, background: "#111318", borderRadius: 2 }} />
 
-            <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 20 }}>
-              <IndianRupee size={22} color={NAVY} />
-              <span style={{ fontSize: 32, fontWeight: 800, color: NAVY }}>842</span>
-              <span style={{ fontSize: 13, color: "#8a8fa3", fontWeight: 600 }}>· 12 deliveries</span>
-            </div>
-
-            {[
-              { label: "Pickup — Fresh Mart", tag: "En route", icon: Navigation },
-              { label: "Delivered — #ZB3312", tag: "Done", icon: PackageCheck },
-            ].map((row, i) => (
-              <div
-                key={i}
+            {/* notch */}
+            <div
+              style={{
+                position: "absolute",
+                top: 10,
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: 80,
+                height: 16,
+                background: "#111318",
+                borderRadius: 10,
+                zIndex: 2,
+              }}
+            />
+            <div
+              style={{
+                background: PAPER,
+                width: "100%",
+                height: "100%",
+                borderRadius: 16,
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={delivery}
+                alt="ZestBot delivery partner riding to deliver an order"
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "10px 0",
-                  borderTop: i === 0 ? "1px solid #eceef5" : "none",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
                 }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <div style={{ width: 30, height: 30, borderRadius: 8, background: NAVY, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <row.icon size={14} color={GOLD} />
-                  </div>
-                  <span style={{ fontSize: 12.5, color: "#3a3e52", fontWeight: 500 }}>{row.label}</span>
-                </div>
-                <span style={{ fontSize: 10.5, fontWeight: 800, color: GOLD, background: "rgba(242,183,5,0.12)", padding: "3px 8px", borderRadius: 999 }}>
-                  {row.tag}
-                </span>
-              </div>
-            ))}
-
-            <div style={{ marginTop: 16, background: GOLD, borderRadius: 12, padding: "10px", textAlign: "center", fontWeight: 800, fontSize: 12, color: NAVY }}>
-              Accept New Request
+              />
             </div>
           </div>
         </div>
