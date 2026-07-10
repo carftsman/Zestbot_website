@@ -21,7 +21,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import delivery from "../../../assets/images/rider.png";
+import Dps from "../../../assets/images/dps.png";
+import DeliveryBg from "../../../assets/images/delivery.png";
 
 // ---- Brand tokens (matches the ZestBot home/services/customer/vendor pages) ----
 const NAVY = "#152352";
@@ -171,6 +172,12 @@ export default function DeliveryPartnerAppPage() {
       color:#F2B705;
 
   }
+
+  @keyframes floatDelivery{
+    0%{transform:translateY(-50%) translateY(0);}
+    50%{transform:translateY(-50%) translateY(-12px);}
+    100%{transform:translateY(-50%) translateY(0);}
+  }
 `}
 </style>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 6% 0" }}>
@@ -200,7 +207,7 @@ export default function DeliveryPartnerAppPage() {
           <span
             style={{
               display: "inline-block",
-              background: NAVY,
+              background: "#192A5f",
               color: GOLD,
               fontSize: 12,
               fontWeight: 800,
@@ -215,7 +222,7 @@ export default function DeliveryPartnerAppPage() {
           <h1
             style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: 46,
+              fontSize: 40,
               lineHeight: 1.15,
               color: NAVY,
               margin: "0 0 20px",
@@ -224,12 +231,12 @@ export default function DeliveryPartnerAppPage() {
           >
             Deliver on Your Terms,<br />Earn on Your Time
           </h1>
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#4a4f63", maxWidth: 480, marginBottom: 14 }}>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 14 }}>
             The ZestBot Delivery Partner App enables riders to accept delivery requests,
             navigate efficiently, track earnings, manage deliveries, and enjoy flexible earning
             opportunities.
           </p>
-          <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#6b7085", maxWidth: 480, marginBottom: 30 }}>
+          <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 30 }}>
             Work when it suits you, deliver with confidence, and stay connected with a platform
             built to support your hustle.
           </p>
@@ -315,7 +322,7 @@ export default function DeliveryPartnerAppPage() {
               }}
             >
               <img
-                src={delivery}
+                src={Dps}
                 alt="ZestBot delivery partner riding to deliver an order"
                 style={{
                   width: "100%",
@@ -331,7 +338,7 @@ export default function DeliveryPartnerAppPage() {
       {/* WHAT YOU CAN DO */}
       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
             WHAT YOU CAN DO
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
@@ -374,7 +381,7 @@ export default function DeliveryPartnerAppPage() {
       {/* KEY FEATURES - navy band */}
       <section style={{ background: NAVY, padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
             KEY FEATURES
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
@@ -406,11 +413,41 @@ export default function DeliveryPartnerAppPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section style={{ background: "#fff", padding: "70px 6%" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+      <section
+        style={{
+          background: "#fff",
+          padding: "70px 6%",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={DeliveryBg}
+          alt=""
+          style={{
+            position: "absolute",
+            right: "-120px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            width: "560px",
+            opacity: 0.09,
+            pointerEvents: "none",
+            userSelect: "none",
+            zIndex: 0,
+            animation: "floatDelivery 6s ease-in-out infinite",
+          }}
+        />
+        <div
+          style={{
+            maxWidth: 900,
+            margin: "0 auto",
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
             WHY CHOOSE ZESTBOT
-          </p>
+          </p> */}
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
             Why Choose the ZestBot Delivery Partner App?
           </h2>
@@ -429,9 +466,9 @@ export default function DeliveryPartnerAppPage() {
       {/* WHO CAN BECOME A DELIVERY PARTNER */}
       <section style={{ background: "#fff", padding: "0 6% 70px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
             WHO CAN JOIN?
-          </p>
+          </p> */}
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 20px" }}>
             Who Can Become a Delivery Partner?
           </h2>

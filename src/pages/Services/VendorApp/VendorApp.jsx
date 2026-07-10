@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import {
   Store,
@@ -25,7 +24,7 @@ import {
   ArrowRight,
   ArrowLeft,
 } from "lucide-react";
-
+import VendorPhone from "../../../assets/images/VendorPhone.png";
 // ---- Brand tokens (matches the ZestBot home/services/customer pages) ----
 const NAVY = "#152352";
 const NAVY_DEEP = "#0d1638";
@@ -233,12 +232,12 @@ export default function VendorAppPage() {
           >
             Grow Your Business<br />with ZestBot
           </h1>
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#4a4f63", maxWidth: 480, marginBottom: 14 }}>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 14 }}>
             The ZestBot Vendor App empowers local businesses to take their store online and
             reach more customers with ease — whether you run a grocery store, supermarket,
             restaurant, pharmacy, or any local retail business.
           </p>
-          <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#6b7085", maxWidth: 480, marginBottom: 30 }}>
+          <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 30 }}>
             Focus on serving your customers while we help you streamline order management and
             expand your digital presence.
           </p>
@@ -279,71 +278,32 @@ export default function VendorAppPage() {
           </div>
         </div>
 
-        {/* Dashboard mock signature element */}
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div
+        {/* Vendor App Phone Image */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={VendorPhone}
+            alt="Vendor App"
             style={{
-              width: 280,
-              background: "#fff",
-              borderRadius: 20,
-              padding: 22,
-              boxShadow: "0 30px 60px rgba(21,35,82,0.18)",
+              width: "100%",
+              maxWidth: 220,
+              height: "auto",
+              objectFit: "contain",
+              filter: "drop-shadow(0 30px 60px rgba(21,35,82,.25))",
             }}
-          >
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
-              <div style={{ fontWeight: 800, color: NAVY, fontSize: 15 }}>Today's Orders</div>
-              <div style={{ background: GOLD_SOFT, color: NAVY, fontSize: 11, fontWeight: 800, padding: "4px 10px", borderRadius: 999 }}>
-                +18%
-              </div>
-            </div>
-
-            <div style={{ display: "flex", alignItems: "flex-end", gap: 8, height: 90, marginBottom: 20 }}>
-              {[40, 65, 50, 80, 60, 95, 70].map((h, i) => (
-                <div
-                  key={i}
-                  style={{
-                    flex: 1,
-                    height: `${h}%`,
-                    background: i === 5 ? GOLD : "#e3e5f0",
-                    borderRadius: 6,
-                  }}
-                />
-              ))}
-            </div>
-
-            {[
-              { label: "New order — #ZB2481", tag: "New" },
-              { label: "Order #ZB2477 packed", tag: "Ready" },
-            ].map((row, i) => (
-              <div
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "10px 0",
-                  borderTop: i === 0 ? "1px solid #eceef5" : "none",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <div style={{ width: 30, height: 30, borderRadius: 8, background: NAVY, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <BellRing size={14} color={GOLD} />
-                  </div>
-                  <span style={{ fontSize: 12.5, color: "#3a3e52", fontWeight: 500 }}>{row.label}</span>
-                </div>
-                <span style={{ fontSize: 10.5, fontWeight: 800, color: GOLD, background: "rgba(242,183,5,0.12)", padding: "3px 8px", borderRadius: 999 }}>
-                  {row.tag}
-                </span>
-              </div>
-            ))}
-          </div>
+          />
         </div>
       </section>
 
       {/* WHAT YOU CAN DO */}
       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
             WHAT YOU CAN DO
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
@@ -386,7 +346,7 @@ export default function VendorAppPage() {
       {/* KEY FEATURES - navy band */}
       <section style={{ background: NAVY, padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
             KEY FEATURES
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
@@ -420,9 +380,9 @@ export default function VendorAppPage() {
       {/* WHY CHOOSE */}
       <section style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
             WHY CHOOSE ZESTBOT
-          </p>
+          </p> */}
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
             Why Choose the ZestBot Vendor App?
           </h2>
@@ -441,7 +401,7 @@ export default function VendorAppPage() {
       {/* WHO CAN JOIN */}
       <section style={{ background: "#fff", padding: "0 6% 70px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
             WHO CAN JOIN?
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 20px" }}>

@@ -206,7 +206,7 @@ export default function CustomerAppPage() {
           <h1
             style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: 46,
+              fontSize: 36,
               lineHeight: 1.15,
               color: NAVY,
               margin: "0 0 20px",
@@ -307,7 +307,7 @@ export default function CustomerAppPage() {
       {/* WHAT YOU CAN DO */}
       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
             WHAT YOU CAN DO
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
@@ -351,7 +351,7 @@ export default function CustomerAppPage() {
       {/* KEY FEATURES - navy band */}
       <section style={{ background: NAVY, padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
             KEY FEATURES
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
@@ -385,9 +385,9 @@ export default function CustomerAppPage() {
       {/* WHY CHOOSE */}
       <section style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+          {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
             WHY CHOOSE ZESTBOT
-          </p>
+          </p> */}
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
             Why Choose the ZestBot Customer App?
           </h2>
@@ -489,4 +489,5 @@ export default function CustomerAppPage() {
     </div>
   );
 }
+ 
  
