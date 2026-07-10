@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-
+ 
 import Home from "../pages/Home/Home";
 import Services from "../pages/Services/Services";
 import CustomerApp from "../pages/Services/CustomerApp/CustomerApp";
 import VendorApp from "../pages/Services/VendorApp/VendorApp";
 import DeliveryPartner from "../pages/Services/DeliveryPartner/DeliveryPartner";
-
 const AppRoutes = () => {
   return (
     <Routes>
@@ -26,5 +25,6 @@ const AppRoutes = () => {
     </Routes>
   );
 };
-
+ 
 export default AppRoutes;
+ 
