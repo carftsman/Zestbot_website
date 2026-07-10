@@ -458,3 +458,202 @@ a{
 .curve{
     opacity:.75;
 }
+
+/* =====================================================
+   LARGE DESKTOP (1600px+)
+===================================================== */
+
+@media (min-width:1600px){
+
+    .download-container{
+        max-width:1500px;
+        height:500px;
+        padding:30px 60px;
+    }
+
+    .download-left h2{
+        font-size:58px;
+    }
+
+    .download-left p{
+        font-size:20px;
+    }
+
+    .store-buttons img{
+        width:190px;
+    }
+
+    .bot-image{
+        width:450px;
+    }
+
+    .bg-z{
+        font-size:340px;
+    }
+}
+
+/* =====================================================
+   SMALL LAPTOP (1024px)
+===================================================== */
+
+@media (max-width:1024px){
+
+    .download-container{
+        width:94%;
+        gap:20px;
+        padding:30px;
+    }
+
+    .download-left{
+        margin-left:0;
+    }
+
+    .download-right{
+        margin-right:0;
+    }
+
+    .download-left h2{
+        font-size:34px;
+    }
+
+    .download-left p{
+        font-size:15px;
+    }
+
+    .store-buttons img{
+        width:150px;
+    }
+
+    .bot-image{
+        width:300px;
+    }
+}
+
+/* =====================================================
+   iPad Air (820px)
+===================================================== */
+
+@media (max-width:820px){
+
+    .download-container{
+        padding:35px 25px;
+    }
+
+    .download-left h2{
+        font-size:32px;
+    }
+
+    .download-left p{
+        font-size:15px;
+    }
+
+    .bot-image{
+        width:280px;
+    }
+
+    .store-buttons{
+        gap:12px;
+    }
+}
+
+/* =====================================================
+   LARGE MOBILE (640px)
+===================================================== */
+
+@media (max-width:640px){
+
+    .download-container{
+        width:96%;
+        padding:25px 18px;
+        border-radius:24px;
+    }
+
+    .download-left h2{
+        font-size:26px;
+        line-height:1.25;
+    }
+
+    .download-left p{
+        font-size:14px;
+    }
+
+    .store-buttons img{
+        width:150px;
+    }
+
+    .bot-image{
+        width:220px;
+    }
+
+    .curve{
+        display:none;
+    }
+}
+
+/* =====================================================
+   iPhone (375px)
+===================================================== */
+
+@media (max-width:375px){
+
+    .download-container{
+        padding:20px 15px;
+    }
+
+    .download-left h2{
+        font-size:22px;
+    }
+
+    .download-left p{
+        font-size:13px;
+    }
+
+    .store-buttons img{
+        width:135px;
+    }
+
+    .bot-image{
+        width:180px;
+    }
+
+    .bg-z{
+        font-size:170px;
+    }
+}
+
+/* =====================================================
+   SMALL DEVICES (320px)
+===================================================== */
+
+@media (max-width:320px){
+
+    .download-container{
+        padding:18px 12px;
+        border-radius:18px;
+    }
+
+    .download-left h2{
+        font-size:20px;
+    }
+
+    .download-left p{
+        font-size:12px;
+    }
+
+    .store-buttons img{
+        width:120px;
+    }
+
+    .bot-image{
+        width:150px;
+    }
+
+    .store-buttons{
+        gap:10px;
+    }
+
+    .bg-z{
+        font-size:140px;
+        left:-20px;
+    }
+}
