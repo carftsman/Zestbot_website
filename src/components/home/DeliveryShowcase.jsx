@@ -554,11 +554,14 @@ import {
 import "../../styles/DeliveryShowcase.css";
 
 // import phone from "../../assets/images/phone.png";
-import burger from "../../assets/images/stationary.webp";
-import momos from "../../assets/images/gift.webp";
-import pizza from "../../assets/images/food.png";
-import leaf from "../../assets/images/grocery.png";
-// import tomato from "../../assets/images/tomato.png";
+import burger from "../../assets/images/milk.png";
+import momos from "../../assets/images/eggs.png";
+import pizza from "../../assets/images/veg-icon.png";
+import leaf from "../../assets/images/veg-2.png";
+import stationary from "../../assets/images/stationary.png";
+
+
+
 
 const floating = {
   animate: {
@@ -582,6 +585,19 @@ const DeliveryShowcase = () => {
 
       {/* Decorative SVG Curves */}
    {/* Premium Delivery Routes */}
+
+   <div className="blur veg-blur"></div>
+<div className="blur meat-blur"></div>
+<div className="blur milk-blur"></div>
+<div className="blur egg-blur"></div>
+
+<motion.img
+   src={leaf}
+   className="floating-food leaf"
+/>
+
+
+
 
 <svg
   className="hero-curves"
@@ -682,9 +698,9 @@ const DeliveryShowcase = () => {
       />
 
       {/* <motion.img
-        src={tomato}
+        src={stationary}
         alt=""
-        className="tomato"
+        className="stationary"
         variants={floating}
         animate="animate"
       /> */}

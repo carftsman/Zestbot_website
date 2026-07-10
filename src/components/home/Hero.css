@@ -113,7 +113,6 @@
   50% { transform: scale(1.02); box-shadow: 0 0 35px rgba(255, 212, 42, 0.6); }
 }
 
-/* --- Typography & 💛 BRIGHT YELLOW GRADIENT TEXT --- */
 .hero-title {
  font-size: clamp(3rem,5vw,4rem);
   font-weight: 400;
@@ -214,7 +213,7 @@
  
 
 .yellow-gradient-text {
-  background: linear-gradient(135deg, #FFD42A 0%, #fff066 60%, #ffa600 100%);
+  background: #FFD42A;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

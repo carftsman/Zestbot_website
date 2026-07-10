@@ -65,17 +65,21 @@
   color: #192a5f;
   font-weight: 700;
   line-height: 1.25;
-  margin-bottom: 18px;
+  margin-bottom: 0px;
 }
 
 .whyChoose-title span {
   color: #ffd400;
+
 }
 
 .whyChoose-description {
   font-size: 14px;
   line-height: 1.8;
   color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-weight: 500;
 }
 
 /* ==========================

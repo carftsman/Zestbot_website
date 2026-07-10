@@ -7,10 +7,13 @@ import Cities from "../../components/home/Cities";
 import Partners from "../../components/home/Partners";
 import WhyChoose from "../../components/home/WhyChoose";
 import DownloadApp from "../../components/home/DownloadApp";
+// import TermsConditions from "../../components/home/Terms&Conditions";
+// import CookieConsent from "../../components/home/CookieConsent";
 const Home = () => {
   return (
     <>
       <Hero />
+      {/* <CookieConsent/> */}
       <Cards />
       <DeliveryShowcase />
       <section id="WhyChoose">
@@ -19,10 +22,20 @@ const Home = () => {
       <Partners />
       <Cities />
       <DownloadApp/>
-      <section id="faqs">
-        <FAQs />
-      </section>
+     
 
+      
+    
+
+  
+
+  <section id="faqs">
+    <FAQs />
+  </section>
+   {/* <section id="Termsconditions">
+    <TermsConditions />
+  </section> */}
+  
     </>
   );
 };

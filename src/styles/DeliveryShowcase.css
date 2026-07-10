@@ -145,7 +145,7 @@
  
 .burger{
  
-  width:170px;
+  width:150px;
  
   left:8%;
  
@@ -157,9 +157,9 @@
  
 .momos{
  
-  width:165px;
+  width:190px;
  
-  right:6%;
+  right:7%;
  
   top:220px;
  
@@ -169,11 +169,11 @@
  
 .pizza{
  
-  width:160px;
+  width:150px;
  
-  right:19%;
+  right:1%;
  
-  bottom:300px;
+  bottom:60px;
  
 }
  
@@ -183,11 +183,11 @@
  
   position:absolute;
  
-  width:160px;
+  width:120px;
  
   left:16%;
  
-  bottom:350px;
+  bottom:90px;
  
 }
  
@@ -791,5 +791,64 @@ background:#F8F8F8;
 
     }
 
+}
+
+/* DeliveryShowcase.css */
+
+.why-choose-section {
+  position: relative;
+  overflow: hidden; /* Prevent background images from overflowing */
+  /* Ensure a dark enough background for text readability if images are transparent */
+  background-color: #000; /* Use your existing dark background color */
+  z-index: 0;
+}
+
+.section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Make sure background doesn't interfere with interaction */
+  z-index: -1; /* Place it behind all other content */
+}
+
+.bg-image {
+  position: absolute;
+  opacity: 0.2; /* Reduce opacity to make it a subtle background */
+  filter: blur(10px); /* Apply the blur effect you're looking for */
+  -webkit-filter: blur(10px); /* For Safari and other browsers */
+  /* Adjust size as needed, object-fit can help */
+  max-width: 30%; 
+  max-height: 30%;
+  object-fit: contain;
+}
+
+/* Position individual background images as desired */
+.bg-veg {
+  top: 10%;
+  left: 5%;
+  max-width: 40%; /* Increase size if needed */
+}
+
+.bg-stationary {
+  bottom: 10%;
+  right: 5%;
+}
+
+.bg-milk {
+  top: 40%;
+  right: 15%;
+  max-width: 25%;
+}
+
+.bg-meat {
+  bottom: 30%;
+  left: 10%;
+}
+
+.bg-eggs {
+  top: 60%;
+  right: 5%;
 }
 
