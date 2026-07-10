@@ -1,3 +1,4 @@
+
 .footer {
   width: 100%;
   background: #0d0d0d;
@@ -7,6 +8,15 @@
   /* margin-top: 20px; */
 }
 
+.footer-wrapper{
+    background:#ffffff;
+    padding-top:0;
+}
+
+.home-footer{
+    background:#192A5F;
+    padding-top:40px; /* Adjust this value as needed */
+}
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -322,4 +332,22 @@
     font-size:12px;
   }
 
+}
+
+
+.footer-link-btn{
+  background:none;
+  border:none;
+  padding:0;
+  margin:0;
+  color:inherit;
+  font-size:inherit;
+  font-family:inherit;
+    margin: 0 0 14px 0; 
+  cursor:pointer;
+  text-align:left;
+}
+
+.footer-link-btn:hover{
+  color:#ffd400;
 }

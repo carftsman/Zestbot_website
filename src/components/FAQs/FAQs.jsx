@@ -64,127 +64,137 @@ const FAQs = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  return (
+ return (
+  <section id="faqs" className="faq-section">
 
-    <section
-      id="faqs"
-      className="faq-section"
-    >
+    <div className="faq-header">
 
-      <div className="faq-header">
+      <span className="faq-tag">
+        FAQs
+      </span>
 
-        <span className="faq-tag">
-          FAQs
-        </span>
+      <h2>
+        Frequently Asked Questions
+      </h2>
 
-        <h2>
-          Frequently Asked Questions
-        </h2>
+      <p className="faq-subtitle">
+        Everything you need to know about ZestBot.
+        Can't find the answer? Contact our support team.
+      </p>
 
-        <p className="faq-subtitle">
-          Everything you need to know about
-          ZestBot. Can't find the answer?
-          Contact our support team.
-        </p>
+    </div>
 
-      </div>
+    <div className="faq-content">
 
-      <div className="faq-container">
+      {/* LEFT SIDE */}
 
-        {(showAll ? faqData : faqData.slice(0, 3)).map((faq, index) => (
+      <div className="faq-left">
 
-          <div
-            key={index}
-            className={`faq-card ${activeIndex === index
-              ? "active"
-              : ""
+        <div className="faq-container">
+
+          {(showAll ? faqData : faqData.slice(0, 3)).map((faq, index) => (
+
+            <div
+              key={index}
+              className={`faq-card ${
+                activeIndex === index ? "active" : ""
               }`}
-          >
-
-            <button
-              className="faq-question"
-              onClick={() =>
-                toggleFAQ(index)
-              }
             >
 
-              <span>
-                {faq.question}
-              </span>
+              <button
+                className="faq-question"
+                onClick={() => toggleFAQ(index)}
+              >
 
-              <div className="faq-icon">
+                <span>
+                  {faq.question}
+                </span>
 
-                {activeIndex === index ? (
-                  <FaChevronUp />
-                ) : (
-                  <FaChevronDown />
-                )}
+                <div className="faq-icon">
+
+                  {activeIndex === index ? (
+                    <FaChevronUp />
+                  ) : (
+                    <FaChevronDown />
+                  )}
+
+                </div>
+
+              </button>
+
+              <div
+                className={`faq-answer ${
+                  activeIndex === index ? "show" : ""
+                }`}
+              >
+
+                <p>
+                  {faq.answer}
+                </p>
 
               </div>
 
-            </button>
-
-            <div
-              className={`faq-answer ${activeIndex === index
-                ? "show"
-                : ""
-                }`}
-            >
-
-              <p>
-                {faq.answer}
-              </p>
-
             </div>
 
-          </div>
+          ))}
 
-        ))}
+        </div>
 
-      </div>
-      <div className="faq-see-more">
+        <div className="faq-see-more">
 
-        <button
-          className="see-more-btn"
-          onClick={() => setShowAll(!showAll)}
-        >
-          {showAll ? "Show Less" : "See More FAQs"}
-        </button>
+          <button
+            className="see-more-btn"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Show Less" : "See More FAQs"}
+          </button>
 
-      </div>
-
-      <div className="faq-help">
-
-        <h3>
-          Still have questions?
-        </h3>
-
-        <p>
-          Our support team is available to
-          help you anytime.
-        </p>
-
-        <button
-          className="contact-btn"
-          onClick={() => {
-            const footer = document.getElementById("contact");
-
-            if (footer) {
-              footer.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          }}
-        >
-          Contact Us
-        </button>
+        </div>
 
       </div>
 
-    </section>
+      {/* RIGHT SIDE */}
 
-  );
+      <div className="faq-right">
+
+        <div className="faq-help">
+
+          <h3>
+            Still have
+            <br />
+            Questions?
+          </h3>
+
+          <p>
+            Our support team is available to
+            assist you with any questions or
+            concerns regarding ZestBot.
+          </p>
+
+          <button
+            className="contact-btn"
+            onClick={() => {
+              const footer = document.getElementById("contact");
+
+              if (footer) {
+                footer.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+          >
+            Contact Us
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+);
 
 };
 

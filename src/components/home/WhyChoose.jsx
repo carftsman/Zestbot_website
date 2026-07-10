@@ -2,14 +2,14 @@ import React from "react";
 import "./WhyChoose.css";
 
 import zestLogo from "../../assets/images/logo.png"; // small square logo mark (Z bolt icon)
-import zestBot from "../../assets/images/zest-bot.png";
+import zestBot from "../../assets/images/bot.png";
 
-import localShop from "../../assets/images/local-shops.png";
+import localShop from "../../assets/images/kirana.png";
 import restaurant from "../../assets/images/restaurent.png";
 import delivery from "../../assets/images/delivery.png";
 import payments from "../../assets/images/payments.png";
-import offers from "../../assets/images/offers.png";
-import tracking from "../../assets/images/tracking.png";
+import offers from "../../assets/images/offers-home.png";
+import tracking from "../../assets/images/live-order.png";
 
 // tiny inline icon set for the badges + nav bar so nothing depends on extra image assets
 const icons = {

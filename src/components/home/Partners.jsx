@@ -1,13 +1,8 @@
 import React from "react";
-import {
-  FaShieldAlt,
-  FaGlobe,
-
-  FaStar,
-} from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 import "../../styles/Partners.css";
-import company from "../../assets/images/company.png";
+import company from "../../assets/images/partnerlogo.png";
 
 export default function Partners() {
   const openWebsite = () => {
@@ -18,113 +13,49 @@ export default function Partners() {
     );
   };
 
-//   const contactPartner = () => {
-//     window.open(
-//       "https://exelusinfotech.com/contact-us/",
-//       "_blank",
-//       "noopener,noreferrer"
-//     );
-//   };
-
   return (
     <section className="partners-section">
-      {/* Background */}
-      <div className="bg-circle bg1"></div>
-      <div className="bg-circle bg2"></div>
-      <div className="bg-circle bg3"></div>
+      <div className="partners-container">
 
-      <div className="grid-dots dots-left"></div>
-      <div className="grid-dots dots-right"></div>
-
-      <div className="container">
-
-        {/* Header */}
+        {/* Heading */}
 
         <div className="partners-header">
-
-          <span className="section-badge">
-            <span className="badge-dot"></span>
-            OUR GROWTH PARTNERS
+          <span className="partners-tag">
+            OUR GROWTH PARTNER
           </span>
 
-          <h2>Exelusinfotech Pvt Ltd</h2>
-
-          <p>
-            Behind every successful campaign is a trusted partner.
-            Meet the agencies helping ZestBot connect with more
-            customers and businesses every day.
-          </p>
-
+          <h2>
+            We proudly work with
+          </h2>
         </div>
 
-        {/* Main Card */}
+        {/* Partner Card */}
 
         <div className="partner-card">
 
-          {/* Left Section */}
-
-          <div className="partner-left">
-
-            <div className="left-pattern"></div>
-
-            <div className="logo-card">
-
-              <img
-                src={company}
-                alt="Exelus Infotech Pvt Ltd"
-                className="partner-logo"
-              />
-
-            </div>
-
-            <div className="mini-circle orange">
-              <FaStar />
-            </div>
-
-            <div className="mini-circle cyan">
-              ⚡
-            </div>
-
+          <div className="partner-logo-box">
+            <img
+              src={company}
+              alt="Exelusinfotech Pvt Ltd"
+              className="partner-logo"
+            />
           </div>
 
-          {/* Right Section */}
+          <h3>
+            Exelusinfotech Pvt Ltd
+          </h3>
 
-          <div className="partner-right">
+          <p>
+            Official Technology Partner
+          </p>
 
-            <div className="partner-tag">
-              <FaShieldAlt />
-              Official Growth Partner
-            </div>
-
-            <h3>
-              Building. Growing. Succeeding Together.
-            </h3>
-
-            <p>
-              Exelusinfotech Pvt Ltd is a trusted technology company
-              specializing in software development, digital marketing,
-              cloud solutions, UI/UX design and business automation.
-              As ZestBot's official growth partner, Exelus helps
-              businesses accelerate their digital transformation,
-              improve customer engagement and achieve sustainable
-              business growth through innovative technology solutions.
-            </p>
-
-            <div className="partner-buttons">
-
-              <button
-                className="visit-btn"
-                onClick={openWebsite}
-              >
-                <FaGlobe />
-                Visit Website
-              </button>
-
-             
-
-            </div>
-
-          </div>
+          <button
+            className="visit-btn"
+            onClick={openWebsite}
+          >
+            Visit Website
+            <FaExternalLinkAlt />
+          </button>
 
         </div>
 
