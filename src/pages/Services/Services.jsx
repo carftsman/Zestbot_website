@@ -7,7 +7,6 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
 const services = [
   {
     title: "Customer App",
@@ -31,33 +30,33 @@ const services = [
       "Accept deliveries, manage earnings and work with complete flexibility using the ZestBot Delivery Partner App.",
   },
 ];
-
+ 
 const Services = () => {
   const navigate = useNavigate();
   return (
     <section className="services-section">
-
+ 
       <div className="services-container">
-
+ 
         <span className="services-tag">
           OUR SERVICES
         </span>
-
+ 
         <h2 className="services-title">
           Everything You Need <br />
           In One Platform
         </h2>
-
+ 
         <p className="services-subtitle">
           ZestBot offers powerful applications for customers,
           vendors and delivery partners to simplify the complete
           delivery ecosystem.
         </p>
-
+ 
         <div className="services-grid">
-
+ 
           {services.map((service, index) => (
-
+ 
             <div
               className="service-card"
               key={index}
@@ -66,30 +65,29 @@ const Services = () => {
               <div className="services-icon-box">
                 {service.icon}
               </div>
-
+ 
               <h3>
                 {service.title}
               </h3>
-
+ 
               <p>
                 {service.description}
               </p>
-
               <button onClick={() => navigate(service.path)}>
                 Learn More
                 <FaArrowRight />
               </button>
-
+ 
             </div>
-
+ 
           ))}
-
+ 
         </div>
-
+ 
       </div>
-
+ 
     </section>
   );
 };
-
+ 
 export default Services;
