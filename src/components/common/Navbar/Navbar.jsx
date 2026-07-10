@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { motion, AnimatePresence } from "framer-motion";
 
 import {
-  FiMoon,
-  FiSun,
   FiMenu,
   FiX,
 } from "react-icons/fi";
@@ -22,9 +20,10 @@ export default function Navbar() {
   =========================== */
 
   const [scrolled, setScrolled] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const location = useLocation();
 
+const isHome = location.pathname === "/";
   /* ===========================
       SCROLL EFFECT
   =========================== */
@@ -51,24 +50,13 @@ export default function Navbar() {
 
   }, []);
 
-  /* ===========================
-      DARK MODE
-  =========================== */
-
-  useEffect(() => {
-
-    document.body.classList.toggle(
-      "dark",
-      darkMode
-    );
-
-  }, [darkMode]);
+  
 
   return (
 
     <header
-      className={`navbar ${scrolled ? "scrolled" : ""}`}
-    >
+  className={`navbar ${scrolled ? "scrolled" : ""} ${!isHome ? "navbar-light" : ""}`}
+>
 
       <div className="navbar-container">
 
@@ -152,93 +140,7 @@ export default function Navbar() {
         DARK MODE
   ====================== */}
 
-  <motion.button
-    className="theme-toggle"
 
-    whileHover={{
-      scale: 1.08,
-      rotate: 180,
-    }}
-
-    whileTap={{
-      scale: .92,
-    }}
-
-    onClick={() =>
-      setDarkMode(!darkMode)
-    }
-
-  >
-
-    <AnimatePresence mode="wait">
-
-      {darkMode ? (
-
-        <motion.div
-
-          key="moon"
-
-          initial={{
-            opacity: 0,
-            rotate: -90,
-          }}
-
-          animate={{
-            opacity: 1,
-            rotate: 0,
-          }}
-
-          exit={{
-            opacity: 0,
-            rotate: 90,
-          }}
-
-          transition={{
-            duration: .25,
-          }}
-
-        >
-
-          <FiMoon />
-
-        </motion.div>
-
-      ) : (
-
-        <motion.div
-
-          key="sun"
-
-          initial={{
-            opacity: 0,
-            rotate: -90,
-          }}
-
-          animate={{
-            opacity: 1,
-            rotate: 0,
-          }}
-
-          exit={{
-            opacity: 0,
-            rotate: 90,
-          }}
-
-          transition={{
-            duration: .25,
-          }}
-
-        >
-
-          <FiSun />
-
-        </motion.div>
-
-      )}
-
-    </AnimatePresence>
-
-  </motion.button>
 
   {/* ======================
        MOBILE BUTTON

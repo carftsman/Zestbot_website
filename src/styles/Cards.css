@@ -81,9 +81,9 @@ border: 1px solid #d8c8ff;
 .cards-header p {
   max-width: 620px;
   margin: 18px auto 0;
-  color: black;
+  color:grey;
   font-size: 15px;
-  line-height: 1.8;
+  /* line-height: 1.8; */
 }
 
 
@@ -197,7 +197,7 @@ border: 1px solid #d8c8ff;
    ICON BOX
 ========================================================= */
 
-.icon-box {
+.card-icon-box {
   width: 70px;
   height: 70px;
   border-radius: 20px;
@@ -219,33 +219,32 @@ border: 1px solid #d8c8ff;
 
 /* Card Colors */
 
-.customer-card .icon-box {
+.customer-card .card-icon-box {
   background: linear-gradient(135deg,#FFC107,#FF9800);
 }
 
-.vendor-card .icon-box {
+.vendor-card .card-icon-box {
   background: linear-gradient(135deg,#3B82F6,#2563EB);
 }
 
-.rider-card .icon-box {
+.rider-card .card-icon-box {
   background: linear-gradient(135deg,#22C55E,#16A34A);
 }
 
 /* Small White Dot */
 
-.icon-box::after {
+.card-icon-box::after {
   content: "";
   position: absolute;
   width: 14px;
   height: 14px;
   top: -4px;
   right: -4px;
-  /* background: #fff; */
   border-radius: 50%;
   opacity: .9;
 }
 
-.feature-card:hover .icon-box {
+.feature-card:hover .card-icon-box {
   transform: translateY(-6px) rotate(-6deg) scale(1.05);
   box-shadow: 0 22px 45px rgba(0,0,0,.18);
 }
@@ -416,7 +415,7 @@ border: 1px solid #d8c8ff;
     padding: 24px;
   }
 
-  .icon-box {
+  .card-icon-box {
     width: 65px;
     height: 65px;
     font-size: 26px;
@@ -479,7 +478,7 @@ border: 1px solid #d8c8ff;
     line-height: 1.7;
   }
 
-  .icon-box {
+  .card-icon-box {
     width: 62px;
     height: 62px;
     font-size: 24px;
@@ -521,7 +520,7 @@ border: 1px solid #d8c8ff;
     border-radius: 20px;
   }
 
-  .icon-box {
+  .card-icon-box {
     width: 58px;
     height: 58px;
     font-size: 22px;
@@ -575,7 +574,7 @@ border: 1px solid #d8c8ff;
     padding: 20px;
   }
 
-  .icon-box {
+  .card-icon-box {
     width: 54px;
     height: 54px;
     font-size: 20px;
@@ -653,7 +652,7 @@ border: 1px solid #d8c8ff;
 ========================================================= */
 
 .feature-card,
-.icon-box,
+.card-icon-box,
 .card-btn,
 .arrow-circle,
 .feature-card h3,

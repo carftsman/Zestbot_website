@@ -24,7 +24,7 @@
 
     width:100%;
 
-    height:95px;
+    height:80px;
 
     display:flex;
 
@@ -276,6 +276,27 @@
 
     border-color:#2563eb;
 
+}
+
+/* Home page remains unchanged */
+
+.navbar-light{
+    background:#b0afaf;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.navbar-light .nav-links a{
+    color:#ffff;
+}
+
+.navbar-light .nav-links a:hover,
+.navbar-light .nav-links a.active{
+    color:#FFD54A;
+}
+
+.navbar-light ,
+.navbar-light .menu-btn{
+    color:#192A5F;
 }
 
 /* ===================================================

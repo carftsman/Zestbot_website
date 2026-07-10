@@ -61,8 +61,8 @@ const Services = () => {
               className="service-card"
               key={index}
             >
- 
-              <div className="icon-box">
+
+              <div className="services-icon-box">
                 {service.icon}
               </div>
  

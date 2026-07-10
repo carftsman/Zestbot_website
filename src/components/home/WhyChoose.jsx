@@ -6,7 +6,7 @@ import zestBot from "../../assets/images/bot.png";
 
 import localShop from "../../assets/images/kirana.png";
 import restaurant from "../../assets/images/restaurent.png";
-import delivery from "../../assets/images/delivery.png";
+import delivery from "../../assets/images/fast-delivery.png";
 import payments from "../../assets/images/payments.png";
 import offers from "../../assets/images/offers-home.png";
 import tracking from "../../assets/images/live-order.png";

@@ -720,8 +720,8 @@ font-size:14px;
  
 ::selection{
  
-background:#EF4F5F;
-color:#fff;
+background:#ffffff;
+color:#000000;
  
 }
  
@@ -737,7 +737,7 @@ width:8px;
  
 ::-webkit-scrollbar-thumb{
  
-background:#EF4F5F;
+background:#192A5F;
 border-radius:20px;
  
 }

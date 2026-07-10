@@ -180,7 +180,7 @@ export default function DeliveryPartnerAppPage() {
   }
 `}
 </style>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 6% 0" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "100px 6% 0" }}>
         <button
           onClick={() => navigate(-1)}
           style={{
@@ -281,8 +281,8 @@ export default function DeliveryPartnerAppPage() {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             style={{
-              width: 240,
-              height: 490,
+              width: 230,
+              height: 450,
               background: "#111318",
               borderRadius: 26,
               padding: 10,
@@ -531,7 +531,7 @@ export default function DeliveryPartnerAppPage() {
       </section>
 
       {/* JOIN CTA */}
-      <section style={{ background: NAVY_DEEP, padding: "70px 6%", textAlign: "center" }}>
+      <section style={{ background: "#192A5f", padding: "70px 6%", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Georgia, serif", fontSize: 34, color: "#fff", margin: "0 0 16px" }}>
           Join the ZestBot Delivery Partner Network
         </h2>

@@ -1,4 +1,5 @@
- 
+ import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 import {
   Store,
@@ -17,7 +18,10 @@ import {
   ArrowRight,
   ArrowLeft,
 } from "lucide-react";
- 
+import customer from "../../../assets/images/customer.png"
+import handshake from "../../../assets/images/customer.png";
+import people from "../../../assets/images/customer-2.png";
+import community from "../../../assets/images/zest.png";
 const NAVY = "#152352";
 const NAVY_DEEP = "#0d1638";
 const GOLD = "#F2B705";
@@ -90,7 +94,12 @@ const whyChoose = [
 ];
  
 export default function CustomerAppPage() {
+
+  
   const navigate = useNavigate();
+
+   const [isPaused, setIsPaused] = useState(false);
+  
  
   return (
     <div style={{ background: PAPER, minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif", color: INK }}>
@@ -164,7 +173,7 @@ export default function CustomerAppPage() {
 `}
 </style>
       {/* BACK LINK */}
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 6% 0" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "100px 6% 0" }}>
         <button
           onClick={() => navigate(-1)}
           style={{
@@ -186,7 +195,7 @@ export default function CustomerAppPage() {
       </div>
  
       {/* HERO */}
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
+      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "6px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
         <div>
           <span
             style={{
@@ -255,53 +264,44 @@ export default function CustomerAppPage() {
             </a>
           </div>
         </div>
+ <div style={{ display: "flex", justifyContent: "center" }}>
+           <div
+             style={{
+               width: 230,
+               height: 450,
+               boxShadow: "0 0px 0px ",
+               position: "relative",
+             }}
+           >
+             {/* side buttons */}
+
  
-        {/* Phone mock signature element */}
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div
-            style={{
-              width: 240,
-              height: 480,
-              background: NAVY_DEEP,
-              borderRadius: 36,
-              padding: 14,
-              boxShadow: "0 30px 60px rgba(21,35,82,0.35)",
-              position: "relative",
-            }}
-          >
-            <div style={{ background: PAPER, width: "100%", height: "100%", borderRadius: 24, padding: 16, display: "flex", flexDirection: "column", gap: 10 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <div style={{ width: 22, height: 22, borderRadius: 6, background: GOLD }} />
-                <div style={{ height: 8, width: 70, background: "#d9dcea", borderRadius: 4 }} />
-              </div>
-              {[Store, ShoppingCart, MapPin].map((Icon, i) => (
-                <div
-                  key={i}
-                  style={{
-                    background: "#fff",
-                    borderRadius: 14,
-                    padding: 12,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    boxShadow: "0 6px 14px rgba(21,35,82,0.08)",
-                  }}
-                >
-                  <div style={{ width: 34, height: 34, borderRadius: 10, background: GOLD_SOFT, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <Icon size={18} color={NAVY} />
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ height: 8, width: "70%", background: "#e3e5f0", borderRadius: 4, marginBottom: 6 }} />
-                    <div style={{ height: 6, width: "45%", background: "#eceef5", borderRadius: 4 }} />
-                  </div>
-                </div>
-              ))}
-              <div style={{ marginTop: "auto", background: GOLD, borderRadius: 12, padding: "10px", textAlign: "center", fontWeight: 800, fontSize: 12, color: NAVY }}>
-                Track Order Live
-              </div>
-            </div>
-          </div>
-        </div>
+             {/* notch */}
+          
+             <div
+               style={{
+                 background: PAPER,
+                 width: "100%",
+                 height: "100%",
+                 borderRadius: 16,
+                 overflow: "hidden",
+                 display: "flex",
+                 alignItems: "center",
+                 justifyContent: "center",
+               }}
+             >
+               <img
+                 src={customer}
+                 alt="ZestBot delivery partner riding to deliver an order"
+                 style={{
+                   width: "100%",
+                   height: "100%",
+                   objectFit: "cover",
+                 }}
+               />
+             </div>
+           </div>
+         </div>
       </section>
  
       {/* WHAT YOU CAN DO */}
@@ -313,29 +313,42 @@ export default function CustomerAppPage() {
     position: "relative",
   }}
 >
+ <div
+  className="marquee-wrapper"
+  style={{
+    width: "100%",
+    overflow: "hidden",
+    position: "relative",
+  }}
+>
   <div
+    className="marquee-track"
     style={{
       display: "flex",
       gap: "24px",
       width: "max-content",
       animation: "marquee 28s linear infinite",
+       animationPlayState: isPaused ? "paused" : "running",
     }}
   >
     {[...whatYouCanDo, ...whatYouCanDo].map(
       ({ icon: Icon, title, text }, i) => (
         <div
-          key={i}
-          className="hover-card"
-          style={{
-            width: 300,
-            minWidth: 300,
-            flexShrink: 0,
-            border: "2px solid #eceef5",
-            borderRadius: 18,
-            padding: 26,
-            background: "#fff",
-          }}
-        >
+  key={i}
+  className="hover-card"
+  onMouseEnter={() => setIsPaused(true)}
+  onMouseLeave={() => setIsPaused(false)}
+  style={{
+    width: 300,
+    minWidth: 300,
+    flexShrink: 0,
+    border: "2px solid #eceef5",
+    borderRadius: 18,
+    padding: 26,
+    background: "#fff",
+    cursor: "pointer",
+  }}
+>
           <div
             className="icon-box"
             style={{
@@ -376,17 +389,26 @@ export default function CustomerAppPage() {
         </div>
       )
     )}
-    <style>{`
+  </div>
+
+<style>{`
 @keyframes marquee{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-90%);
-  }
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(calc(-50% - 12px));
+
+    }
+
 }
 `}</style>
-  </div>
+</div>
 </div>
  
       {/* KEY FEATURES - navy band */}
@@ -424,26 +446,135 @@ export default function CustomerAppPage() {
       </section>
  
       {/* WHY CHOOSE */}
-      <section style={{ background: "#fff", padding: "70px 6%" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
-            WHY CHOOSE ZESTBOT
-          </p> */}
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
-            Why Choose the ZestBot Customer App?
-          </h2>
- 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "20px 32px" }}>
-            {whyChoose.map((point, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <CheckCircle2 size={20} color={GOLD} style={{ flexShrink: 0, marginTop: 2 }} />
-                <span style={{ fontSize: 15.5, lineHeight: 1.6, color: "#33364a" }}>{point}</span>
-              </div>
-            ))}
-          </div>
+      {/* WHY CHOOSE */}
+<section
+  style={{
+    background: "#fff",
+    padding: "70px 6%",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
+
+  {/* LEFT IMAGE */}
+
+  <img
+    src={handshake}
+    alt=""
+    style={{
+      position: "absolute",
+      left: 40,
+      top: 60,
+      width: 170,
+      opacity: 0.06,
+      filter: "grayscale(100%)",
+      pointerEvents: "none",
+      userSelect: "none",
+      zIndex: 1,
+    }}
+  />
+
+  {/* CENTER IMAGE */}
+
+  <img
+    src={people}
+    alt=""
+    style={{
+      position: "absolute",
+      left: "50%",
+      top: "50%",
+      transform: "translate(-50%, -50%)",
+      width: 280,
+      opacity: 0.04,
+      filter: "grayscale(100%)",
+      pointerEvents: "none",
+      userSelect: "none",
+      zIndex: 1,
+    }}
+  />
+
+  {/* RIGHT IMAGE */}
+
+  <img
+    src={community}
+    alt=""
+    style={{
+      position: "absolute",
+      right: 40,
+      bottom: 40,
+      width: 170,
+      opacity: 0.06,
+      filter: "grayscale(100%)",
+      pointerEvents: "none",
+      userSelect: "none",
+      zIndex: 1,
+    }}
+  />
+
+  {/* CONTENT */}
+
+  <div
+    style={{
+      maxWidth: 900,
+      margin: "0 auto",
+      position: "relative",
+      zIndex: 5,
+    }}
+  >
+
+    <h2
+      style={{
+        textAlign: "center",
+        fontFamily: "Georgia, serif",
+        fontSize: 32,
+        color: NAVY,
+        margin: "0 0 44px",
+      }}
+    >
+      Why Choose the ZestBot Customer App?
+    </h2>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+        gap: "20px 32px",
+      }}
+    >
+      {whyChoose.map((point, i) => (
+        <div
+          key={i}
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 12,
+          }}
+        >
+          <CheckCircle2
+            size={20}
+            color={GOLD}
+            style={{
+              flexShrink: 0,
+              marginTop: 2,
+            }}
+          />
+
+          <span
+            style={{
+              fontSize: 15.5,
+              lineHeight: 1.6,
+              color: "#33364a",
+            }}
+          >
+            {point}
+          </span>
         </div>
-      </section>
- 
+      ))}
+    </div>
+
+  </div>
+
+</section>
       {/* PERFECT FOR */}
       <section style={{ padding: "0 6% 70px" }}>
         <div
@@ -486,7 +617,7 @@ export default function CustomerAppPage() {
       </section>
  
       {/* DOWNLOAD CTA */}
-      <section id="download" style={{ background: NAVY_DEEP, padding: "70px 6%", textAlign: "center" }}>
+      <section id="download" style={{ background: "#192A5f", padding: "70px 6%", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Georgia, serif", fontSize: 34, color: "#fff", margin: "0 0 16px" }}>
           Download the ZestBot Customer App
         </h2>
