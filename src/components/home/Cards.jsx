@@ -3,7 +3,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import "../../styles/Cards.css";
-
+import { motion } from "framer-motion";
 import {
   FaArrowRight,
   FaShoppingBag,
@@ -54,7 +54,7 @@ export default function Cards() {
 
   return (
     <section className="cards-section">
-      <div className="cards-header">
+      <div className="cards-header sticky-header">
         <span className="section-tag">
           Join the ZestBot Ecosystem
         </span>
@@ -69,65 +69,92 @@ export default function Cards() {
           ZestBot has something for everyone.
         </p>
       </div>
-
-      <Swiper
-        modules={[Autoplay]}
-        loop={true}
-        grabCursor={true}
-        speed={800}
-        centeredSlides={false}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+      <motion.div
+        className="cards-swiper"
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.9,
+          ease: "easeOut",
         }}
-        spaceBetween={30}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          576: {
-            slidesPerView: 1.3,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 25,
-          },
-          992: {
-            slidesPerView: 2.5,
-            spaceBetween: 25,
-          },
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
+        viewport={{
+          once: true,
+          amount: 0.35,
         }}
       >
-        {cards.map((card) => (
-          <SwiperSlide key={card.id}>
-            <div className={`feature-card ${card.bg}`}>
-              <div className="card-icon-box">{card.icon}</div>
+        <Swiper
+          modules={[Autoplay]}
+          loop={true}
+          grabCursor={true}
+          speed={800}
+          centeredSlides={false}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            576: {
+              slidesPerView: 1.3,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 25,
+            },
+            992: {
+              slidesPerView: 2.5,
+              spaceBetween: 25,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+        >
+          {cards.map((card) => (
+            <SwiperSlide key={card.id}>
 
-              <h3>{card.title}</h3>
-
-              <p>{card.description}</p>
-
-              <button
-                className="card-btn"
-                onClick={() => handleRedirect(card.link)}
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: card.id * 0.15,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.3,
+                }}
               >
-                {card.button}
+                <div className={`feature-card ${card.bg}`}>
+                  <div className="card-icon-box">{card.icon}</div>
 
-                <span className="arrow-circle">
-                  <FaArrowRight />
-                </span>
-              </button>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+                  <h3>{card.title}</h3>
+
+                  <p>{card.description}</p>
+
+                  <button
+                    className="card-btn"
+                    onClick={() => handleRedirect(card.link)}
+                  >
+                    {card.button}
+
+                    <span className="arrow-circle">
+                      <FaArrowRight />
+                    </span>
+                  </button>
+                </div>
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.div>
     </section>
   );
 }

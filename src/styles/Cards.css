@@ -44,7 +44,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  margin-bottom: 55px;
+  margin-bottom: 10px;
 }
 
 .section-tag {
@@ -65,7 +65,7 @@ border: 1px solid #d8c8ff;
 }
 
 .cards-header h2 {
-  margin-top: 20px;
+  margin-top: 0px;
   font-size: 37px;
   font-weight: 800;
   color: #111827;
@@ -80,7 +80,7 @@ border: 1px solid #d8c8ff;
 
 .cards-header p {
   max-width: 620px;
-  margin: 18px auto 0;
+  margin: 4px auto 0;
   color: black;
   font-size: 15px;
   line-height: 1.8;
@@ -94,7 +94,7 @@ border: 1px solid #d8c8ff;
 .swiper {
   width: 100%;
   max-width: 1220px;
-  height: 380px;
+  height: 350px;
   margin: 0 auto;
   padding: 20px 20px 60px !important;
 }
@@ -111,7 +111,7 @@ border: 1px solid #d8c8ff;
 
 .feature-card {
   width: 100%;
-  max-width: 410px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -122,8 +122,8 @@ border: 1px solid #d8c8ff;
 
 .feature-card {
   position: relative;
-  width: 100%;
-  min-height: 360px;
+  width: 95%;
+  min-height: 300px;
   background: #fff;
   border-radius: 26px;
   padding: 28px;
@@ -198,8 +198,8 @@ border: 1px solid #d8c8ff;
 ========================================================= */
 
 .card-icon-box {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 20px;
 
   display: flex;
@@ -285,13 +285,13 @@ border: 1px solid #d8c8ff;
 ========================================================= */
 
 .feature-card h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   color: #111827;
 
   line-height: 1.2;
 
-  margin-bottom: 14px;
+  margin-bottom: 5px;
 
   transition: .35s ease;
 }
@@ -306,10 +306,10 @@ border: 1px solid #d8c8ff;
 ========================================================= */
 
 .feature-card p {
-  font-size: 15px;
+  font-size: 13px;
   color: #667085;
 
-  line-height: 1.8;
+  line-height: 1.4;
 
   margin-bottom: 28px;
 
@@ -330,8 +330,8 @@ border: 1px solid #d8c8ff;
   align-items: center;
   justify-content: space-between;
 
-  width: 185px;
-  height: 50px;
+  width: 175px;
+  height: 45px;
 
   padding: 0 6px 0 18px;
 
@@ -363,8 +363,8 @@ border: 1px solid #d8c8ff;
 ========================================================= */
 
 .arrow-circle {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
 
   border-radius: 50%;
 
