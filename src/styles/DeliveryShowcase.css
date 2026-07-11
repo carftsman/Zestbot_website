@@ -94,7 +94,7 @@
 }
 
 .hero-content h1 .yellow-text {
-  color: #FFD42A;
+  color: #fecd07;
 }
  
 /* ==========================================
@@ -146,11 +146,11 @@
  
 .burger{
  
-  width:150px;
+  width:180px;
  
-  left:8%;
+  left:9%;
  
-  top:200px;
+  top:360px;
  
 }
  
@@ -158,11 +158,11 @@
  
 .momos{
  
-  width:190px;
+  width:160px;
  
-  right:7%;
+  right:9%;
  
-  top:220px;
+  top:140px;
  
 }
  
@@ -170,7 +170,7 @@
  
 .pizza{
  
-  width:150px;
+  width:200px;
  
   right:1%;
  
@@ -183,11 +183,8 @@
 .leaf{
  
   position:absolute;
- 
-  width:120px;
- 
+  width:150px;
   left:16%;
- 
   bottom:90px;
  
 }
@@ -721,8 +718,8 @@ font-size:14px;
  
 ::selection{
  
-background:#EF4F5F;
-color:#fff;
+background:#ffffff;
+color:#000000;
  
 }
  
@@ -738,7 +735,7 @@ width:8px;
  
 ::-webkit-scrollbar-thumb{
  
-background:#EF4F5F;
+background:#192A5F;
 border-radius:20px;
  
 }

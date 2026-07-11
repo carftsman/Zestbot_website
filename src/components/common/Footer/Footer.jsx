@@ -15,8 +15,8 @@ import TermsConditions from "../../home/Terms&Conditions";
 import "./Footer.css";
 
 import logo from "../../../assets/images/logo.png";
-import googlePlay from "../../../assets/images/google-play.png";
-import appStore from "../../../assets/images/app-store.png";
+import googlePlay from "../../../assets/images/appstore.png";
+import appStore from "../../../assets/images/playstore.png";
 
 const Footer = () => {
   const [showTerms, setShowTerms] = useState(false);

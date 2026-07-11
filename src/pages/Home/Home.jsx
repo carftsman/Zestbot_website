@@ -14,13 +14,14 @@ const Home = () => {
     <>
       <Hero />
       {/* <CookieConsent/> */}
-      <Cards />
+      
       <DeliveryShowcase />
+      <Cards />
       <section id="WhyChoose">
         <WhyChoose />
       </section>
-      <Partners />
-      <Cities />
+      {/* <Partners /> */}
+     
       <DownloadApp/>
      
 
@@ -32,6 +33,7 @@ const Home = () => {
   <section id="faqs">
     <FAQs />
   </section>
+   <Cities />
    {/* <section id="Termsconditions">
     <TermsConditions />
   </section> */}

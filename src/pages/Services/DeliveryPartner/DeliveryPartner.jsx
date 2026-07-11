@@ -23,6 +23,7 @@ import {
 
 import Dps from "../../../assets/images/dps.png";
 import DeliveryBg from "../../../assets/images/delivery.png";
+import DeliveryBot from "../../../assets/images/Bot-Bag.png";
 
 // ---- Brand tokens (matches the ZestBot home/services/customer/vendor pages) ----
 const NAVY = "#152352";
@@ -426,11 +427,27 @@ export default function DeliveryPartnerAppPage() {
           alt=""
           style={{
             position: "absolute",
-            right: "-120px",
-            top: "50%",
+            left: "-50px",
+            top: "35%",
             transform: "translateY(-50%)",
-            width: "560px",
+            width: "360px",
             opacity: 0.09,
+            pointerEvents: "none",
+            userSelect: "none",
+            zIndex: 0,
+            animation: "floatDelivery 6s ease-in-out infinite",
+          }}
+        />
+        <img
+          src={DeliveryBot}
+          alt=""
+          style={{
+            position: "absolute",
+            right: "30px",
+            top: "60%",
+            transform: "translateY(-50%)",
+            width: "160px",
+            opacity: 0.11,
             pointerEvents: "none",
             userSelect: "none",
             zIndex: 0,

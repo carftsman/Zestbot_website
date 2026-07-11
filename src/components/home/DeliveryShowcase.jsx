@@ -554,11 +554,11 @@ import {
 import "../../styles/DeliveryShowcase.css";
 
 // import phone from "../../assets/images/phone.png";
-import burger from "../../assets/images/milk.png";
-import momos from "../../assets/images/eggs.png";
-import pizza from "../../assets/images/veg-icon.png";
+import burger from "../../assets/images/eggs.png";
+import momos from "../../assets/images/milk.png";
+import pizza from "../../assets/images/stationary.png";
 import leaf from "../../assets/images/veg-2.png";
-import stationary from "../../assets/images/stationary.png";
+// import stationary from "../../assets/images/stationary.png";
 
 
 

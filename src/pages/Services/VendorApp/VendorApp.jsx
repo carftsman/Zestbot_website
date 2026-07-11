@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import {
   Store,
   Boxes,
@@ -25,6 +26,9 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import VendorPhone from "../../../assets/images/VendorPhone.png";
+import handshake from "../../../assets/images/live-order.png";
+import people from "../../../assets/images/customer-2.png";
+import community from "../../../assets/images/local-shops.png";
 // ---- Brand tokens (matches the ZestBot home/services/customer pages) ----
 const NAVY = "#152352";
 const NAVY_DEEP = "#0d1638";
@@ -106,10 +110,11 @@ const whoCanJoin = [
 
 export default function VendorAppPage() {
   const navigate = useNavigate();
+  const [isPaused, setIsPaused] = useState(false);
 
   return (
     <div style={{ background: PAPER, minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif", color: INK }}>
-    <style>{`
+      <style>{`
   .hover-card {
     position: relative;
     overflow: hidden;
@@ -179,7 +184,7 @@ export default function VendorAppPage() {
 
   
 `}
-</style>
+      </style>
       {/* BACK LINK */}
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "100px 6% 0" }}>
         <button
@@ -303,10 +308,29 @@ export default function VendorAppPage() {
       {/* WHAT YOU CAN DO */}
       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
+
+          <p
+            style={{
+              textAlign: "center",
+              color: GOLD,
+              fontWeight: 800,
+              letterSpacing: 1,
+              fontSize: 20,
+              marginBottom: 8,
+            }}
+          >
             WHAT YOU CAN DO
           </p>
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
+
+          <h2
+            style={{
+              textAlign: "center",
+              fontFamily: "Georgia, serif",
+              fontSize: 32,
+              color: NAVY,
+              margin: "0 0 44px",
+            }}
+          >
             Everything You Need to Run Your Store Online
           </h2>
 
@@ -340,9 +364,9 @@ export default function VendorAppPage() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
-
       {/* KEY FEATURES - navy band */}
       <section style={{ background: NAVY, padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -378,20 +402,89 @@ export default function VendorAppPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section style={{ background: "#fff", padding: "70px 6%" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
-            WHY CHOOSE ZESTBOT
-          </p> */}
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
+      <section
+        style={{
+          background: "#fff",
+          padding: "70px 6%",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+      
+        {/* RIGHT IMAGE */}
+
+        <img
+          src={community}
+          alt=""
+          style={{
+            position: "absolute",
+            right: 0,
+            bottom: 75,
+            width: 330,
+            opacity: 0.15,
+            filter: "grayscale(100%)",
+            pointerEvents: "none",
+            userSelect: "none",
+            zIndex: 1,
+          }}
+        />
+
+        {/* CONTENT */}
+
+        <div
+          style={{
+            maxWidth: 900,
+            margin: "0 auto",
+            position: "relative",
+            zIndex: 5,
+          }}
+        >
+          <h2
+            style={{
+              textAlign: "center",
+              fontFamily: "Georgia, serif",
+              fontSize: 32,
+              color: NAVY,
+              margin: "0 0 44px",
+            }}
+          >
             Why Choose the ZestBot Vendor App?
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "20px 32px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: "20px 32px",
+            }}
+          >
             {whyChoose.map((point, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <ClipboardCheck size={20} color={GOLD} style={{ flexShrink: 0, marginTop: 2 }} />
-                <span style={{ fontSize: 15.5, lineHeight: 1.6, color: "#33364a" }}>{point}</span>
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 12,
+                }}
+              >
+                <ClipboardCheck
+                  size={20}
+                  color={GOLD}
+                  style={{
+                    flexShrink: 0,
+                    marginTop: 2,
+                  }}
+                />
+
+                <span
+                  style={{
+                    fontSize: 15.5,
+                    lineHeight: 1.6,
+                    color: "#33364a",
+                  }}
+                >
+                  {point}
+                </span>
               </div>
             ))}
           </div>
@@ -426,7 +519,7 @@ export default function VendorAppPage() {
                 }}
               >
                 <div
-                 className="icon-box"
+                  className="icon-box"
                   style={{
                     width: 42,
                     height: 42,
@@ -479,7 +572,7 @@ export default function VendorAppPage() {
           >
             Get it on Google Play
           </a>
-         
+
         </div>
       </section>
     </div>
