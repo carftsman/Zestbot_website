@@ -20,8 +20,8 @@ import {
 } from "lucide-react";
 import customer from "../../../assets/images/customer.png"
 import handshake from "../../../assets/images/customer.png";
-import people from "../../../assets/images/customer-2.png";
-import community from "../../../assets/images/zest.png";
+import people from "../../../assets/images/customerr..png";
+import community from "../../../assets/images/bot2.png";
 const NAVY = "#152352";
 const NAVY_DEEP = "#0d1638";
 const GOLD = "#F2B705";
@@ -170,6 +170,23 @@ export default function CustomerAppPage() {
       color:#F2B705;
  
   }
+      .floating-image {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
 `}
       </style>
       {/* BACK LINK */}
@@ -263,58 +280,46 @@ export default function CustomerAppPage() {
             </a>
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div
+ <div style={{ display: "flex", justifyContent: "center" }}>
+           <div
             style={{
-              width: 230,
-              height: 450,
-              boxShadow: "0 0px 0px ",
-              position: "relative",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
             }}
           >
-            {/* side buttons */}
-
-
-            {/* notch */}
-
-            <div
-              style={{
-                background: PAPER,
-                width: "100%",
-                height: "100%",
-                borderRadius: 16,
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <img
-                src={customer}
-                alt="ZestBot delivery partner riding to deliver an order"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-          </div>
-        </div>
+            
+               <img
+                className="floating-image"
+                 src={customer}
+                 alt="ZestBot delivery partner riding to deliver an order"
+                 style={{
+                   width: "110%",
+                maxWidth: "500px",
+                height: "auto",
+                objectFit: "contain",
+                display: "block",
+                filter: "drop-shadow(0 20px 40px rgba(21,35,82,0.2))",
+                 }}
+               />
+             </div>
+           </div>
+        
       </section>
 
-      {/* WHAT YOU CAN DO */}
-      <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
-            WHAT YOU CAN DO
-          </p>
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
-            Everything You Need to Shop Locally
-          </h2>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
-            {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
+     {/* WHAT YOU CAN DO */}
+       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
+         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+           <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+           WHAT YOU CAN DO
+           </p>
+           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
+             Everything You Need to Shop Locally
+           </h2>
+ 
+           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
+             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
                 key={i}
                 className="hover-card"
@@ -394,7 +399,7 @@ export default function CustomerAppPage() {
       >
 
         {/* LEFT IMAGE */}
-
+{/* 
         <img
           src={handshake}
           alt=""
@@ -409,7 +414,7 @@ export default function CustomerAppPage() {
             userSelect: "none",
             zIndex: 1,
           }}
-        />
+        /> */}
 
         {/* CENTER IMAGE */}
 
@@ -422,7 +427,7 @@ export default function CustomerAppPage() {
             top: "50%",
             transform: "translate(-50%, -50%)",
             width: 280,
-            opacity: 0.04,
+            opacity: 0.10,
             filter: "grayscale(100%)",
             pointerEvents: "none",
             userSelect: "none",
@@ -440,7 +445,7 @@ export default function CustomerAppPage() {
             right: 40,
             bottom: 40,
             width: 170,
-            opacity: 0.06,
+            opacity: 0.13,
             filter: "grayscale(100%)",
             pointerEvents: "none",
             userSelect: "none",
