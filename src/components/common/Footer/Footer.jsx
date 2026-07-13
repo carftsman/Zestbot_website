@@ -7,6 +7,9 @@ import {
   FaYoutube,
   FaLinkedinIn,
   FaFacebookF,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -48,6 +51,7 @@ const Footer = () => {
               <h3>Contact</h3>
 
               <p className="address-title">
+                <FaMapMarkerAlt className="contact-icon" />
                 Address:
               </p>
 
@@ -64,10 +68,12 @@ const Footer = () => {
               </p>
 
               <a href="mailto:info@zestbot.in">
+                <FaEnvelope className="contact-icon" />
                 info@zestbot.in
               </a>
 
               <a href="tel:04045374487">
+                <FaPhoneAlt className="contact-icon" />
                 Tel: 040-453-74487
               </a>
 
