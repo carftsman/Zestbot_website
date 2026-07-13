@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import heroVideo from "../../assets/images/viedo-2.mp4";
-import "./Hero.css";
-
+import "../../styles/Hero.css";
 const Hero = () => {
   const videoRef = useRef(null);
 

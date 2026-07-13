@@ -852,3 +852,85 @@ background:#F8F8F8;
   right: 5%;
 }
 
+/* ==========================================
+   HERO ANIMATED SIDE IMAGES (Framer Motion)
+========================================== */
+
+.hero-animated-image {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.06));
+  /* Disable universal CSS transform transition to prevent conflict with Framer Motion */
+  transition: none !important;
+}
+
+/* Position and size definitions for all 8 floating images */
+.pos-grocery-bag {
+  left: 6%;
+  top: 12%;
+  width: 170px;
+}
+.pos-sushi-plate {
+  right: 6%;
+  top: 12%;
+  width: 180px;
+}
+.pos-milk-bottle {
+  left: 8%;
+  top: 62%;
+  width: 140px;
+}
+.pos-eggs {
+  right: 8%;
+  top: 62%;
+  width: 140px;
+}
+.pos-vegetables {
+  left: 4%;
+  top: 37%;
+  width: 150px;
+}
+.pos-stationery {
+  right: 4%;
+  top: 37%;
+  width: 155px;
+}
+.pos-fruits-basket {
+  left: 14%;
+  top: 24%;
+  width: 160px;
+}
+.pos-bakery-items {
+  right: 14%;
+  top: 24%;
+  width: 165px;
+}
+
+/* Tablet Layout (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .pos-grocery-bag { left: 10%; top: 14%; width: 140px; }
+  .pos-sushi-plate { right: 10%; top: 14%; width: 150px; }
+  .pos-milk-bottle { left: 12%; top: 60%; width: 120px; }
+  .pos-eggs { right: 12%; top: 60%; width: 120px; }
+  .pos-vegetables { left: 8%; top: 37%; width: 130px; }
+  .pos-stationery { right: 8%; top: 37%; width: 130px; }
+  .pos-fruits-basket { left: 16%; top: 25%; width: 130px; }
+  .pos-bakery-items { right: 16%; top: 25%; width: 135px; }
+}
+
+/* Mobile Layout (max-width: 768px) */
+@media (max-width: 768px) {
+  .pos-grocery-bag { left: 4%; top: 15%; width: 102px; }
+  .pos-sushi-plate { right: 4%; top: 15%; width: 108px; }
+  .pos-milk-bottle { left: 6%; top: 68%; width: 84px; }
+  .pos-eggs { right: 6%; top: 68%; width: 84px; }
+  .pos-vegetables { left: 2%; top: 41%; width: 90px; }
+  .pos-stationery { right: 2%; top: 41%; width: 93px; }
+  .pos-fruits-basket { left: 8%; top: 28%; width: 96px; }
+  .pos-bakery-items { right: 8%; top: 28%; width: 99px; }
+}
+
