@@ -44,7 +44,6 @@ const Hero = () => {
       {/* ================= Hero Content ================= */}
       <div className="hero-container centered-content">
         <div className="hero-content-wrapper">
-
           {/* Badge */}
           <motion.div
             className="hero-badge ultra-glow"
@@ -53,56 +52,47 @@ const Hero = () => {
             animate="visible"
           >
             <span className="badge-pulse-core"></span>
-            <span className="badge-text-prime">
-              You choose, We Deliver
-            </span>
+            <span className="badge-text-prime">You choose, We Deliver</span>
           </motion.div>
 
           {/* Hero Title */}
+          {/* Hero Title */}
           <h1 className="hero-title">
-
             {/* First Line */}
-            <div className="line line1">
+            <div className="hero-line hero-line-primary">
               <span>Everything</span>
               <span>You</span>
               <span>Need.</span>
             </div>
 
             {/* Second Line */}
-            <div className="line line2">
+            <div className="hero-line hero-line-secondary">
               <span>Everything</span>
               <span>You Crave.</span>
             </div>
 
             {/* Third Line */}
-            <div className="line line3">
-              <span className="word yellow-gradient-text your">
-                Fresh.
-              </span>
+            <div className="hero-line hero-line-highlight">
+              <span className="word yellow-gradient-text your">Fresh.</span>
 
-              <span className="word yellow-gradient-text local">
-                Fast.
-              </span>
+              <span className="word yellow-gradient-text local">Fast.</span>
 
               <span className="word yellow-gradient-text store">
                 Delivered.
               </span>
             </div>
-
           </h1>
 
-          
           <motion.p
             className="hero-description"
             variants={scrollRevealVariants}
             initial="hidden"
             animate="visible"
           >
-            From delicious restaurant meals to farm-fresh groceries and
-            everyday essentials, discover thousands of quality products
-            delivered to your doorstep with speed and care.
+            From delicious restaurant meals to farm-fresh groceries and everyday
+            essentials, discover thousands of quality products delivered to your
+            doorstep with speed and care.
           </motion.p>
-
         </div>
       </div>
     </section>
