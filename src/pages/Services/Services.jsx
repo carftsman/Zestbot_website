@@ -22,7 +22,7 @@ const services = [
     features: [
       "Live Order Tracking",
       "Secure Payments",
-      "AI Recommendations",
+      "Order history and easy reordering",
     ],
   },
  
@@ -35,7 +35,7 @@ const services = [
       "Manage products, receive online orders and grow your business with powerful vendor management tools.",
     features: [
       "Inventory Management",
-      "Order Dashboard",
+      "Online store management",
       "Sales Analytics",
     ],
   },
