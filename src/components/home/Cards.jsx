@@ -151,7 +151,7 @@ export default function Cards() {
 
               <img
                 src={card.image}
-                alt={card.title}
+                alt={card.title}       
                 className="card-bg"
               />
 

@@ -169,6 +169,8 @@
     box-shadow:0 30px 60px rgba(0,0,0,.18);
 }
 
+
+
 /* ==========================================================
    CARD IMAGE
 ========================================================== */
@@ -220,10 +222,12 @@
 ========================================================== */
 
 .overlay-content{
-    width:48%;
+    width:55%;
     display:flex;
     flex-direction:column;
-    margin-top:53px;
+    justify-content:center;
+    height:100%;
+    z-index:10;
 }
 
 .overlay-content h3{
@@ -231,14 +235,15 @@
     line-height:1.15;
     font-weight:800;
     color:#111827;
-    margin-bottom:15px;
+    margin-top:75px;
 }
 
 .overlay-content p{
     color:#4b5563;
-    font-size:13px;
-    line-height:1.8;
-    margin-bottom:5px;
+    font-size:15px;
+    line-height:1.7;
+    margin:8px 0 28px;
+    min-height:95px;
 }
 
 /* ==========================================================
