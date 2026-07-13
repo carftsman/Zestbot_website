@@ -31,7 +31,7 @@ export default function ComingSoon() {
           marginBottom: "35px",
         }}
       >
-        The Delivery Partner App will be available soon.
+        The App will be available soon.
       </p>
 
       <button
