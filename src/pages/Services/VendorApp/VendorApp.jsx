@@ -36,10 +36,10 @@ const GOLD = "#F2B705";
 const GOLD_SOFT = "#FBD758";
 const INK = "#1B1B1F";
 const PAPER = "#F7F7FA";
-
+ 
 const VENDOR_APP_URL =
   "https://play.google.com/store/apps/details?id=com.dhatvibs.zestbot.vendor.grocery";
-
+ 
 const whatYouCanDo = [
   {
     icon: Store,
@@ -72,7 +72,7 @@ const whatYouCanDo = [
     text: "Provide timely service, maintain accurate product information, and deliver a better shopping experience that encourages repeat customers.",
   },
 ];
-
+ 
 const keyFeatures = [
   { icon: UserPlus, text: "Easy vendor registration and onboarding" },
   { icon: Store, text: "Online store management" },
@@ -86,7 +86,7 @@ const keyFeatures = [
   { icon: Bell, text: "Real-time notifications" },
   { icon: MousePointerClick, text: "Simple and user-friendly interface" },
 ];
-
+ 
 const whyChoose = [
   "Expand your business beyond walk-in customers",
   "Increase your local visibility",
@@ -95,7 +95,7 @@ const whyChoose = [
   "Improve customer satisfaction through faster service",
   "Grow your revenue with digital commerce opportunities",
 ];
-
+ 
 const whoCanJoin = [
   { icon: ShoppingBasket, label: "Grocery Stores" },
   { icon: Store, label: "Kirana Stores" },
@@ -107,11 +107,11 @@ const whoCanJoin = [
   { icon: Croissant, label: "Bakeries" },
   { icon: Gift, label: "Gift & Stationery Stores" },
 ];
-
+ 
 export default function VendorAppPage() {
   const navigate = useNavigate();
   const [isPaused, setIsPaused] = useState(false);
-
+ 
   return (
     <div style={{ background: PAPER, minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif", color: INK }}>
       <style>{`
@@ -124,13 +124,13 @@ export default function VendorAppPage() {
       border-color .35s ease,
       background .35s ease;
   }
-
+ 
   .hover-card:hover {
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 22px 45px rgba(21,35,82,.18);
     border-color: #F2B705;
   }
-
+ 
   .hover-card::before{
       content:"";
       position:absolute;
@@ -150,39 +150,39 @@ export default function VendorAppPage() {
   .hover-card:hover::before{
       opacity:1;
   }
-
+ 
   .hover-card .icon-box{
       transition:
       transform .35s ease,
       background .35s ease;
   }
-
+ 
   .hover-card:hover .icon-box{
-
+ 
       transform:rotate(-8deg) scale(1.12);
       background:#F2B705;
-
+ 
   }
-
+ 
   .hover-card:hover .icon-box svg{
-
+ 
       color:#152352 !important;
-
+ 
   }
-
+ 
   .hover-card h3{
-
+ 
       transition:color .3s;
-
+ 
   }
-
+ 
   .hover-card:hover h3{
-
+ 
       color:#F2B705;
-
+ 
   }
-
-  
+ 
+ 
 `}
       </style>
       {/* BACK LINK */}
@@ -206,7 +206,7 @@ export default function VendorAppPage() {
           <ArrowLeft size={16} /> Back to Services
         </button>
       </div>
-
+ 
       {/* HERO */}
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
         <div>
@@ -282,7 +282,7 @@ export default function VendorAppPage() {
             </a>
           </div>
         </div>
-
+ 
         {/* Vendor App Phone Image */}
         <div
           style={{
@@ -304,11 +304,11 @@ export default function VendorAppPage() {
           />
         </div>
       </section>
-
+ 
       {/* WHAT YOU CAN DO */}
       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-
+ 
           <p
             style={{
               textAlign: "center",
@@ -321,7 +321,7 @@ export default function VendorAppPage() {
           >
             WHAT YOU CAN DO
           </p>
-
+ 
           <h2
             style={{
               textAlign: "center",
@@ -333,7 +333,7 @@ export default function VendorAppPage() {
           >
             Everything You Need to Run Your Store Online
           </h2>
-
+ 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
@@ -364,7 +364,7 @@ export default function VendorAppPage() {
               </div>
             ))}
           </div>
-
+ 
         </div>
       </section>
       {/* KEY FEATURES - navy band */}
@@ -376,7 +376,7 @@ export default function VendorAppPage() {
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
             Built to Simplify Running Your Store
           </h2>
-
+ 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px" }}>
             {keyFeatures.map(({ icon: Icon, text }, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 14 }}>
@@ -400,7 +400,7 @@ export default function VendorAppPage() {
           </div>
         </div>
       </section>
-
+ 
       {/* WHY CHOOSE */}
       <section
         style={{
@@ -410,9 +410,9 @@ export default function VendorAppPage() {
           overflow: "hidden",
         }}
       >
-      
+     
         {/* RIGHT IMAGE */}
-
+ 
         <img
           src={community}
           alt=""
@@ -428,9 +428,9 @@ export default function VendorAppPage() {
             zIndex: 1,
           }}
         />
-
+ 
         {/* CONTENT */}
-
+ 
         <div
           style={{
             maxWidth: 900,
@@ -450,7 +450,7 @@ export default function VendorAppPage() {
           >
             Why Choose the ZestBot Vendor App?
           </h2>
-
+ 
           <div
             style={{
               display: "grid",
@@ -475,7 +475,7 @@ export default function VendorAppPage() {
                     marginTop: 2,
                   }}
                 />
-
+ 
                 <span
                   style={{
                     fontSize: 15.5,
@@ -490,7 +490,7 @@ export default function VendorAppPage() {
           </div>
         </div>
       </section>
-
+ 
       {/* WHO CAN JOIN */}
       <section style={{ background: "#fff", padding: "0 6% 70px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -504,7 +504,7 @@ export default function VendorAppPage() {
             The ZestBot Vendor App is designed for grocery stores, restaurants, and every kind
             of neighborhood shop in between.
           </p>
-
+ 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 16 }}>
             {whoCanJoin.map(({ icon: Icon, label }, i) => (
               <div
@@ -537,14 +537,14 @@ export default function VendorAppPage() {
               </div>
             ))}
           </div>
-
+ 
           <p style={{ textAlign: "center", color: "#5b6072", fontSize: 14.5, marginTop: 28 }}>
             Plus other local retail businesses — if you serve your local community, ZestBot can
             help you connect with more customers and grow.
           </p>
         </div>
       </section>
-
+ 
       {/* PARTNER CTA */}
       <section style={{ background: "#192A5f", padding: "70px 6%", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Georgia, serif", fontSize: 34, color: "#fff", margin: "0 0 16px" }}>
@@ -572,9 +572,10 @@ export default function VendorAppPage() {
           >
             Get it on Google Play
           </a>
-
+ 
         </div>
       </section>
     </div>
   );
 }
+ 
