@@ -357,7 +357,7 @@ export default function CustomerAppPage() {
             KEY FEATURES
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
-            Built for Fast, Simple Local Shopping
+            Built for Fast & Simple Local Shopping
           </h2>
  
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px" }}>

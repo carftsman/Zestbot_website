@@ -1,11 +1,11 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import {
-  FaShoppingBag,
-  FaStore,
-  FaMotorcycle,
-} from "react-icons/fa";
+// import {
+//   FaShoppingBag,
+//   FaStore,
+//   FaMotorcycle,
+// } from "react-icons/fa";
 
 import "../../styles/Cards.css";
 
