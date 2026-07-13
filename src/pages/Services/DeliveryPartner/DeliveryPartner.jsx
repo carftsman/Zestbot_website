@@ -276,25 +276,24 @@ export default function DeliveryPartnerAppPage() {
             with a platform built to support your hustle.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <a
-              href={DELIVERY_APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                background: GOLD,
-                color: NAVY,
-                fontWeight: 800,
-                fontSize: 15,
-                padding: "14px 28px",
-                borderRadius: 999,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-              }}
-            >
-              Get Delivery Partner App <ArrowRight size={18} />
-            </a>
+            <button
+  onClick={() => navigate("/coming-soon")}
+  style={{
+    background: GOLD,
+    color: NAVY,
+    fontWeight: 800,
+    fontSize: 15,
+    padding: "14px 28px",
+    borderRadius: 999,
+    border: "none",
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+  }}
+>
+  Get Delivery Partner App <ArrowRight size={18} />
+</button>
             <a
               href="#features"
               style={{
@@ -711,30 +710,25 @@ export default function DeliveryPartnerAppPage() {
           Deliver orders, earn flexibility, and grow with a platform dedicated
           to supporting local commerce.
         </p>
-        <div
-          style={{
-            display: "flex",
-            gap: 16,
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          <a
-            href={DELIVERY_APP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: GOLD,
-              color: NAVY,
-              fontWeight: 800,
-              fontSize: 15,
-              padding: "14px 30px",
-              borderRadius: 999,
-              textDecoration: "none",
-            }}
-          >
-            Get it on Google Play
-          </a>
+        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+          <button
+  onClick={() => navigate("/coming-soon")}
+  style={{
+    background: GOLD,
+    color: NAVY,
+    fontWeight: 800,
+    fontSize: 15,
+    padding: "14px 28px",
+    borderRadius: 999,
+    border: "none",
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+  }}
+>
+  Get it on Google Play
+</button>
         </div>
       </section>
     </div>
