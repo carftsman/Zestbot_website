@@ -12,6 +12,7 @@ import "../../styles/Cards.css";
 import customerImg from "../../assets/images/c1.png";
 import vendorImg from "../../assets/images/v1.png";
 import riderImg from "../../assets/images/d1.png";
+import { useNavigate } from "react-router-dom";
 
 const cards = [
   {
@@ -22,7 +23,7 @@ const cards = [
     button: "Download App",
     image: customerImg,
     color: "#FDB515",
-    link: "https://play.google.com/store/apps/details?id=com.dhatvibs.zestbot.vendor.grocery",
+    link: "/coming-soon",
   },
   {
     id: 2,
@@ -43,8 +44,7 @@ const cards = [
     button: "Download App",
     image: riderImg,
     color: "#22C55E",
-    link: "https://play.google.com/store/apps/details?id=com.dhatvibs.zestbot.vendor.grocery",
-  },
+    link: "/coming-soon",  },
 ];
 
 const container = {
@@ -72,6 +72,7 @@ const item = {
 };
 
 export default function Cards() {
+  const navigate = useNavigate();
   return (
     <section className="cards-section">
       {/* Background */}
@@ -179,13 +180,13 @@ export default function Cards() {
 
                   <button
                     className="overlay-btn"
-                    onClick={() =>
-                      window.open(
-                        card.link,
-                        "_blank",
-                        "noopener,noreferrer"
-                      )
-                    }
+                    onClick={() => {
+  if (card.link === "/coming-soon") {
+    navigate("/coming-soon");
+  } else {
+    window.open(card.link, "_blank", "noopener,noreferrer");
+  }
+}}
                   >
                     {card.button}
 

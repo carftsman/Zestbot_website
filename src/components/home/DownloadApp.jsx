@@ -87,7 +87,7 @@ export default function DownloadApp() {
             </a>
 
             <a
-              href={PLAY_STORE_URL}
+              href={""}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download from Google Play"

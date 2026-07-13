@@ -43,7 +43,30 @@
 
   pointer-events: none;
 }
-
+.hero-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ 
+.hero-line-primary {
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-180px);
+  animation: lineReveal .8s ease forwards;
+}
+ 
+.hero-line-secondary {
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-180px);
+  animation: lineReveal .8s ease forwards;
+  animation-delay: .9s;
+}
+ 
 /* --- CONTENT OVERLAY LAYER --- */
 .hero-container.centered-content {
   position: relative;
