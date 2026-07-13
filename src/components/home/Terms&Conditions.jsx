@@ -260,7 +260,7 @@ const TermsConditions = ({ isModal = false, isOpen = true, onClose = () => {} })
           <div className="terms-modal-header">
             <div>
               <h2 id="terms-modal-title" className="terms-modal-title">Terms & Conditions</h2>
-              <p className="terms-modal-subtitle">Last Updated : July 2026</p>
+
             </div>
             <button type="button" className="terms-close-btn" onClick={onClose} aria-label="Close">
               <FaTimes />

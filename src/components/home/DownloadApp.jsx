@@ -66,7 +66,7 @@ export default function DownloadApp() {
           <h2>
             Download the
             <br />
-            <span>Zestbot</span> App
+            <span>ZestBot</span> App
           </h2>
 
           <p>

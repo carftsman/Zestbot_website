@@ -86,13 +86,13 @@ export default function Cities() {
 }
  
 const styles = {
-container: {
-  background:
-    "linear-gradient(135deg, #FCFDFF 0%, #F4F8FF 35%, #EEF4FF 100%)",
-  color: "#192A5F",
-  padding: "40px 5%",
-  minHeight: "100vh",
-},
+  container: {
+    background: "#192A5F",
+    color: "#ffff",
+    padding: "20px 5%",
+    minHeight: "100vh",
+  },
+ 
   section: {
     marginBottom: "28px",
   },

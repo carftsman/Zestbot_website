@@ -51,7 +51,9 @@
 .address-title {
   font-size: 17px;
   font-weight: 600;
-  
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #ffffff;
 }
 
@@ -67,7 +69,9 @@
 }
 
 .contact-details a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #d6d6d6;
   text-decoration: none;
   margin-top: 4px;
@@ -75,6 +79,12 @@
 }
 
 .contact-details a:hover {
+  color: #ffd400;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  font-size: 14px;
   color: #ffd400;
 }
 
@@ -323,6 +333,11 @@
 
   .contact-details{
     text-align:center;
+  }
+
+  .address-title,
+  .contact-details a{
+    justify-content:center;
   }
 
   .social-icons{

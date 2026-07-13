@@ -58,37 +58,37 @@ const Hero = () => {
           </motion.div>
 
           {/* Hero Title */}
-          <h1 className="hero-title">
+         <h1 className="hero-title">
 
-            {/* First Line */}
-            <div className="line line1">
-              <span>Everything</span>
-              <span>You</span>
-              <span>Need.</span>
-            </div>
+  {/* First Line */}
+  <div className="hero-line hero-line-primary">
+    <span>Everything</span>
+    <span>You</span>
+    <span>Need.</span>
+  </div>
 
-            {/* Second Line */}
-            <div className="line line2">
-              <span>Everything</span>
-              <span>You Crave.</span>
-            </div>
+  {/* Second Line */}
+  <div className="hero-line hero-line-secondary">
+    <span>Everything</span>
+    <span>You Crave.</span>
+  </div>
 
-            {/* Third Line */}
-            <div className="line line3">
-              <span className="word yellow-gradient-text your">
-                Fresh.
-              </span>
+  {/* Third Line */}
+  <div className="hero-line hero-line-highlight">
+    <span className="word yellow-gradient-text your">
+      Fresh.
+    </span>
 
-              <span className="word yellow-gradient-text local">
-                Fast.
-              </span>
+    <span className="word yellow-gradient-text local">
+      Fast.
+    </span>
 
-              <span className="word yellow-gradient-text store">
-                Delivered.
-              </span>
-            </div>
+    <span className="word yellow-gradient-text store">
+      Delivered.
+    </span>
+  </div>
 
-          </h1>
+</h1>
 
           
           <motion.p
