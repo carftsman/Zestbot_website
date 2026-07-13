@@ -92,15 +92,9 @@ const whyChoose = [
   "Safe and reliable shopping experience",
   "Support your neighborhood stores while enjoying modern convenience",
 ];
- 
 export default function CustomerAppPage() {
-
-  
   const navigate = useNavigate();
-
-   const [isPaused, setIsPaused] = useState(false);
-  
- 
+ //  const [isPaused, setIsPaused] = useState(false);
   return (
     <div style={{ background: PAPER, minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif", color: INK }}>
   <style>{`
@@ -170,6 +164,23 @@ export default function CustomerAppPage() {
       color:#F2B705;
  
   }
+      .floating-image {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
 `}
 </style>
       {/* BACK LINK */}
@@ -266,45 +277,32 @@ export default function CustomerAppPage() {
         </div>
  <div style={{ display: "flex", justifyContent: "center" }}>
            <div
-             style={{
-               width: 230,
-               height: 450,
-               boxShadow: "0 0px 0px ",
-               position: "relative",
-             }}
-           >
-             {/* side buttons */}
-
- 
-             {/* notch */}
-          
-             <div
-               style={{
-                 background: PAPER,
-                 width: "100%",
-                 height: "100%",
-                 borderRadius: 16,
-                 overflow: "hidden",
-                 display: "flex",
-                 alignItems: "center",
-                 justifyContent: "center",
-               }}
-             >
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            
                <img
+                className="floating-image"
                  src={customer}
                  alt="ZestBot delivery partner riding to deliver an order"
                  style={{
-                   width: "100%",
-                   height: "100%",
-                   objectFit: "cover",
+                   width: "110%",
+                maxWidth: "500px",
+                height: "auto",
+                objectFit: "contain",
+                display: "block",
+                filter: "drop-shadow(0 20px 40px rgba(21,35,82,0.2))",
                  }}
                />
              </div>
            </div>
-         </div>
+        
       </section>
- 
-      {/* WHAT YOU CAN DO */}
+
      {/* WHAT YOU CAN DO */}
        <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
