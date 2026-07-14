@@ -8,7 +8,7 @@ import CustomerApp from "../pages/Services/CustomerApp/CustomerApp";
 import VendorApp from "../pages/Services/VendorApp/VendorApp";
 import DeliveryPartner from "../pages/Services/DeliveryPartner/DeliveryPartner";
 import Blog from "../pages/Blog/Blog";
-
+import ComingSoon from "../pages/ComingSoon";
 const AppRoutes = () => {
   return (
     <>
@@ -24,6 +24,7 @@ const AppRoutes = () => {
           <Route path="/services/vendor" element={<VendorApp />} />
           <Route path="/services/delivery" element={<DeliveryPartner />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Route>
       </Routes>
     </>

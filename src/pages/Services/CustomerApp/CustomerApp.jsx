@@ -1,4 +1,4 @@
- import { useState } from "react";
+import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import {
@@ -28,11 +28,11 @@ const GOLD = "#F2B705";
 const GOLD_SOFT = "#FBD758";
 const INK = "#1B1B1F";
 const PAPER = "#F7F7FA";
- 
- 
+
+
 const CUSTOMER_APP_URL =
   "https://play.google.com/store/apps/details?id=com.dhatvibs.zestbot.vendor.grocery";
- 
+
 const whatYouCanDo = [
   {
     icon: Store,
@@ -70,7 +70,7 @@ const whatYouCanDo = [
     text: "Discover special deals, discounts, and promotional offers from participating local merchants.",
   },
 ];
- 
+
 const keyFeatures = [
   { icon: Smartphone, text: "Easy-to-use mobile application" },
   { icon: Store, text: "Browse nearby local stores" },
@@ -83,7 +83,7 @@ const keyFeatures = [
   { icon: RotateCcw, text: "Order history and easy reordering" },
   { icon: Bell, text: "Instant notifications and delivery updates" },
 ];
- 
+
 const whyChoose = [
   "Shop from trusted local businesses",
   "Save time with convenient online ordering",
@@ -92,18 +92,18 @@ const whyChoose = [
   "Safe and reliable shopping experience",
   "Support your neighborhood stores while enjoying modern convenience",
 ];
- 
+
 export default function CustomerAppPage() {
 
-  
+
   const navigate = useNavigate();
 
-   const [isPaused, setIsPaused] = useState(false);
-  
- 
+  const [isPaused, setIsPaused] = useState(false);
+
+
   return (
     <div style={{ background: PAPER, minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif", color: INK }}>
-  <style>{`
+      <style>{`
   .hover-card {
     position: relative;
     overflow: hidden;
@@ -171,7 +171,7 @@ export default function CustomerAppPage() {
  
   }
 `}
-</style>
+      </style>
       {/* BACK LINK */}
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "100px 6% 0" }}>
         <button
@@ -193,7 +193,7 @@ export default function CustomerAppPage() {
           <ArrowLeft size={16} /> Back to Services
         </button>
       </div>
- 
+
       {/* HERO */}
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "6px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
         <div>
@@ -229,10 +229,8 @@ export default function CustomerAppPage() {
             and quick doorstep delivery.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <a
-              href={CUSTOMER_APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => navigate("/coming-soon")}
               style={{
                 background: GOLD,
                 color: NAVY,
@@ -240,14 +238,15 @@ export default function CustomerAppPage() {
                 fontSize: 15,
                 padding: "14px 28px",
                 borderRadius: 999,
-                textDecoration: "none",
+                border: "none",
+                cursor: "pointer",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
               }}
             >
-              Download the App <ArrowRight size={18} />
-            </a>
+              Get Customer App <ArrowRight size={18} />
+            </button>
             <a
               href="#features"
               style={{
@@ -264,61 +263,60 @@ export default function CustomerAppPage() {
             </a>
           </div>
         </div>
- <div style={{ display: "flex", justifyContent: "center" }}>
-           <div
-             style={{
-               width: 230,
-               height: 450,
-               boxShadow: "0 0px 0px ",
-               position: "relative",
-             }}
-           >
-             {/* side buttons */}
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
+            style={{
+              width: 230,
+              height: 450,
+              boxShadow: "0 0px 0px ",
+              position: "relative",
+            }}
+          >
+            {/* side buttons */}
 
- 
-             {/* notch */}
-          
-             <div
-               style={{
-                 background: PAPER,
-                 width: "100%",
-                 height: "100%",
-                 borderRadius: 16,
-                 overflow: "hidden",
-                 display: "flex",
-                 alignItems: "center",
-                 justifyContent: "center",
-               }}
-             >
-               <img
-                 src={customer}
-                 alt="ZestBot delivery partner riding to deliver an order"
-                 style={{
-                   width: "100%",
-                   height: "100%",
-                   objectFit: "cover",
-                 }}
-               />
-             </div>
-           </div>
-         </div>
+
+            {/* notch */}
+
+            <div
+              style={{
+                background: PAPER,
+                width: "100%",
+                height: "100%",
+                borderRadius: 16,
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={customer}
+                alt="ZestBot delivery partner riding to deliver an order"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+          </div>
+        </div>
       </section>
- 
+
       {/* WHAT YOU CAN DO */}
-     {/* WHAT YOU CAN DO */}
-       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
-         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-           <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
-           WHAT YOU CAN DO
-           </p>
-           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
-             Everything You Need to Shop Locally
-           </h2>
- 
-           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
-             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
+      <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+            WHAT YOU CAN DO
+          </p>
+          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
+            Everything You Need to Shop Locally
+          </h2>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
+            {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
-                 key={i}
+                key={i}
                 className="hover-card"
                 style={{
                   border: "2px solid #eceef5",
@@ -327,7 +325,7 @@ export default function CustomerAppPage() {
                 }}
               >
                 <div
-                className="icon-box"
+                  className="icon-box"
                   style={{
                     width: 46,
                     height: 46,
@@ -348,8 +346,8 @@ export default function CustomerAppPage() {
           </div>
         </div>
       </section>
- 
- 
+
+
       {/* KEY FEATURES - navy band */}
       <section style={{ background: NAVY, padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -359,7 +357,7 @@ export default function CustomerAppPage() {
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
             Built for Fast & Simple Local Shopping
           </h2>
- 
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px" }}>
             {keyFeatures.map(({ icon: Icon, text }, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 14 }}>
@@ -383,137 +381,137 @@ export default function CustomerAppPage() {
           </div>
         </div>
       </section>
- 
+
       {/* WHY CHOOSE */}
       {/* WHY CHOOSE */}
-<section
-  style={{
-    background: "#fff",
-    padding: "70px 6%",
-    position: "relative",
-    overflow: "hidden",
-  }}
->
+      <section
+        style={{
+          background: "#fff",
+          padding: "70px 6%",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
 
-  {/* LEFT IMAGE */}
+        {/* LEFT IMAGE */}
 
-  <img
-    src={handshake}
-    alt=""
-    style={{
-      position: "absolute",
-      left: 40,
-      top: 60,
-      width: 170,
-      opacity: 0.06,
-      filter: "grayscale(100%)",
-      pointerEvents: "none",
-      userSelect: "none",
-      zIndex: 1,
-    }}
-  />
-
-  {/* CENTER IMAGE */}
-
-  <img
-    src={people}
-    alt=""
-    style={{
-      position: "absolute",
-      left: "50%",
-      top: "50%",
-      transform: "translate(-50%, -50%)",
-      width: 280,
-      opacity: 0.04,
-      filter: "grayscale(100%)",
-      pointerEvents: "none",
-      userSelect: "none",
-      zIndex: 1,
-    }}
-  />
-
-  {/* RIGHT IMAGE */}
-
-  <img
-    src={community}
-    alt=""
-    style={{
-      position: "absolute",
-      right: 40,
-      bottom: 40,
-      width: 170,
-      opacity: 0.06,
-      filter: "grayscale(100%)",
-      pointerEvents: "none",
-      userSelect: "none",
-      zIndex: 1,
-    }}
-  />
-
-  {/* CONTENT */}
-
-  <div
-    style={{
-      maxWidth: 900,
-      margin: "0 auto",
-      position: "relative",
-      zIndex: 5,
-    }}
-  >
-
-    <h2
-      style={{
-        textAlign: "center",
-        fontFamily: "Georgia, serif",
-        fontSize: 32,
-        color: NAVY,
-        margin: "0 0 44px",
-      }}
-    >
-      Why Choose the ZestBot Customer App?
-    </h2>
-
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-        gap: "20px 32px",
-      }}
-    >
-      {whyChoose.map((point, i) => (
-        <div
-          key={i}
+        <img
+          src={handshake}
+          alt=""
           style={{
-            display: "flex",
-            alignItems: "flex-start",
-            gap: 12,
+            position: "absolute",
+            left: 40,
+            top: 60,
+            width: 170,
+            opacity: 0.06,
+            filter: "grayscale(100%)",
+            pointerEvents: "none",
+            userSelect: "none",
+            zIndex: 1,
+          }}
+        />
+
+        {/* CENTER IMAGE */}
+
+        <img
+          src={people}
+          alt=""
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 280,
+            opacity: 0.04,
+            filter: "grayscale(100%)",
+            pointerEvents: "none",
+            userSelect: "none",
+            zIndex: 1,
+          }}
+        />
+
+        {/* RIGHT IMAGE */}
+
+        <img
+          src={community}
+          alt=""
+          style={{
+            position: "absolute",
+            right: 40,
+            bottom: 40,
+            width: 170,
+            opacity: 0.06,
+            filter: "grayscale(100%)",
+            pointerEvents: "none",
+            userSelect: "none",
+            zIndex: 1,
+          }}
+        />
+
+        {/* CONTENT */}
+
+        <div
+          style={{
+            maxWidth: 900,
+            margin: "0 auto",
+            position: "relative",
+            zIndex: 5,
           }}
         >
-          <CheckCircle2
-            size={20}
-            color={GOLD}
-            style={{
-              flexShrink: 0,
-              marginTop: 2,
-            }}
-          />
 
-          <span
+          <h2
             style={{
-              fontSize: 15.5,
-              lineHeight: 1.6,
-              color: "#33364a",
+              textAlign: "center",
+              fontFamily: "Georgia, serif",
+              fontSize: 32,
+              color: NAVY,
+              margin: "0 0 44px",
             }}
           >
-            {point}
-          </span>
+            Why Choose the ZestBot Customer App?
+          </h2>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: "20px 32px",
+            }}
+          >
+            {whyChoose.map((point, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 12,
+                }}
+              >
+                <CheckCircle2
+                  size={20}
+                  color={GOLD}
+                  style={{
+                    flexShrink: 0,
+                    marginTop: 2,
+                  }}
+                />
+
+                <span
+                  style={{
+                    fontSize: 15.5,
+                    lineHeight: 1.6,
+                    color: "#33364a",
+                  }}
+                >
+                  {point}
+                </span>
+              </div>
+            ))}
+          </div>
+
         </div>
-      ))}
-    </div>
 
-  </div>
-
-</section>
+      </section>
       {/* PERFECT FOR */}
       <section style={{ padding: "0 6% 70px" }}>
         <div
@@ -554,7 +552,7 @@ export default function CustomerAppPage() {
           </div>
         </div>
       </section>
- 
+
       {/* DOWNLOAD CTA */}
       <section id="download" style={{ background: "#192A5f", padding: "70px 6%", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Georgia, serif", fontSize: 34, color: "#fff", margin: "0 0 16px" }}>
@@ -565,40 +563,44 @@ export default function CustomerAppPage() {
           convenient doorstep delivery.
         </p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <a
-            href={CUSTOMER_APP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => navigate("/coming-soon")}
             style={{
               background: GOLD,
               color: NAVY,
               fontWeight: 800,
               fontSize: 15,
-              padding: "14px 30px",
+              padding: "14px 28px",
               borderRadius: 999,
-              textDecoration: "none",
+              border: "none",
+              cursor: "pointer",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
             }}
           >
             Get it on Google Play
-          </a>
-          <a
-            href="#"
+          </button>
+          <button
+            onClick={() => navigate("/coming-soon")}
             style={{
-              border: "2px solid rgba(255,255,255,0.3)",
-              color: "#fff",
-              fontWeight: 700,
+              background: "#ffff",
+              color: NAVY,
+              fontWeight: 800,
               fontSize: 15,
-              padding: "12px 28px",
+              padding: "14px 28px",
               borderRadius: 999,
-              textDecoration: "none",
+              border: "none",
+              cursor: "pointer",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
             }}
           >
-            Download on the App Store
-          </a>
+            Download on the App Store 
+          </button>
         </div>
       </section>
     </div>
   );
 }
- 
- 

@@ -234,7 +234,7 @@ export default function DeliveryPartnerAppPage() {
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 14 }}>
             The ZestBot Delivery Partner App enables riders to accept delivery requests,
-            navigate efficiently, track earnings, manage deliveries, and enjoy flexible earning
+            navigate efficiently, track earnings, manage deliveries and enjoy flexible earning
             opportunities.
           </p>
           <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 30 }}>
@@ -242,25 +242,24 @@ export default function DeliveryPartnerAppPage() {
             built to support your hustle.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <a
-              href={DELIVERY_APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                background: GOLD,
-                color: NAVY,
-                fontWeight: 800,
-                fontSize: 15,
-                padding: "14px 28px",
-                borderRadius: 999,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-              }}
-            >
-              Get Delivery Partner App <ArrowRight size={18} />
-            </a>
+            <button
+  onClick={() => navigate("/coming-soon")}
+  style={{
+    background: GOLD,
+    color: NAVY,
+    fontWeight: 800,
+    fontSize: 15,
+    padding: "14px 28px",
+    borderRadius: 999,
+    border: "none",
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+  }}
+>
+  Get Delivery Partner App <ArrowRight size={18} />
+</button>
             <a
               href="#features"
               style={{
@@ -386,7 +385,7 @@ export default function DeliveryPartnerAppPage() {
             KEY FEATURES
           </p>
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
-            Built for Fast, Reliable Deliveries
+            Built for Fast and Reliable Deliveries
           </h2>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px" }}>
@@ -558,22 +557,24 @@ export default function DeliveryPartnerAppPage() {
           grow with a platform dedicated to supporting local commerce.
         </p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <a
-            href={DELIVERY_APP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: GOLD,
-              color: NAVY,
-              fontWeight: 800,
-              fontSize: 15,
-              padding: "14px 30px",
-              borderRadius: 999,
-              textDecoration: "none",
-            }}
-          >
-            Get it on Google Play
-          </a>
+          <button
+  onClick={() => navigate("/coming-soon")}
+  style={{
+    background: GOLD,
+    color: NAVY,
+    fontWeight: 800,
+    fontSize: 15,
+    padding: "14px 28px",
+    borderRadius: 999,
+    border: "none",
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+  }}
+>
+  Get it on Google Play
+</button>
         </div>
       </section>
     </div>
