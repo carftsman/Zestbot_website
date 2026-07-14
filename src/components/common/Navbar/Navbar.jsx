@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react"; import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -29,8 +28,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const location = useLocation();
+  const menuRef = useRef(null);
+  const menuBtnRef = useRef(null);
 
-const isHome = location.pathname === "/";
+  const isHome = location.pathname === "/";
   /* ===========================
       SCROLL EFFECT
   =========================== */
@@ -57,13 +58,33 @@ const isHome = location.pathname === "/";
 
   }, []);
 
-  
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenu &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        menuBtnRef.current &&
+        !menuBtnRef.current.contains(event.target)
+      ) {
+        setMobileMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [mobileMenu]);
 
   return (
 
     <header
-  className={`navbar ${scrolled ? "scrolled" : ""} ${!isHome ? "navbar-light" : ""}`}
->
+      className={`navbar ${scrolled ? "scrolled" : ""} ${!isHome ? "navbar-light" : ""}`}
+    >
 
       <div className="navbar-container">
 
@@ -126,24 +147,24 @@ const isHome = location.pathname === "/";
             Home
           </NavLink>
 
-         <a
-  href="/services"
-  onClick={(e) => {
-    e.preventDefault();
+          <a
+            href="/services"
+            onClick={(e) => {
+              e.preventDefault();
 
-    if (location.pathname === "/services") {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-    } else {
-      navigate("/services");
-    }
-  }}
->
-  Services
-</a>
+              if (location.pathname === "/services") {
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              } else {
+                navigate("/services");
+              }
+            }}
+          >
+            Services
+          </a>
 
           <HashLink smooth to="/#contact" scroll={scrollWithOffset}>
             Contact
@@ -156,103 +177,104 @@ const isHome = location.pathname === "/";
         ====================== */}
         <div className="navbar-right">
 
-  {/* ======================
+          {/* ======================
         DARK MODE
   ====================== */}
 
 
 
-  {/* ======================
+          {/* ======================
        MOBILE BUTTON
   ====================== */}
 
-  <motion.button
+          <motion.button
+            ref={menuBtnRef}
+            className="menu-btn"
 
-    className="menu-btn"
+            whileTap={{
+              scale: .90,
+            }}
 
-    whileTap={{
-      scale: .90,
-    }}
+            onClick={() =>
+              setMobileMenu(!mobileMenu)
+            }
 
-    onClick={() =>
-      setMobileMenu(!mobileMenu)
-    }
+          >
 
-  >
+            {mobileMenu ? <FiX /> : <FiMenu />}
 
-    {mobileMenu ? <FiX /> : <FiMenu />}
+          </motion.button>
 
-  </motion.button>
+        </div>
 
-</div>
-
-{/* ======================
+        {/* ======================
       MOBILE MENU
 ====================== */}
 
- <AnimatePresence>
-    {mobileMenu && (
-      <motion.div
-        className="mobile-menu"
-        initial={{ opacity: 0, y: -25 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -25 }}
-        transition={{ duration: 0.3 }}
-      >
+        <AnimatePresence>
+          {mobileMenu && (
+            <motion.div
+              ref={menuRef}
+              className="mobile-menu"
+              initial={{ opacity: 0, y: -25 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -25 }}
+              transition={{ duration: 0.3 }}
+            >
 
-      <NavLink
+              <NavLink
 
-        to="/"
+                to="/"
 
-        end
+                end
 
-        onClick={() =>
-          setMobileMenu(false)
-        }
+                onClick={() =>
+                  setMobileMenu(false)
+                }
 
-      >
+              >
 
-        Home
+                Home
 
-      </NavLink>
+              </NavLink>
 
-      <NavLink
+              <NavLink
 
-        to="/services"
+                to="/services"
 
-        onClick={() =>
-          setMobileMenu(false)
-        }
+                onClick={() =>
+                  setMobileMenu(false)
+                }
 
-      >
+              >
 
-        Services
+                Services
 
-      </NavLink>
+              </NavLink>
 
-      <HashLink
+              <HashLink
 
-        smooth
+                smooth
 
-        to="/#contact"
+                to="/#contact"
 
-        scroll={scrollWithOffset}
+                scroll={scrollWithOffset}
 
-        onClick={() =>
-          setMobileMenu(false)
-        }
+                onClick={() =>
+                  setMobileMenu(false)
+                }
 
-      >
+              >
 
-        Contact
+                Contact
 
-      </HashLink>
+              </HashLink>
 
-    </motion.div>
+            </motion.div>
 
-  )}
+          )}
 
-</AnimatePresence>
+        </AnimatePresence>
 
       </div>
 

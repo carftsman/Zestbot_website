@@ -447,7 +447,8 @@ font-size:14px;
 
 .stats-container{
 
-padding:18px;
+padding:8px;
+margin-bottom:20px ;
 
 }
 
@@ -475,6 +476,50 @@ font-size:18px;
 
 }
 
+@media(max-width:320px){
+
+.hero-title{
+
+font-size:24px;
+
+}
+
+.hero-content p{
+
+font-size:13px;
+
+}
+
+.stats-container{
+
+padding:8px;
+
+
+}
+
+.stat-left h3{
+
+font-size:16px;
+
+}
+
+.stat-left p{
+
+font-size:12px;
+
+}
+
+.stat-icon{
+
+width:40px;
+
+height:40px;
+
+font-size:18px;
+
+}
+
+}
 /* ==========================================================
    GLOBAL
 ========================================================== */

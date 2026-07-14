@@ -41,7 +41,7 @@ position:relative;
  
 overflow:hidden;
  
-padding:140px 0;
+padding:120px 0;
  
 background:
  
@@ -253,7 +253,7 @@ letter-spacing:2px;
  
 color:var(--primary);
  
-margin-bottom:25px;
+margin-bottom:14px;
  
 backdrop-filter:blur(20px);
  
@@ -265,9 +265,9 @@ backdrop-filter:blur(20px);
  
 .services-heading{
  
-font-size:68px;
+font-size:65px;
  
-font-weight:800;
+font-weight:700;
  
 line-height:1.08;
  
@@ -318,11 +318,11 @@ background-position:200%;
  
 max-width:760px;
  
-margin:30px auto 80px;
+margin:10px auto 40px;
  
 font-size:19px;
  
-line-height:1.9;
+line-height:1.5;
  
 color:#5D6984;
  

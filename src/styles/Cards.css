@@ -125,7 +125,7 @@
     font-size:48px;
     font-weight:800;
     color:#111827;
-    margin-bottom:18px;
+    margin-bottom:1px;
 }
 
 .cards-heading span{
@@ -156,17 +156,18 @@
 ========================================================== */
 
 .image-card{
-    position:relative;
-    /* border-radius:3px; */
-    overflow:hidden;
-    cursor:pointer;
-    transition:.35s ease;
-    box-shadow:0 18px 45px rgba(0,0,0,.12);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .35s ease;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 0;
 }
 
 .image-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 30px 60px rgba(0,0,0,.18);
+    transform: translateY(-10px);
+    box-shadow: none;
 }
 
 
@@ -176,12 +177,13 @@
 ========================================================== */
 
 .card-bg{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    display:block;
-    border-radius:30px;
-    transition:.45s ease;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    background: transparent;
+    transition: .45s ease;
 }
 
 .image-card:hover .card-bg{
@@ -514,6 +516,263 @@
 .overlay-btn span{
     width:26px;
     height:26px;
+}
+
+}
+
+/* ==========================================================
+   LARGE DESKTOP (1600px+)
+========================================================== */
+@media (min-width:1600px){
+
+.cards-container{
+    max-width:1550px;
+}
+
+.cards-heading{
+    font-size:54px;
+}
+
+.cards-subtitle{
+    font-size:19px;
+}
+
+.cards-grid{
+    gap:36px;
+}
+
+.overlay-content h3{
+    font-size:30px;
+}
+
+.overlay-content p{
+    font-size:17px;
+}
+
+.overlay-btn{
+    width:210px;
+    height:56px;
+    font-size:16px;
+}
+
+}
+
+/* ==========================================================
+   DESKTOP (1400px)
+========================================================== */
+@media (max-width:1400px){
+
+.cards-container{
+    max-width:1280px;
+}
+
+.cards-grid{
+    gap:28px;
+}
+
+.cards-heading{
+    font-size:46px;
+}
+
+}
+
+/* ==========================================================
+   LAPTOP (1024px)
+========================================================== */
+@media (max-width:1024px){
+
+.cards-grid{
+    gap:22px;
+}
+
+.overlay-content{
+    width:50%;
+}
+
+.overlay-content h3{
+    font-size:22px;
+}
+
+.overlay-content p{
+    font-size:14px;
+}
+
+}
+
+/* ==========================================================
+   TABLET (820px)
+========================================================== */
+@media (max-width:820px){
+
+.cards-section{
+    padding:45px 18px;
+}
+
+.cards-heading{
+    font-size:28px;
+}
+
+.cards-subtitle{
+    font-size:15px;
+}
+
+.overlay-content{
+    width:54%;
+}
+
+}
+
+/* ==========================================================
+   LARGE MOBILE (640px)
+========================================================== */
+@media (max-width:640px){
+
+.card-bg{
+    height:260px;
+}
+
+.overlay-content{
+    width:60%;
+}
+
+.overlay-content h3{
+    font-size:17px;
+}
+
+.overlay-content p{
+    font-size:12px;
+}
+
+.overlay-btn{
+    width:145px;
+    height:40px;
+}
+
+}
+
+/* ==========================================================
+   MOBILE (480px)
+========================================================== */
+@media (max-width:480px){
+
+.cards-section{
+    padding:40px 12px;
+}
+
+.cards-heading{
+    font-size:24px;
+}
+
+.cards-subtitle{
+    font-size:13px;
+}
+
+.card-bg{
+    
+    height:340px;
+}
+
+.overlay-content{
+    width:95%;
+}
+
+.overlay-content h3{
+    margin-top: 60px;
+    font-size:23px;
+}
+
+.overlay-content p{
+    font-size:16px;
+    line-height:1.4;
+}
+
+.overlay-btn{
+    width:160px;
+    height:42px;
+    font-size:15px;
+}
+
+.overlay-btn span{
+    width:26px;
+    height:26px;
+}
+
+}
+
+/* ==========================================================
+   SMALL MOBILE (375px)
+========================================================== */
+@media (max-width:375px){
+
+.cards-heading{
+    font-size:22px;
+}
+
+.cards-subtitle{
+    font-size:12px;
+}
+
+.card-bg{
+    height:auto;
+}
+.overlay-content h3{
+    font-size:14px;
+}
+
+.overlay-content p{
+    font-size:10px;
+}
+
+.overlay-btn{
+    width:130px;
+    height:36px;
+    font-size:11px;
+}
+
+}
+
+/* ==========================================================
+   EXTRA SMALL MOBILE (320px)
+========================================================== */
+@media (max-width:320px){
+
+.cards-section{
+    padding:35px 10px;
+}
+
+.cards-heading{
+    font-size:20px;
+}
+
+.cards-subtitle{
+    font-size:11px;
+}
+
+.card-bg{
+    height:290px;
+}
+
+.overlay-content{
+    width:100%;
+}
+
+.overlay-content h3{
+    font-size:13px;
+}
+
+.overlay-content p{
+    font-size:10px;
+}
+
+.overlay-btn{
+    width:120px;
+    height:34px;
+    font-size:10px;
+}
+
+.overlay-btn span{
+    width:24px;
+    height:24px;
 }
 
 }

@@ -559,6 +559,43 @@ width:135px;
     }
 
 }
+@media(max-width:480px){
+
+    .navbar{
+        height:74px;
+    }
+
+    .logo img{
+        width:120px;
+    }
+
+    .theme-toggle{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    .menu-btn{
+        width:40px;
+        height:40px;
+        font-size:24px;
+        color:#fff;
+    }
+
+    .menu-btn svg{
+        color:#fff;
+    }
+
+    .mobile-menu{
+        top:44px;
+        left: 110px;
+        width:calc(90% - 90px);
+        max-width:none;
+        /* padding:10px; */
+        border-radius:18px;
+    }
+
+}
 
 @media(max-width:320px){
 
