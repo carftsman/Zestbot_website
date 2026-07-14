@@ -244,7 +244,31 @@ body{
 .theme-toggle:hover{
     background:#2563eb;
     border-color:#2563eb;
-    transform:rotate(180deg);
+
+}
+
+/* Home page remains unchanged */
+
+.navbar-light{
+    background:#192A5F;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.navbar-light .nav-links a{
+    color:#fff;
+}
+
+.navbar-light .nav-links a:hover,
+.navbar-light .nav-links a.active{
+    color:#FFD54A;
+}
+
+.navbar-light .menu-btn{
+    color:#fff;
+}
+
+.navbar-light .menu-btn svg{
+    color:#fff;
 }
 
 /* ===================================================
@@ -272,12 +296,335 @@ body{
 }
 
 .menu-btn:hover{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+}
+/* ===================================================
+   MOBILE MENU
+=================================================== */
+
+.mobile-menu{
+    position: fixed;
+    top: 90px;
+    left: 110px;
+    transform: translateX(-50%);
+
+
+    width: 190px;
+    /* max-width: 360px; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    padding: 10px;
+
+    background: rgba(8,12,20,.96);
+    backdrop-filter: blur(25px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+
+    z-index: 100000;
+}
+
+.mobile-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    height:50px;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    border-radius:14px;
+
+    transition:.35s;
+
+}
+.mobile-menu a:hover{
+
     background:rgba(255,255,255,.08);
 }
 
-.menu-btn svg{
-    width:28px;
-    height:28px;
+.mobile-menu a.active{
+
+    background:#2E323B;
+
+    color:#FFD42A;
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+/* ===================================================
+   DARK MODE
+=================================================== */
+
+body.dark{
+
+    background:#070b13;
+
+    color:#ffffff;
+
+}
+
+body.dark .navbar.scrolled{
+
+    background:rgba(4,7,15,.85);
+
+}
+
+body.dark .mobile-menu{
+
+    background:rgba(8,12,20,.97);
+
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media(max-width:1100px){
+
+.nav-links{
+
+gap:12px;
+
+margin-left:30px;
+
+margin-right:30px;
+
+}
+
+.nav-links a{
+
+width:110px;
+
+font-size:14px;
+
+}
+
+.logo img{
+
+width:165px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.menu-btn{
+
+display:flex;
+
+}
+
+.logo img{
+
+width:150px;
+
+}
+
+.theme-toggle{
+
+width:44px;
+
+height:44px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+height:80px;
+
+}
+
+.logo img{
+
+width:135px;
+
+}
+
+.mobile-menu{
+        top:48px;
+        left:420px;
+        width:calc(50% - 90px);
+        max-width:none;
+        padding:10px;
+        border-radius:18px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .navbar{
+        height:74px;
+    }
+
+    .logo img{
+        width:120px;
+    }
+
+    .theme-toggle{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    .menu-btn{
+        width:40px;
+        height:40px;
+        font-size:24px;
+        color:#fff;
+    }
+
+    .menu-btn svg{
+        color:#fff;
+    }
+
+    .mobile-menu{
+        top:44px;
+        width:calc(90% - 90px);
+        max-width:none;
+        padding:10px;
+        border-radius:18px;
+    }
+
+}
+
+@media(max-width:320px){
+
+    .navbar{
+        height:74px;
+    }
+
+    .logo img{
+        width:120px;
+    }
+
+    .theme-toggle{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    .menu-btn{
+        width:40px;
+        height:40px;
+        font-size:24px;
+        color:#fff;
+    }
+
+    .menu-btn svg{
+        color:#fff;
+    }
+
+    .mobile-menu{
+        top:44px;
+        left: 110px;
+        width:calc(90% - 90px);
+        max-width:none;
+        /* padding:10px; */
+        border-radius:18px;
+    }
+
+}
+
+/* ===================================================
+   SCROLL ANIMATION
+=================================================== */
+
+.navbar{
+
+animation:fadeDown .5s ease;
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================================================
+   LOGO
+=================================================== */
+
+.logo img{
+
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.25));
+
+}
+
+/* ===================================================
+   MICRO INTERACTIONS
+=================================================== */
+
+.logo img,
+.theme-toggle,
+.menu-btn,
+.nav-links a{
+
+transition:all .35s ease;
+
+}
+
+.nav-links a:hover{
+
+transform:translateY(-2px);
+
+}
+
+.theme-toggle:hover{
+
+transform:rotate(180deg);
+
+}
+
+.logo:hover img{
+
+transform:scale(1.05);
+
 }
 
 /* ===================================================

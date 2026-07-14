@@ -40,20 +40,14 @@ a{
    DOWNLOAD SECTION
 ===================================================== */
 
-.download-app{
-    width:50%;
-    /* padding:10px 20px; */
-    background:#fff;
-    overflow:hidden;
-    
-}
+
 
 
 /* =====================================================
    MAIN CONTAINER
 ==================================================== */
 .download{
-    background-color: "#fff";
+    background: "#fff";
 }
 .download-container{
     position:relative;
@@ -216,34 +210,14 @@ a{
 }
 
 
-/* =====================================================
-   BOT IMAGE
-===================================================== */
 
-.bot-image{
-    width:110px;
-    max-width:120%;
-    /* height:auto; */
-    display:block;
-    object-fit:contain;
-    pointer-events:none;
-    user-select:none;
-    z-index:5;
-    will-change:transform;
-}
 
 
 /* =====================================================
    LAYER ORDER
 ===================================================== */
 
-.download-right::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    z-index:1;
-}
+
 
 .bot-image{
     position:relative;
@@ -262,12 +236,15 @@ a{
 }
 
 .bot-image{
-    backface-visibility:hidden;
+    
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.download-container:hover .bot-image{
-    transform: translateY(-6px);
+.bot-wrapper{
+    position:relative;
+    display:inline-block;
+    animation:botFloat 4s ease-in-out infinite;
+    transition:transform .4s ease;
 }
 /* =====================================================
    LARGE LAPTOP
@@ -410,6 +387,165 @@ a{
 
 .bot-image{
     width:210px;
+}
+
+}
+
+.bot-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.bot-image{
+    width:400px;
+    max-width:100%;
+    display:block;
+    object-fit:contain;
+    position:relative;
+    z-index:1;
+    pointer-events:none;
+    user-select:none;
+}
+
+.qr-image{
+    position:absolute;
+
+    top:51%;
+    left:78%;
+    transform:translate(-50%,-50%);
+
+    width:110px;
+    height:110px;
+
+    padding:6px;
+    background:#fff;
+    border-radius:12px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+    z-index:999;          /* Bring QR above robot */
+    pointer-events:none;
+}
+@keyframes botFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+@media (max-width:768px){
+
+.qr-image{
+    width:70px;
+    height:70px;
+    padding:4px;
+}
+
+}
+
+@media (max-width:992px){
+
+.download-right{
+    justify-content:center;
+    margin-right:0;
+    min-height:auto;
+}
+
+.bot-wrapper{
+    width:320px;
+    max-width:90%;
+}
+
+.bot-image{
+    width:100%;
+}
+
+.qr-image{
+    width:90px;
+    height:90px;
+
+    top:51%;
+    left:78%;
+}
+
+}
+
+@media (max-width:768px){
+
+.download-container{
+    flex-direction:column;
+    padding:30px 20px;
+    gap:30px;
+}
+
+.download-left{
+    text-align:center;
+    align-items:center;
+}
+
+.download-right{
+    justify-content:center;
+    width:100%;
+}
+
+.bot-wrapper{
+    width:260px;
+    max-width:100%;
+}
+
+.bot-image{
+    width:100%;
+}
+
+.qr-image{
+    width:72px;
+    height:72px;
+
+    top:51%;
+    left:78%;
+}
+
+}
+@media (max-width:480px){
+
+.bot-wrapper{
+    width:220px;
+}
+
+.bot-image{
+    width:100%;
+}
+
+.qr-image{
+    width:60px;
+    height:60px;
+
+    top:51%;
+    left:78%;
+}
+
+}
+
+@media (max-width:360px){
+
+.bot-wrapper{
+    width:190px;
+}
+
+.qr-image{
+    width:52px;
+    height:52px;
+
+    top:51%;
+    left:78%;
 }
 
 }

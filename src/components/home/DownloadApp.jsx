@@ -4,7 +4,7 @@ import "../../styles/DownloadApp.css";
 import botImg from "../../assets/images/botimage.png";
 import playStore from "../../assets/images/playstore.png";
 import appStore from "../../assets/images/appstore.png";
-
+import qrCode from "../../assets/images/qr.png";
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.dhatvibs.zestbot.vendor.grocery";
 
@@ -102,22 +102,31 @@ export default function DownloadApp() {
 
         {/* RIGHT CONTENT */}
         <motion.div
-          className="download-right"
-          variants={phoneVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{
-            once: true,
-            amount: 0.4,
-          }}
-        >
-          {/* BOT */}
-          <img
-            src={botImg}
-            alt="Robot"
-            className="bot-image"
-          />
-        </motion.div>
+  className="download-right"
+  variants={phoneVariant}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{
+    once: true,
+    amount: 0.4,
+  }}
+>
+  <div className="bot-wrapper">
+    {/* Robot */}
+    <img
+      src={botImg}
+      alt="Robot"
+      className="bot-image"
+    />
+
+    {/* QR Code */}
+    <img
+      src={qrCode}
+      alt="QR Code"
+      className="qr-image"
+    />
+  </div>
+</motion.div>
       </div>
     </section>
   );
