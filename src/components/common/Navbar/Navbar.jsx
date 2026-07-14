@@ -190,34 +190,15 @@ const isHome = location.pathname === "/";
       MOBILE MENU
 ====================== */}
 
-<AnimatePresence>
-
-  {mobileMenu && (
-
-    <motion.div
-
-      className="mobile-menu"
-
-      initial={{
-        opacity: 0,
-        y: -25,
-      }}
-
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-
-      exit={{
-        opacity: 0,
-        y: -25,
-      }}
-
-      transition={{
-        duration: .30,
-      }}
-
-    >
+ <AnimatePresence>
+    {mobileMenu && (
+      <motion.div
+        className="mobile-menu"
+        initial={{ opacity: 0, y: -25 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -25 }}
+        transition={{ duration: 0.3 }}
+      >
 
       <NavLink
 

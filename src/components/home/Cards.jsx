@@ -1,11 +1,11 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import {
-  FaShoppingBag,
-  FaStore,
-  FaMotorcycle,
-} from "react-icons/fa";
+// import {
+//   FaShoppingBag,
+//   FaStore,
+//   FaMotorcycle,
+// } from "react-icons/fa";
 
 import "../../styles/Cards.css";
 
@@ -96,7 +96,7 @@ export default function Cards() {
           viewport={{ once: true }}
           transition={{ duration: .6 }}
         >
-          <span className="badge-icon">👥</span>
+          <span className="badge-icon"></span>
           Join the ZestBot Ecosystem
         </motion.div>
 
