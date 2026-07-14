@@ -3,7 +3,7 @@ import {
   Bike,Navigation,PackageCheck,Wallet,CalendarClock,BellRing,UserPlus,MapPin,IndianRupee,History,CreditCard, Clock,MousePointerClick,GraduationCap, Users,Briefcase,Smartphone,ArrowLeft,ArrowRight,} from "lucide-react";
 
 import Dps from "../../../assets/images/Dps.png";
-import DeliveryBg from "../../../assets/images/Delivery.png";
+import DeliveryBg from "../../../assets/images/delivery11.png";
 import DeliveryBot from "../../../assets/images/bot-bag.png";
 
 // ---- Brand tokens (matches the ZestBot home/services/customer/vendor pages) ----
