@@ -333,35 +333,98 @@
    MOBILE
 ========================================== */
 
-@media (max-width: 600px) {
-  .whyChoose-section {
-    padding: 60px 16px;
-  }
 
-  .whyChoose-title {
-    font-size: 26px;
-  }
+@media (max-width:600px){
 
-  .whyChoose-description {
-    font-size: 14.5px;
-  }
+.whyChoose-section{
+    padding:60px 16px;
+}
 
-  .whyChoose-phoneWrap {
-    width: 220px;
-  }
+.whyChoose-title{
+    font-size:26px;
+}
 
-  .whyChoose-phone {
-    width: 210px;
-    height: 430px;
-    border-radius: 32px;
-  }
+.whyChoose-description{
+    font-size:14px;
+}
 
-  .whyChoose-screen {
-    border-radius: 24px;
-  }
+/* Layout */
+.whyChoose-layout{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+}
 
-  .whyChoose-featureIcon {
-    width: 54px;
-    height: 54px;
-  }
+/* Left cards -> TOP */
+.whyChoose-cardsLeft{
+    order:1;
+    width:100%;
+    max-width:320px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-items:center;
+    align-items:center;
+    gap:20px;
+}
+
+/* Phone -> MIDDLE */
+.whyChoose-phoneWrap{
+    order:2;
+    width:220px;
+}
+
+.whyChoose-phone{
+    width:210px;
+    height:430px;
+    border-radius:32px;
+}
+
+.whyChoose-screen{
+    border-radius:24px;
+}
+
+/* Right cards -> BOTTOM */
+.whyChoose-cardsRight{
+    order:3;
+    width:100%;
+    max-width:320px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-items:center;
+    align-items:center;
+    gap:20px;
+}
+
+/* Remove desktop positioning */
+.whyChoose-cardsLeft .whyChoose-card-0,
+.whyChoose-cardsLeft .whyChoose-card-1,
+.whyChoose-cardsLeft .whyChoose-card-2,
+.whyChoose-cardsRight .whyChoose-card-0,
+.whyChoose-cardsRight .whyChoose-card-1,
+.whyChoose-cardsRight .whyChoose-card-2{
+    margin:0 !important;
+    transform:none !important;
+    animation:none !important;
+}
+
+/* Icon bubbles */
+.whyChoose-featureIcon{
+    width:72px;
+    height:72px;
+    background-size:115%;
+}
+
+.whyChoose-badge{
+    width:22px;
+    height:22px;
+}
+
+.whyChoose-badge svg{
+    width:11px;
+    height:11px;
+}
+
 }
