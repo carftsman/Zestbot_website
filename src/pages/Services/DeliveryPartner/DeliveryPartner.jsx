@@ -145,6 +145,7 @@ export default function DeliveryPartnerAppPage() {
 
   }
 
+
   .hover-card:hover .icon-box svg{
 
       color:#152352 !important;
@@ -185,6 +186,107 @@ export default function DeliveryPartnerAppPage() {
     transform: translateY(0px);
   }
 }
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+  /* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1024px){
+
+.hero-responsive{
+grid-template-columns:1fr !important;
+text-align:center;
+gap:40px !important;
+}
+
+.hero-content-responsive{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.hero-title-responsive{
+font-size:38px !important;
+}
+
+.hero-buttons-responsive{
+justify-content:center;
+}
+
+.phone-responsive{
+max-width:380px !important;
+width:100% !important;
+}
+
+.hide-mobile{
+display:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-responsive{
+padding:20px 5% 40px !important;
+}
+
+.hero-title-responsive{
+font-size:30px !important;
+line-height:1.3 !important;
+}
+
+.hero-buttons-responsive{
+flex-direction:column;
+width:100%;
+}
+
+.hero-buttons-responsive a{
+width:100%;
+justify-content:center;
+text-align:center;
+}
+
+.phone-responsive{
+max-width:300px !important;
+}
+
+.features-grid-responsive,
+.key-grid-responsive,
+.why-grid-responsive{
+grid-template-columns:1fr !important;
+}
+
+.join-grid-responsive{
+grid-template-columns:repeat(2,1fr) !important;
+}
+
+.cta-responsive{
+flex-direction:column;
+}
+
+.cta-responsive a{
+width:100%;
+text-align:center;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-title-responsive{
+font-size:26px !important;
+}
+
+.join-grid-responsive{
+grid-template-columns:1fr !important;
+}
+
+}
 `}
       </style>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "100px 6% 0" }}>
@@ -210,17 +312,18 @@ export default function DeliveryPartnerAppPage() {
 
       {/* HERO */}
       <section
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          padding: "36px 6% 60px",
-          display: "grid",
-          gridTemplateColumns: "1.1fr 0.9fr",
-          gap: 48,
-          alignItems: "center",
-        }}
-      >
-        <div>
+  className="hero-responsive"
+  style={{
+    maxWidth:1100,
+    margin:"0 auto",
+    padding:"36px 6% 60px",
+    display:"grid",
+    gridTemplateColumns:"1.1fr 0.9fr",
+    gap:48,
+    alignItems:"center"
+  }}
+>
+        <div className="hero-content-responsive">
           <span
             style={{
               display: "inline-block",
@@ -237,6 +340,7 @@ export default function DeliveryPartnerAppPage() {
             DELIVERY PARTNER APP
           </span>
           <h1
+className="hero-title-responsive"
             style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontSize: 40,
@@ -275,7 +379,14 @@ export default function DeliveryPartnerAppPage() {
             Work when it suits you, deliver with confidence, and stay connected
             with a platform built to support your hustle.
           </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <div
+  className="hero-buttons-responsive"
+  style={{
+    display: "flex",
+    gap: 16,
+    flexWrap: "wrap",
+  }}
+>
             <button
   onClick={() => navigate("/coming-soon")}
   style={{
@@ -322,7 +433,7 @@ export default function DeliveryPartnerAppPage() {
             }}
           >
             <img
-            className="floating-image"
+  className="floating-image hide-mobile phone-responsive"
               src={Dps}
               alt="ZestBot Delivery Partner App"
               style={{
@@ -366,12 +477,13 @@ export default function DeliveryPartnerAppPage() {
           </h2>
 
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: 24,
-            }}
-          >
+  className="features-grid-responsive"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: 24,
+  }}
+>
             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
                 key={i}
@@ -450,12 +562,13 @@ export default function DeliveryPartnerAppPage() {
           </h2>
 
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "18px 28px",
-            }}
-          >
+  className="key-grid-responsive"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "18px 28px",
+  }}
+>
             {keyFeatures.map(({ icon: Icon, text }, i) => (
               <div
                 key={i}
@@ -496,6 +609,7 @@ export default function DeliveryPartnerAppPage() {
         }}
       >
         <img
+        className="hide-mobile"
           src={DeliveryBg}
           alt=""
           style={{
@@ -512,7 +626,8 @@ export default function DeliveryPartnerAppPage() {
           }}
         />
         <img
-          src={DeliveryBot}
+  className="hide-mobile"
+  src={DeliveryBot}
           alt=""
           style={{
             position: "absolute",
@@ -551,12 +666,14 @@ export default function DeliveryPartnerAppPage() {
           </h2>
 
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: "20px 32px",
-            }}
-          >
+  className="join-grid-responsive"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+    gap: 16,
+    marginBottom: 36,
+  }}
+>
             {whyChoose.map((point, i) => (
               <div
                 key={i}
