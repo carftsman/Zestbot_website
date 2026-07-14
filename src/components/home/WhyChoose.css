@@ -1,0 +1,430 @@
+
+.whyChoose-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #f5f7ff 0%, #eef2ff 55%, #e8ecff 100%);
+  padding: 30px 6%;
+  overflow: hidden;
+}
+
+/* faint dot-grid texture across the whole section */
+.whyChoose-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#c3cdf0 1.4px, transparent 1.4px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* soft blurred color blobs for depth */
+.whyChoose-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(360px 360px at 8% 12%, rgba(255, 212, 0, 0.22), transparent 70%),
+    radial-gradient(420px 420px at 95% 20%, rgba(37, 81, 224, 0.16), transparent 70%),
+    radial-gradient(460px 460px at 12% 92%, rgba(37, 81, 224, 0.14), transparent 70%),
+    radial-gradient(380px 380px at 92% 90%, rgba(255, 212, 0, 0.16), transparent 70%);
+  filter: blur(10px);
+  z-index: 0;
+}
+
+/* keep real content above the decorative layers above */
+.whyChoose-header,
+.whyChoose-layout {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.whyChoose-header {
+  text-align: center;
+  max-width: 790px;
+  margin: 0 auto 30px;
+}
+
+.whyChoose-tag {
+  display: inline-block;
+  padding: 10px 24px;
+  background: rgba(255, 212, 0, 0.15);
+  color: #192a5f;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.whyChoose-title {
+  font-size: 30px;
+  color: #192a5f;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0px;
+}
+
+.whyChoose-title span {
+  color: #ffd400;
+
+}
+
+.whyChoose-description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: black;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/* ==========================
+   CENTER LAYOUT (ICONS + PHONE)
+========================== */
+
+.whyChoose-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.whyChoose-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  max-width: 130px;
+}
+
+.whyChoose-cardsLeft .whyChoose-card-0 {
+  transform: translateX(20px);
+  animation: cardFloat 5s ease-in-out infinite;
+}
+
+.whyChoose-cardsLeft .whyChoose-card-1 {
+  margin-top: 40px;
+  transform: translateX(-30px);
+  animation: cardFloat 6s ease-in-out infinite 0.6s;
+}
+
+.whyChoose-cardsLeft .whyChoose-card-2 {
+  margin-top: 10px;
+  transform: translateX(30px);
+  animation: cardFloat 5.5s ease-in-out infinite 1.2s;
+}
+
+.whyChoose-cardsRight .whyChoose-card-0 {
+  margin-top: 25px;
+  transform: translateX(-20px);
+  animation: cardFloat 5.5s ease-in-out infinite 0.3s;
+}
+
+.whyChoose-cardsRight .whyChoose-card-1 {
+  margin-top: 40px;
+  transform: translateX(30px);
+  animation: cardFloat 6s ease-in-out infinite 0.9s;
+}
+
+.whyChoose-cardsRight .whyChoose-card-2 {
+  margin-top: -10px;
+  transform: translateX(-30px);
+  animation: cardFloat 5s ease-in-out infinite 1.5s;
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: -14px;
+  }
+}
+
+/* ==========================
+   PHONE WRAP + RING
+========================== */
+
+.whyChoose-phoneWrap {
+  flex: 0 0 auto;
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* ==========================
+   CSS-BUILT PHONE (replaces the flat phone-frame PNG)
+========================== */
+
+.whyChoose-phone {
+  position: relative;
+  z-index: 2;
+  width: 230px;
+  height: 460px;
+  border-radius: 42px;
+  background: #111;
+  padding: 10px;
+  box-shadow: 0 25px 50px rgba(25, 42, 95, 0.35);
+  animation: phoneFloat 4s ease-in-out infinite;
+}
+
+@keyframes phoneFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.whyChoose-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 0%, #2451e0 0%, #16296b 55%, #0d1c4d 100%);
+}
+
+/* notch */
+.whyChoose-screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 24px;
+  background: #111;
+  border-radius: 0 0 16px 16px;
+  z-index: 5;
+}
+
+.whyChoose-logo {
+  position: relative;
+  z-index: 2;
+  padding-top: 48px;
+  text-align: center;
+}
+
+/* your zest-logo.png already contains the "ZestBot" wordmark, so it's the
+   only element here — no extra text label on top of it */
+.whyChoose-logo img {
+  width: auto;
+  height: 34px;
+  display: inline-block;
+}
+
+.whyChoose-bot {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  max-height: 54%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+
+
+/* ==========================
+   FLOATING ICON BUBBLES
+========================== */
+
+.whyChoose-featureIcon {
+  position: relative;
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 116%;   /* Change from cover to 72% */
+  box-shadow: 0 10px 24px rgba(25, 42, 95, 0.14);
+  transition: 0.3s;
+}
+
+.whyChoose-featureIcon:hover {
+  transform: scale(1.12) translateY(-4px);
+  /* box-shadow: 0 12px 28px rgba(255, 212, 0, 0.35); */
+}
+
+.whyChoose-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+}
+
+.whyChoose-badge svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+  .whyChoose-section {
+    padding: 80px 20px;
+  }
+
+  .whyChoose-title {
+    font-size: 34px;
+  }
+
+  .whyChoose-description {
+    font-size: 16px;
+  }
+
+  .whyChoose-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .whyChoose-cards {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .whyChoose-cards .whyChoose-featureIcon {
+    margin-top: 0 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .whyChoose-phoneWrap {
+    order: -1;
+    width: 280px;
+  }
+
+  .whyChoose-phone {
+    width: 260px;
+    height: 530px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+
+@media (max-width:600px){
+
+.whyChoose-section{
+    padding:60px 16px;
+}
+
+.whyChoose-title{
+    font-size:26px;
+}
+
+.whyChoose-description{
+    font-size:14px;
+}
+
+/* Layout */
+.whyChoose-layout{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+}
+
+/* Left cards -> TOP */
+.whyChoose-cardsLeft{
+    order:1;
+    width:100%;
+    max-width:320px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-items:center;
+    align-items:center;
+    gap:20px;
+}
+
+/* Phone -> MIDDLE */
+.whyChoose-phoneWrap{
+    order:2;
+    width:220px;
+}
+
+.whyChoose-phone{
+    width:210px;
+    height:430px;
+    border-radius:32px;
+}
+
+.whyChoose-screen{
+    border-radius:24px;
+}
+
+/* Right cards -> BOTTOM */
+.whyChoose-cardsRight{
+    order:3;
+    width:100%;
+    max-width:320px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-items:center;
+    align-items:center;
+    gap:20px;
+}
+
+/* Remove desktop positioning */
+.whyChoose-cardsLeft .whyChoose-card-0,
+.whyChoose-cardsLeft .whyChoose-card-1,
+.whyChoose-cardsLeft .whyChoose-card-2,
+.whyChoose-cardsRight .whyChoose-card-0,
+.whyChoose-cardsRight .whyChoose-card-1,
+.whyChoose-cardsRight .whyChoose-card-2{
+    margin:0 !important;
+    transform:none !important;
+    animation:none !important;
+}
+
+/* Icon bubbles */
+.whyChoose-featureIcon{
+    width:72px;
+    height:72px;
+    background-size:115%;
+}
+
+.whyChoose-badge{
+    width:22px;
+    height:22px;
+}
+
+.whyChoose-badge svg{
+    width:11px;
+    height:11px;
+}
+
+}

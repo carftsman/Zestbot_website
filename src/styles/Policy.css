@@ -1,0 +1,69 @@
+.cancellation-page {
+  width: 100%;
+  background: #fff;
+  padding: 60px 20px;
+  color: #192a5f;
+}
+
+.cancellation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cancellation-container h1 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: #192a5f;
+  margin-bottom: 40px;
+  margin-top: 35px;
+}
+
+.cancellation-container h2 {
+  font-size: 36px;
+  margin: 40px 0 15px;
+  color: #192a5f;
+ 
+}
+
+.cancellation-container h3 {
+  font-size: 26px;
+  margin: 30px 0 15px;
+}
+
+.cancellation-container p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #192a5f;
+  margin-bottom: 18px;
+}
+
+.cancellation-container ul {
+  margin-left: 35px;
+  margin-bottom: 25px;
+}
+
+.cancellation-container li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+  .cancellation-container h1 {
+    font-size: 38px;
+  }
+
+  .cancellation-container h2 {
+    font-size: 28px;
+  }
+
+  .cancellation-container h3 {
+    font-size: 22px;
+  }
+
+  .cancellation-container p,
+  .cancellation-container li {
+    font-size: 18px;
+  }
+}

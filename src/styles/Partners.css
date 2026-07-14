@@ -1,0 +1,553 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.partners-section{
+    padding:80px 20px;
+    background:#ffffff;
+}
+
+.partners-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.partners-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.partners-tag{
+    display:inline-block;
+    font-size:13px;
+    font-weight:700;
+    color:#4F46E5;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.partners-header h2{
+    font-size:42px;
+    font-weight:800;
+    color:#1F2937;
+    margin:0;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.partner-card{
+
+    width:360px;
+
+    margin:auto;
+
+    background:#ffffff;
+
+    border:1px solid #ECECEC;
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.partner-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.partner-logo-box{
+
+    width:220px;
+
+    height:100px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.partner-logo{
+
+    max-width:180px;
+
+    max-height:70px;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+}
+
+.partner-card:hover .partner-logo{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.partner-card h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+.partner-card p{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.visit-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.visit-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+.visit-btn svg{
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.partner-card{
+
+width:100%;
+
+padding:35px 20px;
+
+}
+
+.partners-header h2{
+
+font-size:32px;
+
+}
+
+.partner-logo-box{
+
+width:180px;
+height:90px;
+
+}
+
+.partner-logo{
+
+max-width:150px;
+
+}
+
+.partner-card h3{
+
+font-size:21px;
+
+}
+
+}
+/* =====================================================
+   LARGE DESKTOP (1600px+)
+===================================================== */
+
+@media (min-width:1600px){
+
+    .partners-container{
+        max-width:1400px;
+    }
+
+    .partners-header h2{
+        font-size:48px;
+    }
+
+    .partner-card{
+        width:400px;
+        padding:45px 35px;
+    }
+
+    .partner-logo-box{
+        width:240px;
+        height:110px;
+    }
+
+    .partner-logo{
+        max-width:200px;
+    }
+
+    .partner-card h3{
+        font-size:26px;
+    }
+
+    .partner-card p{
+        font-size:16px;
+    }
+
+    .visit-btn{
+        padding:15px 32px;
+        font-size:16px;
+    }
+}
+
+/* =====================================================
+   DESKTOP (1400px)
+===================================================== */
+
+@media (max-width:1400px){
+
+    .partners-container{
+        max-width:1180px;
+    }
+
+    .partners-header h2{
+        font-size:40px;
+    }
+}
+
+/* =====================================================
+   LAPTOP (1200px)
+===================================================== */
+
+@media (max-width:1200px){
+
+    .partners-section{
+        padding:70px 25px;
+    }
+
+    .partner-card{
+        width:340px;
+    }
+
+    .partners-header h2{
+        font-size:38px;
+    }
+}
+
+/* =====================================================
+   SMALL LAPTOP (1024px)
+===================================================== */
+
+@media (max-width:1024px){
+
+    .partners-section{
+        padding:65px 22px;
+    }
+
+    .partners-header h2{
+        font-size:36px;
+    }
+
+    .partner-card{
+        width:320px;
+        padding:35px 25px;
+    }
+
+    .partner-logo{
+        max-width:165px;
+    }
+}
+
+/* =====================================================
+   TABLET (992px)
+===================================================== */
+
+@media (max-width:992px){
+
+    .partners-header{
+        margin-bottom:40px;
+    }
+
+    .partners-header h2{
+        font-size:34px;
+    }
+
+    .partner-card{
+        width:300px;
+    }
+}
+
+/* =====================================================
+   iPad Air (820px)
+===================================================== */
+
+@media (max-width:820px){
+
+    .partners-section{
+        padding:60px 20px;
+    }
+
+    .partners-header h2{
+        font-size:32px;
+    }
+
+    .partner-card{
+        width:100%;
+        max-width:340px;
+    }
+}
+
+/* =====================================================
+   TABLET / MOBILE (768px)
+===================================================== */
+
+@media(max-width:768px){
+
+    .partners-section{
+        padding:55px 18px;
+    }
+
+    .partners-header{
+        margin-bottom:35px;
+    }
+
+    .partners-header h2{
+        font-size:30px;
+    }
+
+    .partners-tag{
+        font-size:12px;
+    }
+
+    .partner-card{
+        width:100%;
+        max-width:340px;
+        padding:35px 20px;
+    }
+
+    .partner-logo-box{
+        width:180px;
+        height:90px;
+    }
+
+    .partner-logo{
+        max-width:150px;
+    }
+
+    .partner-card h3{
+        font-size:21px;
+    }
+
+    .partner-card p{
+        font-size:14px;
+    }
+
+    .visit-btn{
+        padding:13px 24px;
+        font-size:14px;
+    }
+}
+
+/* =====================================================
+   LARGE MOBILE (640px)
+===================================================== */
+
+@media (max-width:640px){
+
+    .partners-header h2{
+        font-size:28px;
+    }
+
+    .partner-card{
+        padding:30px 18px;
+    }
+}
+
+/* =====================================================
+   MOBILE (480px)
+===================================================== */
+
+@media (max-width:480px){
+
+    .partners-section{
+        padding:50px 15px;
+    }
+
+    .partners-header h2{
+        font-size:26px;
+    }
+
+    .partner-card{
+        padding:28px 18px;
+        border-radius:18px;
+    }
+
+    .partner-logo-box{
+        width:160px;
+        height:80px;
+    }
+
+    .partner-logo{
+        max-width:135px;
+    }
+
+    .partner-card h3{
+        font-size:20px;
+    }
+
+    .partner-card p{
+        font-size:13px;
+        margin-bottom:24px;
+    }
+
+    .visit-btn{
+        width:100%;
+        justify-content:center;
+        padding:12px 18px;
+        font-size:14px;
+    }
+}
+
+/* =====================================================
+   iPhone (375px)
+===================================================== */
+
+@media (max-width:375px){
+
+    .partners-header h2{
+        font-size:24px;
+    }
+
+    .partner-card{
+        padding:24px 15px;
+    }
+
+    .partner-logo{
+        max-width:120px;
+    }
+
+    .partner-card h3{
+        font-size:18px;
+    }
+
+    .partner-card p{
+        font-size:12px;
+    }
+
+    .visit-btn{
+        font-size:13px;
+    }
+}
+
+/* =====================================================
+   SMALL DEVICES (320px)
+===================================================== */
+
+@media (max-width:320px){
+
+    .partners-header h2{
+        font-size:22px;
+    }
+
+    .partner-card{
+        padding:20px 12px;
+    }
+
+    .partner-logo-box{
+        width:140px;
+        height:70px;
+    }
+
+    .partner-logo{
+        max-width:110px;
+    }
+
+    .partner-card h3{
+        font-size:17px;
+    }
+
+    .partner-card p{
+        font-size:11px;
+    }
+
+    .visit-btn{
+        padding:11px 14px;
+        font-size:12px;
+    }
+}
