@@ -13,7 +13,7 @@ import {
  
 const services = [
   {
-    id: "01",
+    
     title: "Customer App",
     path: "/services/customer",
     icon: <FaUser />,
@@ -27,7 +27,7 @@ const services = [
   },
  
   {
-    id: "02",
+    
     title: "Vendor App",
     path: "/services/vendor",
     icon: <FaStore />,
@@ -41,7 +41,7 @@ const services = [
   },
  
   {
-    id: "03",
+   
     title: "Delivery Partner App",
     path: "/services/delivery",
     icon: <FaMotorcycle />,
@@ -148,7 +148,7 @@ const Services = () => {
           {services.map((service) => (
  
             <motion.div
-              key={service.id}
+              key={service.title}
               className="service-card"
               variants={cardVariants}
               whileHover={{
@@ -173,9 +173,7 @@ const Services = () => {
  
               {/* Number */}
  
-              <span className="card-number">
-                {service.id}
-              </span>
+             
  
               {/* Floating Icon */}
  

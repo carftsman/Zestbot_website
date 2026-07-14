@@ -7,11 +7,17 @@ import Cities from "../../components/home/Cities";
 import Partners from "../../components/home/Partners";
 import WhyChoose from "../../components/home/WhyChoose";
 import DownloadApp from "../../components/home/DownloadApp";
+
+import PageTracker from "../../Gtm/PageTracker";
+import MetaPageTracker from "../../Gtm/MetaPageTracker";
+
 // import TermsConditions from "../../components/home/Terms&Conditions";
 // import CookieConsent from "../../components/home/CookieConsent";
 const Home = () => {
   return (
     <>
+      <PageTracker />
+           <MetaPageTracker />
       <Hero />
       {/* <CookieConsent/> */}
       <Cards />

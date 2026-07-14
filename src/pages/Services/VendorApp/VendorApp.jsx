@@ -36,10 +36,10 @@ const GOLD = "#F2B705";
 const GOLD_SOFT = "#FBD758";
 const INK = "#1B1B1F";
 const PAPER = "#F7F7FA";
- 
+
 const VENDOR_APP_URL =
   "https://play.google.com/store/apps/details?id=com.dhatvibs.zestbot.vendor.grocery";
- 
+
 const whatYouCanDo = [
   {
     icon: Store,
@@ -72,7 +72,7 @@ const whatYouCanDo = [
     text: "Provide timely service, maintain accurate product information, and deliver a better shopping experience that encourages repeat customers.",
   },
 ];
- 
+
 const keyFeatures = [
   { icon: UserPlus, text: "Easy vendor registration and onboarding" },
   { icon: Store, text: "Online store management" },
@@ -86,7 +86,7 @@ const keyFeatures = [
   { icon: Bell, text: "Real-time notifications" },
   { icon: MousePointerClick, text: "Simple and user-friendly interface" },
 ];
- 
+
 const whyChoose = [
   "Expand your business beyond walk-in customers",
   "Increase your local visibility",
@@ -95,7 +95,7 @@ const whyChoose = [
   "Improve customer satisfaction through faster service",
   "Grow your revenue with digital commerce opportunities",
 ];
- 
+
 const whoCanJoin = [
   { icon: ShoppingBasket, label: "Grocery Stores" },
   { icon: Store, label: "Kirana Stores" },
@@ -107,11 +107,11 @@ const whoCanJoin = [
   { icon: Croissant, label: "Bakeries" },
   { icon: Gift, label: "Gift & Stationery Stores" },
 ];
- 
+
 export default function VendorAppPage() {
   const navigate = useNavigate();
   const [isPaused, setIsPaused] = useState(false);
- 
+
   return (
     <div style={{ background: PAPER, minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif", color: INK }}>
       <style>{`
@@ -198,7 +198,106 @@ export default function VendorAppPage() {
     transform: translateY(0px);
   }
 }
- 
+ @media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+  /* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1024px){
+
+.hero-responsive{
+grid-template-columns:1fr !important;
+text-align:center;
+gap:40px !important;
+}
+
+.hero-content-responsive{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.hero-title-responsive{
+font-size:38px !important;
+}
+
+.hero-buttons-responsive{
+justify-content:center;
+}
+
+.phone-responsive{
+max-width:380px !important;
+width:100% !important;
+}
+
+.hide-mobile{
+display:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-responsive{
+padding:20px 5% 40px !important;
+}
+
+.hero-title-responsive{
+font-size:30px !important;
+line-height:1.3 !important;
+}
+
+.hero-buttons-responsive{
+flex-direction:column;
+width:100%;
+}
+
+.hero-buttons-responsive a{
+width:100%;
+justify-content:center;
+text-align:center;
+}
+
+.phone-responsive{
+max-width:300px !important;
+}
+
+.features-grid-responsive,
+.key-grid-responsive,
+.why-grid-responsive{
+grid-template-columns:1fr !important;
+}
+
+.join-grid-responsive{
+grid-template-columns:repeat(2,1fr) !important;
+}
+
+.cta-responsive{
+flex-direction:column;
+}
+
+.cta-responsive a{
+width:100%;
+text-align:center;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-title-responsive{
+font-size:26px !important;
+}
+
+.join-grid-responsive{
+grid-template-columns:1fr !important;
+}
+
+}
 `}
       </style>
       {/* BACK LINK */}
@@ -222,10 +321,21 @@ export default function VendorAppPage() {
           <ArrowLeft size={16} /> Back to Services
         </button>
       </div>
- 
+
       {/* HERO */}
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
-        <div>
+      <section
+        className="hero-responsive"
+        style={{
+          maxWidth: 1100,
+          margin: "0 auto",
+          padding: "36px 6% 60px",
+          display: "grid",
+          gridTemplateColumns: "1.1fr 0.9fr",
+          gap: 48,
+          alignItems: "center"
+        }}
+      >
+        <div className="hero-content-responsive">
           <span
             style={{
               display: "inline-block",
@@ -242,6 +352,7 @@ export default function VendorAppPage() {
             VENDOR APP
           </span>
           <h1
+className="hero-title-responsive"
             style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontSize: 46,
@@ -262,7 +373,14 @@ export default function VendorAppPage() {
             Focus on serving your customers while we help you streamline order management and
             expand your digital presence.
           </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <div
+className="hero-buttons-responsive"
+style={{
+display:"flex",
+gap:16,
+flexWrap:"wrap"
+}}
+>
             <a
               href={VENDOR_APP_URL}
               target="_blank"
@@ -298,36 +416,36 @@ export default function VendorAppPage() {
             </a>
           </div>
         </div>
- 
+
         {/* Vendor App Phone Image */}
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            width:"100%"
+            width: "100%"
           }}
         >
           <img
-           className="floating-image"
+className="floating-image hide-mobile phone-responsive"
             src={VendorPhone}
             alt="Vendor App"
             style={{
               width: "110%",
               maxWidth: "500px",
-                height: "auto",
-                objectFit: "contain",
-                display: "block",
-                filter: "drop-shadow(0 20px 40px rgba(21,35,82,0.2)",
+              height: "auto",
+              objectFit: "contain",
+              display: "block",
+              filter: "drop-shadow(0 20px 40px rgba(21,35,82,0.2)",
             }}
           />
         </div>
       </section>
- 
+
       {/* WHAT YOU CAN DO */}
       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
- 
+
           <p
             style={{
               textAlign: "center",
@@ -340,7 +458,7 @@ export default function VendorAppPage() {
           >
             WHAT YOU CAN DO
           </p>
- 
+
           <h2
             style={{
               textAlign: "center",
@@ -352,7 +470,7 @@ export default function VendorAppPage() {
           >
             Everything You Need to Run Your Store Online
           </h2>
- 
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
@@ -383,7 +501,7 @@ export default function VendorAppPage() {
               </div>
             ))}
           </div>
- 
+
         </div>
       </section>
       {/* KEY FEATURES - navy band */}
@@ -395,7 +513,7 @@ export default function VendorAppPage() {
           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
             Built to Simplify Running Your Store
           </h2>
- 
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px" }}>
             {keyFeatures.map(({ icon: Icon, text }, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 14 }}>
@@ -419,7 +537,7 @@ export default function VendorAppPage() {
           </div>
         </div>
       </section>
- 
+
       {/* WHY CHOOSE */}
       <section
         style={{
@@ -429,9 +547,9 @@ export default function VendorAppPage() {
           overflow: "hidden",
         }}
       >
-     
+
         {/* RIGHT IMAGE */}
- 
+
         <img
           src={community}
           alt=""
@@ -462,9 +580,9 @@ export default function VendorAppPage() {
             zIndex: 1,
           }}
         />
- 
+
         {/* CONTENT */}
- 
+
         <div
           style={{
             maxWidth: 900,
@@ -484,7 +602,7 @@ export default function VendorAppPage() {
           >
             Why Choose the ZestBot Vendor App?
           </h2>
- 
+
           <div
             style={{
               display: "grid",
@@ -509,7 +627,7 @@ export default function VendorAppPage() {
                     marginTop: 2,
                   }}
                 />
- 
+
                 <span
                   style={{
                     fontSize: 15.5,
@@ -524,7 +642,7 @@ export default function VendorAppPage() {
           </div>
         </div>
       </section>
- 
+
       {/* WHO CAN JOIN */}
       <section style={{ background: "#fff", padding: "0 6% 70px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -538,7 +656,7 @@ export default function VendorAppPage() {
             The ZestBot Vendor App is designed for grocery stores, restaurants, and every kind
             of neighborhood shop in between.
           </p>
- 
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 16 }}>
             {whoCanJoin.map(({ icon: Icon, label }, i) => (
               <div
@@ -571,14 +689,14 @@ export default function VendorAppPage() {
               </div>
             ))}
           </div>
- 
+
           <p style={{ textAlign: "center", color: "#5b6072", fontSize: 14.5, marginTop: 28 }}>
             Plus other local retail businesses — if you serve your local community, ZestBot can
             help you connect with more customers and grow.
           </p>
         </div>
       </section>
- 
+
       {/* PARTNER CTA */}
       <section style={{ background: "#192A5f", padding: "70px 6%", textAlign: "center" }}>
         <h2 style={{ fontFamily: "Georgia, serif", fontSize: 34, color: "#fff", margin: "0 0 16px" }}>
@@ -606,10 +724,9 @@ export default function VendorAppPage() {
           >
             Get it on Google Play
           </a>
- 
+
         </div>
       </section>
     </div>
   );
 }
- 

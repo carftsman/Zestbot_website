@@ -19,7 +19,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import customer from "../../../assets/images/customer.png"
-import handshake from "../../../assets/images/customer.png";
+// import handshake from "../../../assets/images/customer.png";
 import people from "../../../assets/images/customerr..png";
 import community from "../../../assets/images/bot2.png";
 const NAVY = "#152352";
@@ -187,6 +187,105 @@ export default function CustomerAppPage() {
     transform: translateY(0px);
   }
 }
+  @media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+  /* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1024px){
+
+.hero-responsive{
+grid-template-columns:1fr !important;
+text-align:center;
+gap:40px !important;
+}
+
+.hero-content-responsive{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.hero-title-responsive{
+font-size:38px !important;
+}
+
+.hero-buttons-responsive{
+justify-content:center;
+}
+
+.phone-responsive{
+max-width:380px !important;
+width:100% !important;
+}
+
+.hide-mobile{
+display:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-responsive{
+padding:20px 5% 40px !important;
+}
+
+.hero-title-responsive{
+font-size:30px !important;
+line-height:1.3 !important;
+}
+
+.hero-buttons-responsive{
+flex-direction:column;
+width:100%;
+}
+
+.hero-buttons-responsive button,
+.hero-buttons-responsive a{
+width:100%;
+justify-content:center;
+text-align:center;
+}
+
+.phone-responsive{
+max-width:300px !important;
+}
+
+.features-grid-responsive,
+.key-grid-responsive,
+.why-grid-responsive{
+grid-template-columns:1fr !important;
+}
+
+.perfect-responsive{
+padding:28px !important;
+flex-direction:column;
+text-align:center;
+}
+
+.cta-responsive{
+flex-direction:column;
+}
+
+.cta-responsive button{
+width:100%;
+justify-content:center;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-title-responsive{
+font-size:26px !important;
+}
+
+}
 `}
       </style>
       {/* BACK LINK */}
@@ -212,8 +311,10 @@ export default function CustomerAppPage() {
       </div>
 
       {/* HERO */}
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "6px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
-        <div>
+      <section
+        className="hero-responsive"
+        style={{ maxWidth: 1100, margin: "0 auto", padding: "6px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
+        <div className="hero-content-responsive">
           <span
             style={{
               display: "inline-block",
@@ -229,7 +330,7 @@ export default function CustomerAppPage() {
           >
             CUSTOMER APP
           </span>
-          <h1
+          <h1 className="hero-title-responsive"
             style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontSize: 36,
@@ -245,7 +346,14 @@ export default function CustomerAppPage() {
             The ZestBot Customer App lets users order fresh fruits and vegetables, dairy products, meat, food, or other daily essentials from nearby local stores — with secure payments, live order tracking,
             and quick doorstep delivery.
           </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <div
+            className="hero-buttons-responsive"
+            style={{
+              display: "flex",
+              gap: 16,
+              flexWrap: "wrap",
+            }}
+          >
             <button
               onClick={() => navigate("/coming-soon")}
               style={{
@@ -280,8 +388,8 @@ export default function CustomerAppPage() {
             </a>
           </div>
         </div>
- <div style={{ display: "flex", justifyContent: "center" }}>
-           <div
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
             style={{
               display: "flex",
               justifyContent: "center",
@@ -289,37 +397,41 @@ export default function CustomerAppPage() {
               width: "100%",
             }}
           >
-            
-               <img
-                className="floating-image"
-                 src={customer}
-                 alt="ZestBot delivery partner riding to deliver an order"
-                 style={{
-                   width: "110%",
+
+            <img
+              className="floating-image hide-mobile"
+              src={customer}
+              alt="ZestBot delivery partner riding to deliver an order"
+              style={{
+                width: "110%",
                 maxWidth: "500px",
                 height: "auto",
                 objectFit: "contain",
                 display: "block",
                 filter: "drop-shadow(0 20px 40px rgba(21,35,82,0.2))",
-                 }}
-               />
-             </div>
-           </div>
-        
+              }}
+            />
+          </div>
+        </div>
+
       </section>
 
-     {/* WHAT YOU CAN DO */}
-       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
-         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-           <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
-           WHAT YOU CAN DO
-           </p>
-           <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
-             Everything You Need to Shop Locally
-           </h2>
- 
-           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
-             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
+      {/* WHAT YOU CAN DO */}
+      <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
+            WHAT YOU CAN DO
+          </p>
+          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
+            Everything You Need to Shop Locally
+          </h2>
+
+          <div
+            className="features-grid-responsive"
+            style={{
+              display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24
+            }}>
+            {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
                 key={i}
                 className="hover-card"
@@ -363,7 +475,11 @@ export default function CustomerAppPage() {
             Built for Fast & Simple Local Shopping
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px" }}>
+          <div
+            className="key-grid-responsive"
+            style={{
+              display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px"
+            }}>
             {keyFeatures.map(({ icon: Icon, text }, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 14 }}>
                 <div
@@ -388,7 +504,7 @@ export default function CustomerAppPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      {/* WHY CHOOSE */}
+
       <section
         style={{
           background: "#fff",
@@ -399,7 +515,7 @@ export default function CustomerAppPage() {
       >
 
         {/* LEFT IMAGE */}
-{/* 
+        {/* 
         <img
           src={handshake}
           alt=""
@@ -419,6 +535,7 @@ export default function CustomerAppPage() {
         {/* CENTER IMAGE */}
 
         <img
+          className="hide-mobile"
           src={people}
           alt=""
           style={{
@@ -438,6 +555,7 @@ export default function CustomerAppPage() {
         {/* RIGHT IMAGE */}
 
         <img
+          className="hide-mobile"
           src={community}
           alt=""
           style={{
@@ -477,6 +595,7 @@ export default function CustomerAppPage() {
           </h2>
 
           <div
+            className="why-grid-responsive"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -520,6 +639,7 @@ export default function CustomerAppPage() {
       {/* PERFECT FOR */}
       <section style={{ padding: "0 6% 70px" }}>
         <div
+          className="perfect-responsive"
           style={{
             maxWidth: 1100,
             margin: "0 auto",
@@ -567,23 +687,30 @@ export default function CustomerAppPage() {
           Experience a smarter way to shop locally with fast ordering, secure payments, and
           convenient doorstep delivery.
         </p>
-        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <button
-            onClick={() => navigate("/coming-soon")}
-            style={{
-              background: GOLD,
-              color: NAVY,
-              fontWeight: 800,
-              fontSize: 15,
-              padding: "14px 28px",
-              borderRadius: 999,
-              border: "none",
-              cursor: "pointer",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-            }}
-          >
+        <div
+          className="cta-responsive"
+          style={{
+            display: "flex",
+            gap: 16,
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >          <button
+          onClick={() => navigate("/coming-soon")}
+          style={{
+            background: GOLD,
+            color: NAVY,
+            fontWeight: 800,
+            fontSize: 15,
+            padding: "14px 28px",
+            borderRadius: 999,
+            border: "none",
+            cursor: "pointer",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
             Get it on Google Play
           </button>
           <button
@@ -602,7 +729,7 @@ export default function CustomerAppPage() {
               gap: 8,
             }}
           >
-            Download on the App Store 
+            Download on the App Store
           </button>
         </div>
       </section>
