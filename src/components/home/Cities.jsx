@@ -82,23 +82,17 @@ export default function Cities() {
       {Object.entries(cityData).map(([state, cities]) => (
         <CitySection key={state} title={state} cities={cities} />
       ))}
-      <div style={styles.partnerSection}>
-        <p style={styles.partnerTag}>
-          OUR GROWTH PARTNER
-        </p>
+  <div className="partner-wrapper">
+  <div className="partner-content">
+    <p className="partner-title">OUR GROWTH PARTNER</p>
 
-        <img
-          src={company}
-          alt="Exelusinfotech Pvt Ltd"
-          style={styles.partnerLogo}
-        />
-
-        {/* <h3 style={styles.partnerName}>
-          Exelusinfotech Pvt Ltd
-        </h3> */}
-
-      </div>
-
+    <img
+      src={company}
+      alt="Exelus InfoTech"
+      className="partner-logo"
+    />
+  </div>
+</div>
     </section>
 
   );
@@ -147,11 +141,10 @@ const styles = {
 
   partnerSection: {
   marginTop: "80px",
+  paddingBottom: "40px",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center",
-  textAlign: "center",
 },
 
 partnerTag: {
@@ -159,15 +152,17 @@ partnerTag: {
   fontSize: "20px",
   fontWeight: "700",
   letterSpacing: "1px",
-  marginBottom: "20px",
+  marginBottom: "30px",
+  textAlign: "center",
 },
 
 partnerLogo: {
-  width: "150px",
+  width: "180px",
   height: "auto",
-  marginBottom: "15px",
   background: "#fff",
-
+  padding: "12px 18px",
+  borderRadius: "10px",
+  boxShadow: "0 8px 20px rgba(0,0,0,.15)",
 },
 
 partnerName: {

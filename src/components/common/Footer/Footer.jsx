@@ -183,10 +183,22 @@ const Footer = () => {
             >
              Terms & Conditions
             </button>
-
-
-
+              
+<NavLink
+  to="/cancellation-policy"
+  className="footer-link-btn"
+>
+  Cancellation Policy
+</NavLink>
+              
+<NavLink
+  to="/Return-policy"
+  className="footer-link-btn"
+>
+  Return Policy
+</NavLink>
           </div>
+
 
           {/* Download */}
 
