@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../styles/Cities.css";
 import { MapPin } from "lucide-react";
 import company from "../../assets/images/partnerlogo.png";
-import { FaExternalLinkAlt } from "react-icons/fa";
+
 const cityData = {
   Telangana: [
     "Kamareddy",

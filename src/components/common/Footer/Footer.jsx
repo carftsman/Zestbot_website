@@ -214,20 +214,21 @@ const [showReturn, setShowReturn] = useState(false);
     Privacy Policy
   </button>
 
-  <button
-    className="footer-link-btn"
-    onClick={() => setShowCancellation(true)}
-  >
-    Cancellation Policy
-  </button>
-
-  <button
-    className="footer-link-btn"
-    onClick={() => setShowReturn(true)}
-  >
-    Return Policy
-  </button>
+  <NavLink
+  to="/cancellation-policy"
+  className="footer-link-btn"
+>
+  Cancellation Policy
+</NavLink>
+              
+<NavLink
+  to="/Return-policy"
+  className="footer-link-btn"
+>
+  Return Policy
+</NavLink>
 </div>
+
 
           {/* Download */}
 
@@ -282,22 +283,6 @@ const [showReturn, setShowReturn] = useState(false);
     isModal={true}
     isOpen={showPrivacy}
     onClose={() => setShowPrivacy(false)}
-  />
-)}
-
-{showCancellation && (
-  <CancellationPolicy
-    isModal={true}
-    isOpen={showCancellation}
-    onClose={() => setShowCancellation(false)}
-  />
-)}
-
-{showReturn && (
-  <ReturnPolicy
-    isModal={true}
-    isOpen={showReturn}
-    onClose={() => setShowReturn(false)}
   />
 )}
 

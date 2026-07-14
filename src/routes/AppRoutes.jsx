@@ -9,6 +9,8 @@ import VendorApp from "../pages/Services/VendorApp/VendorApp";
 import DeliveryPartner from "../pages/Services/DeliveryPartner/DeliveryPartner";
 import Blog from "../pages/Blog/Blog";
 import ComingSoon from "../pages/ComingSoon";
+import CancellationPolicy from "../components/home/CancellationPolicy";
+import ReturnsPolicy from "../components/home/ReturnPolicy";
 const AppRoutes = () => {
   return (
     <>
@@ -25,6 +27,8 @@ const AppRoutes = () => {
           <Route path="/services/delivery" element={<DeliveryPartner />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/cancellation-policy" element={<CancellationPolicy />}/>
+          <Route path="/return-policy"element={<ReturnsPolicy/>}/>
         </Route>
       </Routes>
     </>
