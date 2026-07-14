@@ -154,30 +154,32 @@
   letter-spacing: -1px;
 }
 
-.line{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:10px;
-    white-space:nowrap;
-    overflow:hidden;
+.hero-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-/* First line */
-
-.line1{
-  opacity:0;
-  transform:translateX(-180px);
-  animation:lineReveal .8s ease forwards;
+.hero-line-primary {
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-180px);
+  animation: lineReveal .8s ease forwards;
 }
 
-/* Second line */
+.hero-line-secondary {
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-180px);
+  animation: lineReveal .8s ease forwards;
+  animation-delay: .9s;
+}
 
-.line2{
-  opacity:0;
-  transform:translateX(-180px);
-  animation:lineReveal .8s ease forwards;
-  animation-delay:.9s;
+.hero-line-highlight {
+  color: #FFD42A;
 }
 
 /* Third line */

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import useGoogleStats from "../../hooks/useGoogleStats";
+
 import {
   FaStore,
   FaMapMarkerAlt,
@@ -46,6 +48,7 @@ export default function DeliveryShowcase() {
   const [leftIndex, setLeftIndex] = useState(0);
 const [rightIndex, setRightIndex] = useState(0);
 const [isLeftTurn, setIsLeftTurn] = useState(true);
+const stats = useGoogleStats();
 
 useEffect(() => {
   const timer = setInterval(() => {
@@ -273,9 +276,8 @@ useEffect(() => {
 
           <div className="stat-left">
 
-            <h3>6000+</h3>
-
-            <p>Vendors</p>
+           <h3>{Number(stats.vendors).toLocaleString()}+</h3>
+<p>Vendors</p>
 
           </div>
 
@@ -291,9 +293,8 @@ useEffect(() => {
 
           <div className="stat-left">
 
-            <h3>26+</h3>
-
-            <p>Cities</p>
+          <h3>{stats.cities}+</h3>
+<p>Cities</p>
 
           </div>
 
@@ -309,9 +310,8 @@ useEffect(() => {
 
           <div className="stat-left">
 
-            <h3>24/7</h3>
-
-            <p>Support</p>
+           <h3>{stats.support}</h3>
+<p>Support</p>
 
           </div>
 

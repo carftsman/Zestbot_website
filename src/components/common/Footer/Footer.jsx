@@ -10,12 +10,16 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
+   FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 import TermsConditions from "../../home/Terms&Conditions";
+import PrivacyPolicy from "../../PrivacyPolicy/PrivacyPolicy";
+
 
 import "./Footer.css";
+
 
 import logo from "../../../assets/images/logo.png";
 import googlePlay from "../../../assets/images/appstore.png";
@@ -29,6 +33,10 @@ const scrollWithOffset = (el) => {
 
 const Footer = () => {
   const [showTerms, setShowTerms] = useState(false);
+
+const [showPrivacy, setShowPrivacy] = useState(false);
+const [showCancellation, setShowCancellation] = useState(false);
+const [showReturn, setShowReturn] = useState(false);
 
   const location = useLocation();
   const isBluePage =
@@ -52,38 +60,44 @@ const Footer = () => {
               className="footer-logo"
             />
 
-            <div className="contact-details">
+           <div className="contact-details">
+  <h3>Contact</h3>
 
-              <h3>Contact</h3>
+  <p className="address-title">
+    <FaMapMarkerAlt className="contact-icon" />
+    Address:
+  </p>
 
-              <p className="address-title">
-                <FaMapMarkerAlt className="contact-icon" />
-                Address:
-              </p>
+  <div
+    className="footer-address-link"
+    onClick={() =>
+      window.open(
+        "https://www.google.com/maps/search/?api=1&query=PB+House,+HUDA+Techno+Enclave,+Street+No.7,+Madhapur,+Hyderabad",
+        "_blank"
+      )
+    }
+  >
+    <p className="company">
+      Dhatvi Business Solutions Private Limited
+    </p>
 
-              <p className="company">
-                Dhatvi Business Solutions Private Limited
-              </p>
+    <p className="address-text">
+      1st Floor, Street No.7, PB House,<br />
+      HUDA Techno Enclave,<br />
+      Madhapur, Hyderabad
+    </p>
+  </div>
 
-              <p>
-                1st Floor, Street No.7,
+  <a href="mailto:info@zestbot.in">
+    <FaEnvelope className="contact-icon" />
+    info@zestbot.in
+  </a>
 
-                PB House, HUDA Techno Enclave,
-
-                Madhapur, Hyderabad
-              </p>
-
-              <a href="mailto:info@zestbot.in">
-                <FaEnvelope className="contact-icon" />
-                info@zestbot.in
-              </a>
-
-              <a href="tel:04045374487">
-                <FaPhoneAlt className="contact-icon" />
-                Tel: 040-453-74487
-              </a>
-
-            </div>
+  <a href="tel:04045374487">
+    <FaPhoneAlt className="contact-icon" />
+    Tel: 040-453-74487
+  </a>
+</div>
 
             <div className="social-icons">
 
@@ -94,6 +108,16 @@ const Footer = () => {
               >
                 <FaInstagram />
               </a>
+
+              <a
+  href="https://wa.me/918019975577"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WhatsApp"
+  className="whatsapp"
+>
+  <FaWhatsapp />
+</a>
 
               <a
                 href="https://x.com/zestbotindia"
@@ -173,20 +197,37 @@ const Footer = () => {
           </div>
           {/* Other Pages */}
 
-          <div className="footer-column">
+         <div className="footer-column">
+  <h3>Other Pages</h3>
 
-            <h3>Other Pages</h3>
+  <button
+    className="footer-link-btn"
+    onClick={() => setShowTerms(true)}
+  >
+    Terms & Conditions
+  </button>
 
-            <button
-              className="footer-link-btn"
-              onClick={() => setShowTerms(true)}
-            >
-             Terms & Conditions
-            </button>
+  <button
+    className="footer-link-btn"
+    onClick={() => setShowPrivacy(true)}
+  >
+    Privacy Policy
+  </button>
 
+  <button
+    className="footer-link-btn"
+    onClick={() => setShowCancellation(true)}
+  >
+    Cancellation Policy
+  </button>
 
-
-          </div>
+  <button
+    className="footer-link-btn"
+    onClick={() => setShowReturn(true)}
+  >
+    Return Policy
+  </button>
+</div>
 
           {/* Download */}
 
@@ -228,13 +269,37 @@ const Footer = () => {
 
         {/* Terms & Conditions Modal */}
 
-        {showTerms && (
-          <TermsConditions
-            isModal={true}
-            isOpen={showTerms}
-            onClose={() => setShowTerms(false)}
-          />
-        )}
+       {showTerms && (
+  <TermsConditions
+    isModal={true}
+    isOpen={showTerms}
+    onClose={() => setShowTerms(false)}
+  />
+)}
+
+{showPrivacy && (
+  <PrivacyPolicy
+    isModal={true}
+    isOpen={showPrivacy}
+    onClose={() => setShowPrivacy(false)}
+  />
+)}
+
+{showCancellation && (
+  <CancellationPolicy
+    isModal={true}
+    isOpen={showCancellation}
+    onClose={() => setShowCancellation(false)}
+  />
+)}
+
+{showReturn && (
+  <ReturnPolicy
+    isModal={true}
+    isOpen={showReturn}
+    onClose={() => setShowReturn(false)}
+  />
+)}
 
       </div>
     </footer>
