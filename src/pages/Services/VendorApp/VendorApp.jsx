@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 import VendorPhone from "../../../assets/images/VendorPhone.png";
 import handshake from "../../../assets/images/live-order.png";
-import people from "../../../assets/images/customer-2.png";
+import people from "../../../assets/images/bot.png";
 import community from "../../../assets/images/local-shops.png";
 // ---- Brand tokens (matches the ZestBot home/services/customer pages) ----
 const NAVY = "#152352";
@@ -181,7 +181,23 @@ export default function VendorAppPage() {
       color:#F2B705;
  
   }
- 
+ .floating-image {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
  
 `}
       </style>
@@ -289,17 +305,20 @@ export default function VendorAppPage() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            width:"100%"
           }}
         >
           <img
+           className="floating-image"
             src={VendorPhone}
             alt="Vendor App"
             style={{
-              width: "100%",
-              maxWidth: 220,
-              height: "auto",
-              objectFit: "contain",
-              filter: "drop-shadow(0 30px 60px rgba(21,35,82,.25))",
+              width: "110%",
+              maxWidth: "500px",
+                height: "auto",
+                objectFit: "contain",
+                display: "block",
+                filter: "drop-shadow(0 20px 40px rgba(21,35,82,0.2)",
             }}
           />
         </div>
@@ -421,6 +440,21 @@ export default function VendorAppPage() {
             right: 0,
             bottom: 75,
             width: 330,
+            opacity: 0.15,
+            filter: "grayscale(100%)",
+            pointerEvents: "none",
+            userSelect: "none",
+            zIndex: 1,
+          }}
+        />
+        <img
+          src={people}
+          alt=""
+          style={{
+            position: "absolute",
+            left: 10,
+            bottom: 85,
+            width: 130,
             opacity: 0.15,
             filter: "grayscale(100%)",
             pointerEvents: "none",

@@ -1,29 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import {
-  Bike,
-  Navigation,
-  PackageCheck,
-  Wallet,
-  CalendarClock,
-  BellRing,
-  UserPlus,
-  MapPin,
-  IndianRupee,
-  History,
-  CreditCard,
-  Clock,
-  MousePointerClick,
-  GraduationCap,
-  Users,
-  Briefcase,
-  Smartphone,
-  ArrowLeft,
-  ArrowRight,
-} from "lucide-react";
+  Bike,Navigation,PackageCheck,Wallet,CalendarClock,BellRing,UserPlus,MapPin,IndianRupee,History,CreditCard, Clock,MousePointerClick,GraduationCap, Users,Briefcase,Smartphone,ArrowLeft,ArrowRight,} from "lucide-react";
 
-import Dps from "../../../assets/images/dps.png";
-import DeliveryBg from "../../../assets/images/delivery.png";
-import DeliveryBot from "../../../assets/images/Bot-Bag.png";
+import Dps from "../../../assets/images/Dps.png";
+import DeliveryBg from "../../../assets/images/Delivery.png";
+import DeliveryBot from "../../../assets/images/bot-bag.png";
 
 // ---- Brand tokens (matches the ZestBot home/services/customer/vendor pages) ----
 const NAVY = "#152352";
@@ -104,9 +85,17 @@ export default function DeliveryPartnerAppPage() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ background: PAPER, minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif", color: INK }}>
+    <div
+      style={{
+        background: PAPER,
+        minHeight: "100vh",
+        fontFamily: "'Inter', system-ui, sans-serif",
+        color: INK,
+      }}
+    >
       {/* BACK LINK */}
-      <style>{`
+      <style>
+        {`
   .hover-card {
     position: relative;
     overflow: hidden;
@@ -179,8 +168,25 @@ export default function DeliveryPartnerAppPage() {
     50%{transform:translateY(-50%) translateY(-12px);}
     100%{transform:translateY(-50%) translateY(0);}
   }
+  .floating-image {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
 `}
-</style>
+      </style>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "100px 6% 0" }}>
         <button
           onClick={() => navigate(-1)}
@@ -203,7 +209,17 @@ export default function DeliveryPartnerAppPage() {
       </div>
 
       {/* HERO */}
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 6% 60px", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}>
+      <section
+        style={{
+          maxWidth: 1100,
+          margin: "0 auto",
+          padding: "36px 6% 60px",
+          display: "grid",
+          gridTemplateColumns: "1.1fr 0.9fr",
+          gap: 48,
+          alignItems: "center",
+        }}
+      >
         <div>
           <span
             style={{
@@ -230,16 +246,34 @@ export default function DeliveryPartnerAppPage() {
               fontWeight: 700,
             }}
           >
-            Deliver on Your Terms,<br />Earn on Your Time
+            Deliver on Your Terms,
+            <br />
+            Earn on Your Time
           </h1>
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 14 }}>
-            The ZestBot Delivery Partner App enables riders to accept delivery requests,
-            navigate efficiently, track earnings, manage deliveries and enjoy flexible earning
-            opportunities.
+          <p
+            style={{
+              fontSize: 17,
+              lineHeight: 1.7,
+              color: "#17181b",
+              maxWidth: 480,
+              marginBottom: 14,
+            }}
+          >
+            The ZestBot Delivery Partner App enables riders to accept delivery
+            requests, navigate efficiently, track earnings, manage deliveries,
+            and enjoy flexible earning opportunities.
           </p>
-          <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#17181b", maxWidth: 480, marginBottom: 30 }}>
-            Work when it suits you, deliver with confidence, and stay connected with a platform
-            built to support your hustle.
+          <p
+            style={{
+              fontSize: 15.5,
+              lineHeight: 1.7,
+              color: "#17181b",
+              maxWidth: 480,
+              marginBottom: 30,
+            }}
+          >
+            Work when it suits you, deliver with confidence, and stay connected
+            with a platform built to support your hustle.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             <button
@@ -277,60 +311,29 @@ export default function DeliveryPartnerAppPage() {
           </div>
         </div>
 
-        {/* Rider image inside a phone frame */}
+        {/* Rider image  */}
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             style={{
-              width: 230,
-              height: 450,
-              background: "#111318",
-              borderRadius: 26,
-              padding: 10,
-              boxShadow: "0 30px 60px rgba(21,35,82,0.35)",
-              position: "relative",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
             }}
           >
-            {/* side buttons */}
-            <div style={{ position: "absolute", left: -2, top: 90, width: 3, height: 28, background: "#111318", borderRadius: 2 }} />
-            <div style={{ position: "absolute", left: -2, top: 130, width: 3, height: 50, background: "#111318", borderRadius: 2 }} />
-            <div style={{ position: "absolute", right: -2, top: 110, width: 3, height: 60, background: "#111318", borderRadius: 2 }} />
-
-            {/* notch */}
-            <div
+            <img
+            className="floating-image"
+              src={Dps}
+              alt="ZestBot Delivery Partner App"
               style={{
-                position: "absolute",
-                top: 10,
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: 80,
-                height: 16,
-                background: "#111318",
-                borderRadius: 10,
-                zIndex: 2,
+                width: "120%",
+                maxWidth: "500px",
+                height: "auto",
+                objectFit: "contain",
+                display: "block",
+                filter: "drop-shadow(0 20px 40px rgba(21,35,82,0.2))",
               }}
             />
-            <div
-              style={{
-                background: PAPER,
-                width: "100%",
-                height: "100%",
-                borderRadius: 16,
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <img
-                src={Dps}
-                alt="ZestBot delivery partner riding to deliver an order"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -338,14 +341,37 @@ export default function DeliveryPartnerAppPage() {
       {/* WHAT YOU CAN DO */}
       <section id="features" style={{ background: "#fff", padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
+          <p
+            style={{
+              textAlign: "center",
+              color: GOLD,
+              fontWeight: 800,
+              letterSpacing: 1,
+              fontSize: 20,
+              marginBottom: 8,
+            }}
+          >
             WHAT YOU CAN DO
           </p>
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontFamily: "Georgia, serif",
+              fontSize: 32,
+              color: NAVY,
+              margin: "0 0 44px",
+            }}
+          >
             Everything You Need to Deliver with ZestBot
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 24,
+            }}
+          >
             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
                 key={i}
@@ -370,8 +396,26 @@ export default function DeliveryPartnerAppPage() {
                 >
                   <Icon size={22} color={GOLD} />
                 </div>
-                <h3 style={{ fontSize: 17, fontWeight: 700, color: NAVY, margin: "0 0 10px" }}>{title}</h3>
-                <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#5b6072", margin: 0 }}>{text}</p>
+                <h3
+                  style={{
+                    fontSize: 17,
+                    fontWeight: 700,
+                    color: NAVY,
+                    margin: "0 0 10px",
+                  }}
+                >
+                  {title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: 14.5,
+                    lineHeight: 1.6,
+                    color: "#5b6072",
+                    margin: 0,
+                  }}
+                >
+                  {text}
+                </p>
               </div>
             ))}
           </div>
@@ -381,16 +425,42 @@ export default function DeliveryPartnerAppPage() {
       {/* KEY FEATURES - navy band */}
       <section style={{ background: NAVY, padding: "70px 6%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 20, marginBottom: 8 }}>
+          <p
+            style={{
+              textAlign: "center",
+              color: GOLD,
+              fontWeight: 800,
+              letterSpacing: 1,
+              fontSize: 20,
+              marginBottom: 8,
+            }}
+          >
             KEY FEATURES
           </p>
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: "#fff", margin: "0 0 44px" }}>
-            Built for Fast and Reliable Deliveries
+          <h2
+            style={{
+              textAlign: "center",
+              fontFamily: "Georgia, serif",
+              fontSize: 32,
+              color: "#fff",
+              margin: "0 0 44px",
+            }}
+          >
+            Built for Fast, Reliable Deliveries
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px 28px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "18px 28px",
+            }}
+          >
             {keyFeatures.map(({ icon: Icon, text }, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              <div
+                key={i}
+                style={{ display: "flex", alignItems: "center", gap: 14 }}
+              >
                 <div
                   style={{
                     width: 38,
@@ -405,7 +475,11 @@ export default function DeliveryPartnerAppPage() {
                 >
                   <Icon size={18} color={GOLD} />
                 </div>
-                <span style={{ color: "#e8e9f3", fontSize: 15, fontWeight: 500 }}>{text}</span>
+                <span
+                  style={{ color: "#e8e9f3", fontSize: 15, fontWeight: 500 }}
+                >
+                  {text}
+                </span>
               </div>
             ))}
           </div>
@@ -464,15 +538,40 @@ export default function DeliveryPartnerAppPage() {
           {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
             WHY CHOOSE ZESTBOT
           </p> */}
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 44px" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontFamily: "Georgia, serif",
+              fontSize: 32,
+              color: NAVY,
+              margin: "0 0 44px",
+            }}
+          >
             Why Choose the ZestBot Delivery Partner App?
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "20px 32px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: "20px 32px",
+            }}
+          >
             {whyChoose.map((point, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <PackageCheck size={20} color={GOLD} style={{ flexShrink: 0, marginTop: 2 }} />
-                <span style={{ fontSize: 15.5, lineHeight: 1.6, color: "#33364a" }}>{point}</span>
+              <div
+                key={i}
+                style={{ display: "flex", alignItems: "flex-start", gap: 12 }}
+              >
+                <PackageCheck
+                  size={20}
+                  color={GOLD}
+                  style={{ flexShrink: 0, marginTop: 2 }}
+                />
+                <span
+                  style={{ fontSize: 15.5, lineHeight: 1.6, color: "#33364a" }}
+                >
+                  {point}
+                </span>
               </div>
             ))}
           </div>
@@ -485,14 +584,37 @@ export default function DeliveryPartnerAppPage() {
           {/* <p style={{ textAlign: "center", color: GOLD, fontWeight: 800, letterSpacing: 1, fontSize: 14, marginBottom: 8 }}>
             WHO CAN JOIN?
           </p> */}
-          <h2 style={{ textAlign: "center", fontFamily: "Georgia, serif", fontSize: 32, color: NAVY, margin: "0 0 20px" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontFamily: "Georgia, serif",
+              fontSize: 32,
+              color: NAVY,
+              margin: "0 0 20px",
+            }}
+          >
             Who Can Become a Delivery Partner?
           </h2>
-          <p style={{ textAlign: "center", color: "#5b6072", fontSize: 15.5, maxWidth: 560, margin: "0 auto 44px" }}>
+          <p
+            style={{
+              textAlign: "center",
+              color: "#5b6072",
+              fontSize: 15.5,
+              maxWidth: 560,
+              margin: "0 auto 44px",
+            }}
+          >
             The ZestBot Delivery Partner App is ideal for:
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, marginBottom: 36 }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gap: 16,
+              marginBottom: 36,
+            }}
+          >
             {whoCanJoin.map(({ icon: Icon, label }, i) => (
               <div
                 key={i}
@@ -506,7 +628,7 @@ export default function DeliveryPartnerAppPage() {
                 }}
               >
                 <div
-                className="icon-box"
+                  className="icon-box"
                   style={{
                     width: 42,
                     height: 42,
@@ -520,7 +642,9 @@ export default function DeliveryPartnerAppPage() {
                 >
                   <Icon size={20} color={NAVY} />
                 </div>
-                <span style={{ fontSize: 13.5, fontWeight: 600, color: NAVY }}>{label}</span>
+                <span style={{ fontSize: 13.5, fontWeight: 600, color: NAVY }}>
+                  {label}
+                </span>
               </div>
             ))}
           </div>
@@ -538,23 +662,53 @@ export default function DeliveryPartnerAppPage() {
             }}
           >
             <Smartphone size={26} color={NAVY} style={{ flexShrink: 0 }} />
-            <p style={{ margin: 0, fontSize: 14.5, color: NAVY, lineHeight: 1.6 }}>
-              If you have a two-wheeler, a valid driving license, and a smartphone, you can join
-              the ZestBot delivery network and start delivering orders in your local area.
+            <p
+              style={{
+                margin: 0,
+                fontSize: 14.5,
+                color: NAVY,
+                lineHeight: 1.6,
+              }}
+            >
+              If you have a two-wheeler, a valid driving license, and a
+              smartphone, you can join the ZestBot delivery network and start
+              delivering orders in your local area.
             </p>
           </div>
         </div>
       </section>
 
       {/* JOIN CTA */}
-      <section style={{ background: "#192A5f", padding: "70px 6%", textAlign: "center" }}>
-        <h2 style={{ fontFamily: "Georgia, serif", fontSize: 34, color: "#fff", margin: "0 0 16px" }}>
+      <section
+        style={{
+          background: "#192A5f",
+          padding: "70px 6%",
+          textAlign: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontFamily: "Georgia, serif",
+            fontSize: 34,
+            color: "#fff",
+            margin: "0 0 16px",
+          }}
+        >
           Join the ZestBot Delivery Partner Network
         </h2>
-        <p style={{ color: "#c7cadd", fontSize: 16, maxWidth: 620, margin: "0 auto 32px", lineHeight: 1.6 }}>
-          Become a part of the ZestBot ecosystem and help connect local businesses with
-          customers through fast and reliable deliveries. Deliver orders, earn flexibility, and
-          grow with a platform dedicated to supporting local commerce.
+        <p
+          style={{
+            color: "#c7cadd",
+            fontSize: 16,
+            maxWidth: 620,
+            margin: "0 auto 32px",
+            lineHeight: 1.6,
+          }}
+        >
+          Become a part of the ZestBot ecosystem and help connect local
+          businesses with customers through fast and reliable deliveries.
+          Deliver orders, earn flexibility, and grow with a platform dedicated
+          to supporting local commerce.
         </p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <button

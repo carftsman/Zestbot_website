@@ -21,9 +21,9 @@ export default function useGoogleStats() {
   };
 
   useEffect(() => {
-    fetchStats();
+    // fetchStats();
 
-    const interval = setInterval(fetchStats, 100000); // 1 minutes
+    const interval = setInterval(fetchStats, 1000); // 1 Second
 
     return () => clearInterval(interval);
   }, []);

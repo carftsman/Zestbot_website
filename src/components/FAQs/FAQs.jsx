@@ -171,11 +171,10 @@ const FAQs = () => {
                 </button>
 
                 <div
-                  className={`faq-answer ${
-                    activeIndex === index
+                  className={`faq-answer ${activeIndex === index
                       ? "show"
                       : ""
-                  }`}
+                    }`}
                 >
 
                   <p>
@@ -187,7 +186,7 @@ const FAQs = () => {
               </div>
 
             ))}
-                      </div>
+          </div>
 
           <div className="faq-see-more">
 
@@ -225,21 +224,13 @@ const FAQs = () => {
 
             <button
               className="contact-btn"
-              onClick={() => {
-
-                const footer =
-                  document.getElementById("contact");
-
-                if (footer) {
-
-                  footer.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-
-                }
-
-              }}
+              onClick={() =>
+                window.open(
+                  "https://forms.cloud.microsoft/r/HnF3H81yvR?origin=lprLink",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             >
               Contact Us
             </button>
