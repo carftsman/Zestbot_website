@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import {
-  Bike,Navigation,PackageCheck,Wallet,CalendarClock,BellRing,UserPlus,MapPin,IndianRupee,History,CreditCard, Clock,MousePointerClick,GraduationCap, Users,Briefcase,Smartphone,ArrowLeft,ArrowRight,} from "lucide-react";
+  Bike, Navigation, PackageCheck, Wallet, CalendarClock, BellRing, UserPlus, MapPin, IndianRupee, History, CreditCard, Clock, MousePointerClick, GraduationCap, Users, Briefcase, Smartphone, ArrowLeft, ArrowRight,
+} from "lucide-react";
 
 import Dps from "../../../assets/images/Dps.png";
 import DeliveryBg from "../../../assets/images/delivery11.png";
@@ -312,17 +313,17 @@ grid-template-columns:1fr !important;
 
       {/* HERO */}
       <section
-  className="hero-responsive"
-  style={{
-    maxWidth:1100,
-    margin:"0 auto",
-    padding:"36px 6% 60px",
-    display:"grid",
-    gridTemplateColumns:"1.1fr 0.9fr",
-    gap:48,
-    alignItems:"center"
-  }}
->
+        className="hero-responsive"
+        style={{
+          maxWidth: 1100,
+          margin: "0 auto",
+          padding: "36px 6% 60px",
+          display: "grid",
+          gridTemplateColumns: "1.1fr 0.9fr",
+          gap: 48,
+          alignItems: "center"
+        }}
+      >
         <div className="hero-content-responsive">
           <span
             style={{
@@ -340,7 +341,7 @@ grid-template-columns:1fr !important;
             DELIVERY PARTNER APP
           </span>
           <h1
-className="hero-title-responsive"
+            className="hero-title-responsive"
             style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontSize: 40,
@@ -364,7 +365,7 @@ className="hero-title-responsive"
             }}
           >
             The ZestBot Delivery Partner App enables riders to accept delivery
-            requests, navigate efficiently, track earnings, manage deliveries,
+            requests, navigate efficiently, track earnings, manage deliveries
             and enjoy flexible earning opportunities.
           </p>
           <p
@@ -376,35 +377,35 @@ className="hero-title-responsive"
               marginBottom: 30,
             }}
           >
-            Work when it suits you, deliver with confidence, and stay connected
+            Work when it suits you, deliver with confidence and stay connected
             with a platform built to support your hustle.
           </p>
           <div
-  className="hero-buttons-responsive"
-  style={{
-    display: "flex",
-    gap: 16,
-    flexWrap: "wrap",
-  }}
->
+            className="hero-buttons-responsive"
+            style={{
+              display: "flex",
+              gap: 16,
+              flexWrap: "wrap",
+            }}
+          >
             <button
-  onClick={() => navigate("/coming-soon")}
-  style={{
-    background: GOLD,
-    color: NAVY,
-    fontWeight: 800,
-    fontSize: 15,
-    padding: "14px 28px",
-    borderRadius: 999,
-    border: "none",
-    cursor: "pointer",
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 8,
-  }}
->
-  Get Delivery Partner App <ArrowRight size={18} />
-</button>
+              onClick={() => navigate("/coming-soon")}
+              style={{
+                background: GOLD,
+                color: NAVY,
+                fontWeight: 800,
+                fontSize: 15,
+                padding: "14px 28px",
+                borderRadius: 999,
+                border: "none",
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              Get Delivery Partner App <ArrowRight size={18} />
+            </button>
             <a
               href="#features"
               style={{
@@ -433,7 +434,7 @@ className="hero-title-responsive"
             }}
           >
             <img
-  className="floating-image hide-mobile phone-responsive"
+              className="floating-image hide-mobile phone-responsive"
               src={Dps}
               alt="ZestBot Delivery Partner App"
               style={{
@@ -477,13 +478,13 @@ className="hero-title-responsive"
           </h2>
 
           <div
-  className="features-grid-responsive"
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-    gap: 24,
-  }}
->
+            className="features-grid-responsive"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 24,
+            }}
+          >
             {whatYouCanDo.map(({ icon: Icon, title, text }, i) => (
               <div
                 key={i}
@@ -558,17 +559,17 @@ className="hero-title-responsive"
               margin: "0 0 44px",
             }}
           >
-            Built for Fast, Reliable Deliveries
+            Built for Fast & Reliable Deliveries
           </h2>
 
           <div
-  className="key-grid-responsive"
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-    gap: "18px 28px",
-  }}
->
+            className="key-grid-responsive"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "18px 28px",
+            }}
+          >
             {keyFeatures.map(({ icon: Icon, text }, i) => (
               <div
                 key={i}
@@ -609,7 +610,7 @@ className="hero-title-responsive"
         }}
       >
         <img
-        className="hide-mobile"
+          className="hide-mobile"
           src={DeliveryBg}
           alt=""
           style={{
@@ -626,8 +627,8 @@ className="hero-title-responsive"
           }}
         />
         <img
-  className="hide-mobile"
-  src={DeliveryBot}
+          className="hide-mobile"
+          src={DeliveryBot}
           alt=""
           style={{
             position: "absolute",
@@ -666,14 +667,14 @@ className="hero-title-responsive"
           </h2>
 
           <div
-  className="join-grid-responsive"
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-    gap: 16,
-    marginBottom: 36,
-  }}
->
+            className="join-grid-responsive"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gap: 16,
+              marginBottom: 36,
+            }}
+          >
             {whyChoose.map((point, i) => (
               <div
                 key={i}
@@ -829,23 +830,23 @@ className="hero-title-responsive"
         </p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <button
-  onClick={() => navigate("/coming-soon")}
-  style={{
-    background: GOLD,
-    color: NAVY,
-    fontWeight: 800,
-    fontSize: 15,
-    padding: "14px 28px",
-    borderRadius: 999,
-    border: "none",
-    cursor: "pointer",
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 8,
-  }}
->
-  Get it on Google Play
-</button>
+            onClick={() => navigate("/coming-soon")}
+            style={{
+              background: GOLD,
+              color: NAVY,
+              fontWeight: 800,
+              fontSize: 15,
+              padding: "14px 28px",
+              borderRadius: 999,
+              border: "none",
+              cursor: "pointer",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            Get it on Google Play
+          </button>
         </div>
       </section>
     </div>
