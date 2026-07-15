@@ -275,7 +275,32 @@
 }
 
 /* Responsive Scaling for Tablet/Mobile */
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .hero.full-screen-hero {
+    justify-content: flex-start;
+  }
+
+  .hero-content-wrapper {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .hero-badge.ultra-glow {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .hero-line {
+    justify-content: flex-start;
+  }
+
+  .hero-description {
+    text-align: left;
+  }
+}
+/* @media (max-width: 768px) {
   .hero.full-screen-hero {
     justify-content: center;
     padding-top: 110px;
@@ -285,13 +310,122 @@
     align-items: center;
     text-align: center;
   }
+ .hero-badge.ultra-glow {
+  padding: 9px 20px;
+}
+ .badge-text-prime{
+    font-size:.95rem;
+    font-weight:700;
+}
+} */
+
+@media (max-width: 576px) {
+
+  .hero.full-screen-hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 95px 20px 40px;
+    justify-content: center;
+    overflow: hidden;
+    background: #050b1e;
+  }
+
+  /* Blurred Background Image */
+  .hero.full-screen-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../assets/images/bot.png") center center no-repeat;
+    background-size: 300px;
+    filter: blur(0.6px) brightness(0.45);
+    transform: scale(1.15); /* Prevent white edges after blur */
+    z-index: 0;
+  }
+
+  /* Dark overlay */
+  .video-overlay-darkness {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 11, 30, 0.65);
+    z-index: 1;
+  }
+
+  /* Hide Video */
+  .video-background-container,
+  .bg-video {
+    display: none;
+  }
+
+  /* Keep content above background */
+  .hero-container.centered-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content-wrapper {
+    width: 100%;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+    line-height: 1.22;
+    letter-spacing: 0;
+  }
+
+  .hero-description {
+    font-size: .95rem;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  .hero-line {
+    justify-content: center;
+    gap: 8px;
+    white-space: normal;
+    flex-wrap: wrap;
+  }
 
   .hero-badge.ultra-glow {
-    padding: 9px 20px;
+    padding: 8px 16px;
+    gap: 10px;
   }
 
   .badge-text-prime {
-    font-size: .95rem;
-    font-weight: 700;
+    font-size: .85rem;
   }
+
+  .badge-pulse-core {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+
+/* Small Phones */
+@media (max-width: 400px) {
+
+  .hero.full-screen-hero {
+    padding: 30px 16px 6px;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+
+  .hero-description {
+    font-size: .9rem;
+  }
+
+  .hero-badge.ultra-glow {
+    padding: 7px 14px;
+  }
+
+  .badge-text-prime {
+    font-size: .8rem;
+  }
+
 }
