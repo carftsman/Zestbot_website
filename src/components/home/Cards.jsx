@@ -109,8 +109,8 @@ export default function Cards() {
           transition={{ duration: .8 }}
           viewport={{ once: true }}
         >
-          One Platform.
-          <span> Three Opportunities.</span>
+          One App Endless
+          <span>  Convenience.</span>
         </motion.h2>
 
         {/* Subtitle */}

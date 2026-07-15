@@ -4,9 +4,13 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 import { initializeGTM } from "./utils/gtm";
+import { initGA } from "./utils/analytics";
+
+
 
 
 initializeGTM();
+initGA();
 
 
 document.body.style.margin = "0";
