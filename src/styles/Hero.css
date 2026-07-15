@@ -4,9 +4,11 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Aligns content to the left side nicely */
+  justify-content: flex-start;
+  /* Aligns content to the left side nicely */
   overflow: hidden;
-  padding: 120px 4% 60px 4%; /* Added comfortable space for medium navbar */
+  padding: 120px 4% 60px 4%;
+  /* Added comfortable space for medium navbar */
   box-sizing: border-box;
   background-color: #050b1e;
 }
@@ -24,7 +26,8 @@
 .bg-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Forces video to cover entire screen dynamically */
+  object-fit: cover;
+  /* Forces video to cover entire screen dynamically */
 }
 
 /* Cinematic overlay to pop the white text and yellow highlights */
@@ -33,16 +36,15 @@
   inset: 0;
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(6,12,30,.70) 0%,
-      rgba(6,12,30,.42) 38%,
-      rgba(6,12,30,.18) 70%,
-      rgba(6,12,30,.08) 100%
-    );
+    linear-gradient(90deg,
+      rgba(6, 12, 30, .70) 0%,
+      rgba(6, 12, 30, .42) 38%,
+      rgba(6, 12, 30, .18) 70%,
+      rgba(6, 12, 30, .08) 100%);
 
   pointer-events: none;
 }
+
 .hero-line {
   display: flex;
   align-items: center;
@@ -51,14 +53,14 @@
   white-space: nowrap;
   overflow: hidden;
 }
- 
+
 .hero-line-primary {
   color: #fff;
   opacity: 0;
   transform: translateX(-180px);
   animation: lineReveal .8s ease forwards;
 }
- 
+
 .hero-line-secondary {
   color: #fff;
   opacity: 0;
@@ -66,19 +68,20 @@
   animation: lineReveal .8s ease forwards;
   animation-delay: .9s;
 }
- 
+
 /* --- CONTENT OVERLAY LAYER --- */
 .hero-container.centered-content {
   position: relative;
-  z-index: 2; /* Sits directly on top of the video overlay */
+  z-index: 2;
+  /* Sits directly on top of the video overlay */
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
 }
 
-.hero-content-wrapper{
-    gap:24px;
-    max-width:760px;
+.hero-content-wrapper {
+  gap: 24px;
+  max-width: 760px;
 }
 
 /* --- 🌟 ULTRA GLOW BADGE STYLE ("You choose, We Deliver") --- */
@@ -86,16 +89,18 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255, 212, 42, 0.12); /* Semi-transparent base yellow */
-  border: 2px solid #FFD42A; /* Highlighting border match logo theme */
+  background: rgba(255, 212, 42, 0.12);
+  /* Semi-transparent base yellow */
+  border: 2px solid #FFD42A;
+  /* Highlighting border match logo theme */
   padding: 10px 24px;
   border-radius: 100px;
   width: max-content;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  
+
   /* Intense Outer Glow Setup */
-  box-shadow: 
+  box-shadow:
     0 0 20px rgba(255, 212, 42, 0.35),
     inset 0 0 12px rgba(255, 212, 42, 0.2);
   animation: badgeGlowPulse 3s infinite ease-in-out;
@@ -127,25 +132,41 @@
 }
 
 @keyframes corePulse {
-  0% { transform: scale(0.6); opacity: 1; }
-  100% { transform: scale(1.6); opacity: 0; }
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
 }
 
 @keyframes badgeGlowPulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 212, 42, 0.35); }
-  50% { transform: scale(1.02); box-shadow: 0 0 35px rgba(255, 212, 42, 0.6); }
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 212, 42, 0.35);
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 35px rgba(255, 212, 42, 0.6);
+  }
 }
 
 .hero-title {
- font-size: clamp(3rem,5vw,4rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -0.02em;
   color: #ffffff;
-  
+
 }
 
- 
+
 .hero-title {
   font-size: clamp(2.5rem, 4.3vw, 3.9rem);
   font-weight: 800;
@@ -184,58 +205,58 @@
 
 /* Third line */
 
-.word{
-  display:inline-block;
-  opacity:0;
-  transform:translateX(-120px);
-  animation:wordReveal .6s ease forwards;
+.word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-120px);
+  animation: wordReveal .6s ease forwards;
 }
 
-.your{
-  animation-delay:1.8s;
+.your {
+  animation-delay: 1.8s;
 }
 
-.local{
-  animation-delay:2.15s;
+.local {
+  animation-delay: 2.15s;
 }
 
-.store{
-  animation-delay:2.5s;
+.store {
+  animation-delay: 2.5s;
 }
 
-@keyframes lineReveal{
+@keyframes lineReveal {
 
-0%{
-    opacity:0;
-    transform:translateX(-180px);
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-180px);
+  }
 
-100%{
-    opacity:1;
-    transform:translateX(0);
-}
-
-}
-
-@keyframes wordReveal{
-
-0%{
-    opacity:0;
-    transform:translateX(-120px);
-}
-
-70%{
-    opacity:1;
-    transform:translateX(10px);
-}
-
-100%{
-    opacity:1;
-    transform:translateX(0);
-}
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
 }
- 
+
+@keyframes wordReveal {
+
+  0% {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
 
 .yellow-gradient-text {
   background: #FFD42A;
@@ -249,7 +270,7 @@
 .hero-description {
   font-size: 1.08rem;
   line-height: 1.7;
-  color: rgba(255,255,255,.82);
+  color: rgba(255, 255, 255, .82);
   max-width: 610px;
 }
 
@@ -259,16 +280,18 @@
     justify-content: center;
     padding-top: 110px;
   }
+
   .hero-content-wrapper {
     align-items: center;
     text-align: center;
   }
- .hero-badge.ultra-glow {
-  padding: 9px 20px;
-}
- .badge-text-prime{
-    font-size:.95rem;
-    font-weight:700;
-}
-}
 
+  .hero-badge.ultra-glow {
+    padding: 9px 20px;
+  }
+
+  .badge-text-prime {
+    font-size: .95rem;
+    font-weight: 700;
+  }
+}
