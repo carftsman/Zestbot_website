@@ -190,16 +190,7 @@ const TermsConditions = ({ isModal = false, isOpen = true, onClose = () => {} })
       )}
 
       <div className="terms-toolbar">
-        <div className="terms-search">
-          <FaSearch className="terms-search-icon" />
-          <input
-            type="text"
-            className="terms-search-input"
-            placeholder="Search terms..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
+        
 
         <div className="terms-actions">
           <button className="terms-btn terms-btn-primary" onClick={expandAll}>Expand All</button>

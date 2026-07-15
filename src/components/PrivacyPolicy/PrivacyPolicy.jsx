@@ -458,21 +458,7 @@ const PrivacyPolicy = ({ isModal = false, isOpen = true, onClose = () => {} }) =
       )}
 
       <div className="privacy-toolbar">
-        <div className="privacy-search">
-          <FaSearch className="privacy-search-icon" />
-          <input
-            type="text"
-            className="privacy-search-input"
-            placeholder="Search privacy policy..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          {search && (
-            <button className="privacy-search-clear" onClick={() => setSearch("")} aria-label="Clear search">
-              <FaTimes />
-            </button>
-          )}
-        </div>
+        
 
         <div className="privacy-actions">
           <button className="privacy-btn privacy-btn-primary" onClick={expandAll}>Expand All</button>
