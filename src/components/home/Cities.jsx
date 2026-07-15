@@ -156,17 +156,19 @@ const styles = {
 
 partnerTag: {
   color: "#FDB515",
-  fontSize: "20px",
+  fontSize: "23px",
   fontWeight: "700",
   letterSpacing: "1px",
   marginBottom: "20px",
 },
 
 partnerLogo: {
-  width: "150px",
+  width: "230px",
   height: "auto",
   marginBottom: "15px",
   background: "#fff",
+  borderRadius: "14px",
+  padding: "10px 15px",
 
 },
 
