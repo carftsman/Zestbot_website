@@ -5,7 +5,7 @@ const ContactUs = () => {
   return (
     <section id="about" className="contact-us">
       <div className="contact-us-container">
-        <h2 className="contact-us-title">Contact Us</h2>
+        <h2 className="contact-us-title">About Us</h2>
 
         <p>
           <strong>Dhatvi Business Solutions Private Limited</strong> is a
