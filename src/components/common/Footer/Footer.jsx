@@ -424,7 +424,7 @@ const Footer = () => {
 
                 <a href="tel:04045374487">
                   <FaPhoneAlt className="contact-icon" />
-                  Tel: +918064524444
+                  Tel: +91 8064524444
                 </a>
 
               </div>
@@ -433,9 +433,7 @@ const Footer = () => {
 
             </div>
 
-            {/* Links */}
-                        {/* ================= Links ================= */}
-
+            
             <div className="footer-column">
 
               <h3>Links</h3>
