@@ -93,10 +93,6 @@ export default function Cities() {
           style={styles.partnerLogo}
         />
 
-        {/* <h3 style={styles.partnerName}>
-          Exelusinfotech Pvt Ltd
-        </h3> */}
-
       </div>
 
     </section>

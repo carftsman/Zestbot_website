@@ -424,7 +424,7 @@ const Footer = () => {
 
                 <a href="tel:04045374487">
                   <FaPhoneAlt className="contact-icon" />
-                  Tel: 040-453-74487
+                  Tel: +918064524444
                 </a>
 
               </div>

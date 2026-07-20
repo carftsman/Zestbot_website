@@ -147,6 +147,14 @@ export default function Navbar() {
             Home
           </NavLink>
 
+          <HashLink
+            smooth
+            to="/#about"
+            scroll={scrollWithOffset}
+          >
+            About Us
+          </HashLink>
+
           <a
             href="/services"
             onClick={(e) => {
@@ -237,6 +245,17 @@ export default function Navbar() {
                 Home
 
               </NavLink>
+
+              <HashLink
+                smooth
+                to="/#about"
+                scroll={scrollWithOffset}
+                onClick={() => setMobileMenu(false)}
+              >
+                About Us
+              </HashLink>
+
+
 
               <NavLink
 
