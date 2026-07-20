@@ -7,7 +7,7 @@ import Cities from "../../components/home/Cities";
 import Partners from "../../components/home/Partners";
 import WhyChoose from "../../components/home/WhyChoose";
 import DownloadApp from "../../components/home/DownloadApp";
-
+import ContactUs from "../../components/ContactUs/ContactUs";
 import PageTracker from "../../Gtm/PageTracker";
 import MetaPageTracker from "../../Gtm/MetaPageTracker";
 import AnalyticsPageTracker from "../../Gtm/AnalyticsPageTracker";
@@ -21,7 +21,7 @@ const Home = () => {
       <MetaPageTracker />
       <AnalyticsPageTracker />
       <Hero />
-
+      <ContactUs/>
       <Cards />
       <DeliveryShowcase />
       {/* <Cards /> */}
