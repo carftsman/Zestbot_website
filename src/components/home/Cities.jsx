@@ -105,7 +105,7 @@ const styles = {
     background: "#192A5F",
     color: "#ffff",
     padding: "20px 5%",
-    minHeight: "100vh",
+    // minHeight: "100vh",
   },
 
   section: {

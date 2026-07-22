@@ -1,7 +1,15 @@
 .contact-us {
-  padding: 80px 8% 30px;
-  background: #fff;
+  padding: 50px 8% 30px;
+  background: linear-gradient(
+    135deg,
+    #b5cefd 0%,
+    #ffffff 45%,
+    #f4e8cb 100%
+  );
+  position: relative;
+  overflow: hidden;
 }
+
 
 .contact-us-container {
   max-width: 1200px;
@@ -40,6 +48,18 @@
     display:inline-block;
 }
 
+.company-link {
+  color: #192A5F;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.company-link:hover {
+  color: #FDB515;
+  text-decoration: underline;
+}
+
 .contact-us-title::after{
     content:"";
     display:block;
@@ -56,7 +76,7 @@
     margin:0;
 }
 .contact-us p {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.9;
   color: #555;
   margin-bottom: 20px;

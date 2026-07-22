@@ -88,7 +88,6 @@ export default function DownloadApp() {
 
             <a
               href={"/coming-soon"}
-              // target="_blank"
               rel="noopener noreferrer"
               aria-label="Download from Google Play"
             >
