@@ -46,25 +46,25 @@ const rightImages = [
 export default function DeliveryShowcase() {
 
   const [leftIndex, setLeftIndex] = useState(0);
-const [rightIndex, setRightIndex] = useState(0);
-const [isLeftTurn, setIsLeftTurn] = useState(true);
-const stats = useGoogleStats();
+  const [rightIndex, setRightIndex] = useState(0);
+  const [isLeftTurn, setIsLeftTurn] = useState(true);
+  const stats = useGoogleStats();
 
-useEffect(() => {
-  const timer = setInterval(() => {
-    setIsLeftTurn((prevTurn) => {
-      if (prevTurn) {
-        setLeftIndex((prev) => (prev + 1) % leftImages.length);
-      } else {
-        setRightIndex((prev) => (prev + 1) % rightImages.length);
-      }
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsLeftTurn((prevTurn) => {
+        if (prevTurn) {
+          setLeftIndex((prev) => (prev + 1) % leftImages.length);
+        } else {
+          setRightIndex((prev) => (prev + 1) % rightImages.length);
+        }
 
-      return !prevTurn;
-    });
-  }, 2000);
+        return !prevTurn;
+      });
+    }, 2000);
 
-  return () => clearInterval(timer);
-}, []);
+    return () => clearInterval(timer);
+  }, []);
   return (
 
     <section className="hero-section">
@@ -109,25 +109,25 @@ useEffect(() => {
 
         <circle r="5" fill="#FFC107">
           <animateMotion dur="6s" repeatCount="indefinite">
-            <mpath href="#route1"/>
+            <mpath href="#route1" />
           </animateMotion>
         </circle>
 
         <circle r="5" fill="#FFC107">
           <animateMotion dur="7s" repeatCount="indefinite">
-            <mpath href="#route2"/>
+            <mpath href="#route2" />
           </animateMotion>
         </circle>
 
         <circle r="5" fill="#FFC107">
           <animateMotion dur="8s" repeatCount="indefinite">
-            <mpath href="#route3"/>
+            <mpath href="#route3" />
           </animateMotion>
         </circle>
 
         <circle r="5" fill="#FFC107">
           <animateMotion dur="9s" repeatCount="indefinite">
-            <mpath href="#route4"/>
+            <mpath href="#route4" />
           </animateMotion>
         </circle>
 
@@ -146,23 +146,23 @@ useEffect(() => {
             src={leftImages[leftIndex]}
             className="left-image"
             initial={{
-              opacity:0,
-              x:-180,
-              scale:.9
+              opacity: 0,
+              x: -180,
+              scale: .9
             }}
             animate={{
-              opacity:1,
-              x:0,
-              scale:1
+              opacity: 1,
+              x: 0,
+              scale: 1
             }}
             exit={{
-              opacity:0,
-              x:-180,
-              scale:.9
+              opacity: 0,
+              x: -180,
+              scale: .9
             }}
             transition={{
-              duration:0.9,
-              ease:"easeInOut"
+              duration: 0.9,
+              ease: "easeInOut"
             }}
           />
 
@@ -183,29 +183,29 @@ useEffect(() => {
             src={rightImages[rightIndex]}
             className="right-image"
             initial={{
-              opacity:0,
-              x:180,
-              scale:.9
+              opacity: 0,
+              x: 180,
+              scale: .9
             }}
             animate={{
-              opacity:1,
-              x:0,
-              scale:1
+              opacity: 1,
+              x: 0,
+              scale: 1
             }}
             exit={{
-              opacity:0,
-              x:180,
-              scale:.9
+              opacity: 0,
+              x: 180,
+              scale: .9
             }}
             transition={{
-              duration:.7
+              duration: .7
             }}
           />
 
         </AnimatePresence>
 
       </div>
-            {/* ==========================
+      {/* ==========================
           HERO CONTENT
       ========================== */}
 
@@ -276,8 +276,8 @@ useEffect(() => {
 
           <div className="stat-left">
 
-           <h3>{Number(stats.vendors).toLocaleString()}+</h3>
-<p>Vendors</p>
+            <h3>{Number(stats.vendors).toLocaleString()}+</h3>
+            <p>Vendors</p>
 
           </div>
 
@@ -293,8 +293,8 @@ useEffect(() => {
 
           <div className="stat-left">
 
-          <h3>{stats.cities}+</h3>
-<p>Cities</p>
+            <h3>{stats.cities}+</h3>
+            <p>Cities</p>
 
           </div>
 
@@ -310,8 +310,8 @@ useEffect(() => {
 
           <div className="stat-left">
 
-           <h3>{stats.support}</h3>
-<p>Support</p>
+            <h3>{stats.support}</h3>
+            <p>Support</p>
 
           </div>
 
