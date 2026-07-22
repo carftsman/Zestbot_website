@@ -86,22 +86,22 @@ background-image:
  
 linear-gradient(
 rgba(25,42,95,.04) 1px,
-transparent 1px
+/* transparent 1px */
 ),
  
 linear-gradient(
 90deg,
 rgba(25,42,95,.04) 1px,
-transparent 1px
+/* transparent 1px */
 );
  
 background-size:55px 55px;
  
-mask-image:
+/* mask-image:
  
 radial-gradient(circle,
 black,
-transparent 95%);
+transparent 95%); */
  
 pointer-events:none;
  
@@ -169,7 +169,7 @@ top:45%;
  
 left:50%;
  
-transform:translateX(-50%);
+/* transform:translateX(-50%); */
  
 opacity:.25;
  
@@ -191,6 +191,8 @@ transform:translateY(30px);
 transform:translateY(0);
 }
  
+
+
 }
  
 @keyframes float2{
@@ -475,16 +477,9 @@ width:70%;
  
 height:350%;
  
-background:
+
  
-linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.18),
-transparent
-);
- 
-transform:rotate(25deg);
+/* transform:rotate(25deg); */
  
 transition:1s;
  
@@ -548,7 +543,7 @@ animation:iconFloat 5s ease-in-out infinite;
  
 }
  
-@keyframes iconFloat{
+/* @keyframes iconFloat{
  
 0%{
  
@@ -569,7 +564,7 @@ transform:translateY(0);
 }
  
 }
- 
+  */
 .icon-circle{
  
 position:relative;
@@ -598,9 +593,9 @@ font-size:34px;
  
 color:#192A5F;
  
-box-shadow:
+/* box-shadow:
  
-0 20px 35px rgba(255,213,74,.35);
+0 20px 35px rgba(255,213,74,.35); */
  
 transition:.45s;
  
@@ -616,9 +611,9 @@ inset:-8px;
  
 border-radius:30px;
  
-border:2px solid rgba(255,213,74,.3);
+/* border:2px solid rgba(255,213,74,.3); */
  
-animation:pulse 2.5s infinite;
+/* animation:pulse 2.5s infinite; */
  
 }
  

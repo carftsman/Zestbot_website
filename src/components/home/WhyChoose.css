@@ -105,48 +105,34 @@
 
 .whyChoose-cardsLeft .whyChoose-card-0 {
   transform: translateX(20px);
-  animation: cardFloat 5s ease-in-out infinite;
 }
 
 .whyChoose-cardsLeft .whyChoose-card-1 {
-  margin-top: 40px;
+  margin: 10px;
   transform: translateX(-30px);
-  animation: cardFloat 6s ease-in-out infinite 0.6s;
 }
 
 .whyChoose-cardsLeft .whyChoose-card-2 {
   margin-top: 10px;
   transform: translateX(30px);
-  animation: cardFloat 5.5s ease-in-out infinite 1.2s;
 }
 
 .whyChoose-cardsRight .whyChoose-card-0 {
   margin-top: 25px;
   transform: translateX(-20px);
-  animation: cardFloat 5.5s ease-in-out infinite 0.3s;
 }
 
 .whyChoose-cardsRight .whyChoose-card-1 {
-  margin-top: 40px;
+  margin: 15px;
   transform: translateX(30px);
-  animation: cardFloat 6s ease-in-out infinite 0.9s;
 }
 
 .whyChoose-cardsRight .whyChoose-card-2 {
   margin-top: -10px;
   transform: translateX(-30px);
-  animation: cardFloat 5s ease-in-out infinite 1.5s;
 }
 
-@keyframes cardFloat {
-  0%,
-  100% {
-    margin-top: 0px;
-  }
-  50% {
-    margin-top: -14px;
-  }
-}
+
 
 /* ==========================
    PHONE WRAP + RING
@@ -177,18 +163,9 @@
   background: #111;
   padding: 10px;
   box-shadow: 0 25px 50px rgba(25, 42, 95, 0.35);
-  animation: phoneFloat 4s ease-in-out infinite;
 }
 
-@keyframes phoneFloat {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
+
 
 .whyChoose-screen {
   position: relative;
@@ -258,10 +235,7 @@
   transition: 0.3s;
 }
 
-.whyChoose-featureIcon:hover {
-  transform: scale(1.12) translateY(-4px);
-  /* box-shadow: 0 12px 28px rgba(255, 212, 0, 0.35); */
-}
+
 
 .whyChoose-badge {
   position: absolute;

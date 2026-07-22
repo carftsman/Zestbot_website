@@ -11,7 +11,7 @@ import payments from "../../assets/images/payments.png";
 import offers from "../../assets/images/offers-home.png";
 import tracking from "../../assets/images/live-order.png";
 
-// tiny inline icon set for the badges + nav bar so nothing depends on extra image assets
+
 const icons = {
   cart: (
     <svg viewBox="0 0 24 24" fill="none" stroke="#2451e0" strokeWidth="2">
