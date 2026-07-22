@@ -89,63 +89,50 @@ export default function Navbar() {
       <div className="navbar-container">
 
         {/* ======================
-              LOGO
-        ====================== */}
+            LOGO
+      ====================== */}
 
         <motion.div
-
           className="logo"
-
           onClick={() => navigate("/")}
-
-          whileHover={{
-            scale: 1.04,
-          }}
-
-          whileTap={{
-            scale: .96,
-          }}
-
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.96 }}
         >
 
-          {/* Logo Always Visible */}
-
           <motion.img
-
             src={logo}
-
             alt="ZestBot"
-
-            initial={{
-              opacity: 0,
-              y: -15,
-            }}
-
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-
-            transition={{
-              duration: .5,
-            }}
-
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           />
 
         </motion.div>
 
         {/* ======================
-              DESKTOP NAV
-        ====================== */}
+            DESKTOP NAV
+      ====================== */}
 
         <nav className="nav-links">
 
-          <NavLink
-            to="/"
-            end
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+
+              if (location.pathname === "/") {
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              } else {
+                navigate("/");
+              }
+            }}
           >
             Home
-          </NavLink>
+          </a>
 
           <HashLink
             smooth
@@ -174,50 +161,54 @@ export default function Navbar() {
             Services
           </a>
 
-          <HashLink smooth to="/#contact" scroll={scrollWithOffset}>
+          <HashLink
+            smooth
+            to="/#contact"
+            scroll={scrollWithOffset}
+          >
             Contact
           </HashLink>
 
         </nav>
 
         {/* ======================
-             RIGHT SECTION
-        ====================== */}
+            RIGHT SECTION
+      ====================== */}
+
         <div className="navbar-right">
 
-          {/* ======================
-        DARK MODE
-  ====================== */}
+          {/* Register Button */}
 
+          <motion.button
+            className="register-btn"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() =>
+              window.open(
+                "https://forms.gle/pTWd7JR6AzwAeqme6",
+                "_blank"
+              )
+            }
+          >
+            Register
+          </motion.button>
 
-
-          {/* ======================
-       MOBILE BUTTON
-  ====================== */}
+          {/* Mobile Menu Button */}
 
           <motion.button
             ref={menuBtnRef}
             className="menu-btn"
-
-            whileTap={{
-              scale: .90,
-            }}
-
-            onClick={() =>
-              setMobileMenu(!mobileMenu)
-            }
-
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setMobileMenu(!mobileMenu)}
           >
-
             {mobileMenu ? <FiX /> : <FiMenu />}
-
           </motion.button>
 
         </div>
 
         {/* ======================
-      MOBILE MENU
-====================== */}
+            MOBILE MENU
+      ====================== */}
 
         <AnimatePresence>
           {mobileMenu && (
@@ -230,21 +221,25 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
             >
 
-              <NavLink
+              <a
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileMenu(false);
 
-                to="/"
-
-                end
-
-                onClick={() =>
-                  setMobileMenu(false)
-                }
-
+                  if (location.pathname === "/") {
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: "smooth",
+                    });
+                  } else {
+                    navigate("/");
+                  }
+                }}
               >
-
                 Home
-
-              </NavLink>
+              </a>
 
               <HashLink
                 smooth
@@ -255,44 +250,33 @@ export default function Navbar() {
                 About Us
               </HashLink>
 
-
-
               <NavLink
-
                 to="/services"
-
-                onClick={() =>
-                  setMobileMenu(false)
-                }
-
+                onClick={() => setMobileMenu(false)}
               >
-
                 Services
-
               </NavLink>
 
               <HashLink
-
                 smooth
-
                 to="/#contact"
-
                 scroll={scrollWithOffset}
-
-                onClick={() =>
-                  setMobileMenu(false)
-                }
-
+                onClick={() => setMobileMenu(false)}
               >
-
                 Contact
-
               </HashLink>
 
+              <a
+                href="https://your-registration-website.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenu(false)}
+              >
+                Register
+              </a>
+
             </motion.div>
-
           )}
-
         </AnimatePresence>
 
       </div>
