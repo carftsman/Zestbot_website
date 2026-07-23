@@ -177,23 +177,41 @@ a{
     gap:18px;
     flex-wrap:wrap;
 }
-
+ 
 .store-buttons a{
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.store-buttons a:hover{
-    transform: translateY(-4px) scale(1.02);
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
-}
-
-.store-buttons img{
+    display:inline-block;
+    align-items:center;
+    justify-content:center;
+ 
     width:170px;
-    height:auto;
-    border-radius: 10px;
-    margin: 10px;   
+    height:56px;
+ 
+    border-radius:10px;
+    overflow:hidden;
+ 
+    transition: box-shadow .3s ease, filter .3s ease;
+    box-shadow:none;
 }
-
+ 
+.store-buttons a:hover{
+    transform:scale(1.03);
+    /* box-shadow:0 12px 24px rgba(0,0,0,.18); */
+    filter:brightness(1.05);
+ 
+}
+ 
+.store-buttons img{
+    /* width:100%;
+    height:100%; */
+    object-fit:contain;
+    display:block;
+    border-radius: 20px;
+    pointer-events:none;
+ 
+    transition:transform .3s ease;
+    transform:none;
+}
+ 
 /* =====================================================
    RIGHT SECTION
 ===================================================== */
@@ -240,11 +258,12 @@ a{
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.bot-wrapper{
-    position:relative;
-    display:inline-block;
-    animation:botFloat 4s ease-in-out infinite;
-    transition:transform .4s ease;
+.bot-wrapper {
+    position: relative;
+    display: inline-block;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 /* =====================================================
    LARGE LAPTOP

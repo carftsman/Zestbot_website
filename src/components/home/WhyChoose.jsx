@@ -12,47 +12,47 @@ import offers from "../../assets/images/offers-home.png";
 import tracking from "../../assets/images/live-order.png";
 
 
-const icons = {
-  cart: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#2451e0" strokeWidth="2">
-      <circle cx="9" cy="21" r="1" />
-      <circle cx="20" cy="21" r="1" />
-      <path d="M1 1h4l2.6 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
-    </svg>
-  ),
-  store: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2">
-      <path d="M3 9l1-5h16l1 5" />
-      <path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0" />
-      <path d="M4 9v10h16V9" />
-    </svg>
-  ),
-  scooter: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2">
-      <circle cx="6" cy="18" r="2.5" />
-      <circle cx="18" cy="18" r="2.5" />
-      <path d="M6 18h6l3-8h3" />
-      <path d="M9 10h4" />
-    </svg>
-  ),
-  shield: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2">
-      <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" />
-    </svg>
-  ),
-  gift: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#ea580c" strokeWidth="2">
-      <rect x="3" y="8" width="18" height="13" />
-      <path d="M12 8v13M3 8h18M12 8c-2-4-7-3-6 0h6zM12 8c2-4 7-3 6 0h-6z" />
-    </svg>
-  ),
-  pin: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2">
-      <path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
-      <circle cx="12" cy="9" r="2.5" />
-    </svg>
-  ),
-};
+// const icons = {
+//   cart: (
+//     <svg viewBox="0 0 24 24" fill="none" stroke="#2451e0" strokeWidth="2">
+//       <circle cx="9" cy="21" r="1" />
+//       <circle cx="20" cy="21" r="1" />
+//       <path d="M1 1h4l2.6 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+//     </svg>
+//   ),
+//   store: (
+//     <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2">
+//       <path d="M3 9l1-5h16l1 5" />
+//       <path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0" />
+//       <path d="M4 9v10h16V9" />
+//     </svg>
+//   ),
+//   scooter: (
+//     <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2">
+//       <circle cx="6" cy="18" r="2.5" />
+//       <circle cx="18" cy="18" r="2.5" />
+//       <path d="M6 18h6l3-8h3" />
+//       <path d="M9 10h4" />
+//     </svg>
+//   ),
+//   shield: (
+//     <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2">
+//       <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" />
+//     </svg>
+//   ),
+//   gift: (
+//     <svg viewBox="0 0 24 24" fill="none" stroke="#ea580c" strokeWidth="2">
+//       <rect x="3" y="8" width="18" height="13" />
+//       <path d="M12 8v13M3 8h18M12 8c-2-4-7-3-6 0h6zM12 8c2-4 7-3 6 0h-6z" />
+//     </svg>
+//   ),
+//   pin: (
+//     <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2">
+//       <path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+//       <circle cx="12" cy="9" r="2.5" />
+//     </svg>
+//   ),
+// };
 
 const leftFeatures = [
   {
@@ -110,9 +110,9 @@ const FeatureCard = ({ item, index }) => (
     aria-label={item.title}
     title={item.title}
   >
-    <span className="whyChoose-badge" style={{ background: item.badgeColor }}>
+    {/* <span className="whyChoose-badge" style={{ background: item.badgeColor }}>
       {icons[item.badge]}
-    </span>
+    </span> */}
   </div>
 );
 

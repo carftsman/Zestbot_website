@@ -53,6 +53,8 @@
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s ease;
+  /* color: #FDB515; */
+  text-decoration: underline;
 }
 
 .company-link:hover {
