@@ -103,33 +103,41 @@
   max-width: 130px;
 }
 
+
+
 .whyChoose-cardsLeft .whyChoose-card-0 {
-  transform: translateX(20px);
+  --tx: 20px;
+  transform: translateX(var(--tx));
 }
 
 .whyChoose-cardsLeft .whyChoose-card-1 {
   margin: 10px;
-  transform: translateX(-30px);
+  --tx: -30px;
+  transform: translateX(var(--tx));
 }
 
 .whyChoose-cardsLeft .whyChoose-card-2 {
   margin-top: 10px;
-  transform: translateX(30px);
+  --tx: 30px;
+  transform: translateX(var(--tx));
 }
 
 .whyChoose-cardsRight .whyChoose-card-0 {
   margin-top: 25px;
-  transform: translateX(-20px);
+  --tx: -20px;
+  transform: translateX(var(--tx));
 }
 
 .whyChoose-cardsRight .whyChoose-card-1 {
   margin: 15px;
-  transform: translateX(30px);
+  --tx: 30px;
+  transform: translateX(var(--tx));
 }
 
 .whyChoose-cardsRight .whyChoose-card-2 {
   margin-top: -10px;
-  transform: translateX(-30px);
+  --tx: -30px;
+  transform: translateX(var(--tx));
 }
 
 
@@ -223,17 +231,37 @@
 ========================== */
 
 .whyChoose-featureIcon {
+
   position: relative;
+
   width: 94px;
+
   height: 94px;
+
   border-radius: 50%;
+
   background-color: #ffffff;
+
   background-repeat: no-repeat;
+
   background-position: center;
-  background-size: 116%;   /* Change from cover to 72% */
+
+  background-size: 116%;
+
   box-shadow: 0 10px 24px rgba(25, 42, 95, 0.14);
-  transition: 0.3s;
+ 
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+
 }
+ 
+.whyChoose-featureIcon:hover {
+
+  transform: translateX(var(--tx, 0)) scale(1.2);
+
+}
+ 
 
 
 

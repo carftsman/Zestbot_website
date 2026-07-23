@@ -122,12 +122,14 @@ export default function VendorAppPage() {
       transform .35s ease,
       box-shadow .35s ease,
       border-color .35s ease,
-      background .35s ease;
+      background .35s ease,
+      filter .35s ease;
   }
- 
+
   .hover-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 22px 45px rgba(21,35,82,.18);
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,.18);
+    filter: brightness(1.05);
     border-color: #F2B705;
   }
  
@@ -143,8 +145,9 @@ export default function VendorAppPage() {
       transition:.35s;
   }
 .hover-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 22px 45px rgba(21,35,82,.18);
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,.18);
+    filter: brightness(1.05);
     border: 1px solid #F2B705 !important;
 }
   .hover-card:hover::before{

@@ -101,7 +101,8 @@
     transform .6s ease,
     border-color .35s ease,
     box-shadow .35s ease,
-    background .35s ease;
+    background .35s ease,
+    filter .35s ease;
 }
 
 .faq-card.show{
@@ -110,9 +111,10 @@
 }
 
 .faq-card:hover{
-  transform:translateX(0) translateY(-5px);
+  transform:translateX(0) scale(1.03);
   border-color:#FFD54A;
-  box-shadow:0 15px 35px rgba(0,0,0,.25);
+  box-shadow:0 12px 24px rgba(0,0,0,.18);
+  filter:brightness(1.05);
 }
 
 .faq-card.active{
@@ -249,8 +251,9 @@
 
 .contact-btn:hover{
   background:#201f1f;
-  transform:translateY(-4px);
-  box-shadow:0 15px 30px rgba(255,213,74,.35);
+  transform:scale(1.03);
+  box-shadow:0 12px 24px rgba(0,0,0,.18);
+  filter:brightness(1.05);
 }
 
 /* =========================
@@ -276,8 +279,9 @@
 }
 
 .see-more-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(255,255,255,.25);
+  transform:scale(1.03);
+  box-shadow:0 12px 24px rgba(0,0,0,.18);
+  filter:brightness(1.05);
 }
 
 /* =========================
